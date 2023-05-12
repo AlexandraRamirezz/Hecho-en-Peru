@@ -1,0 +1,47 @@
+.menu {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-item {
+    &:hover {
+        color: $color_2;
+        border-bottom: 3px solid #E46953;
+        padding-bottom: 4px;
+    }
+}
+
+.search-bar {
+    input[type="text"] {
+        height: 32px;
+        width: 250px;
+        border: none;
+        background-color: $background-color_2;
+        margin-right: 5px;
+        font-size: 14px;
+        padding: 0 10px;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: $background-color_3;
+        border: none;
+        width: 90px;
+        color: $color_1;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        height: 32px;
+        margin-right: 5px;
+        font-size: 14px;
+        padding: 0 10px;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: $background-color_4;
+            color: $color_1;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+        }
+    }
+}

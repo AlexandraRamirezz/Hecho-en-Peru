@@ -1,0 +1,28 @@
+body {
+    font-family: $font-family_1;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1.7fr 0.3fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    text-align: center;
+    background-color: $background-color_1;
+    color: $color_1;
+    height: 80px;
+    padding: 0 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    font-weight: 500;
+
+    a {
+        text-decoration: none;
+        color: $color_1;
+    }
+}
+
+h2 {
+    margin-top: 3%;
+    font-size: 24px;
+}
