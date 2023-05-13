@@ -69,6 +69,183 @@
                 </div>
             </div>
         </section>
+
+        <section class="container-catalogo row">
+            <div class="filtro col-3">
+                <h3>Filtrar por</h3>
+                <div class="f-precio">
+                    <h4>Precio</h4>
+                    <input type="number" id="precio_minimo" placeholder="Mínimo">
+                    <input type="number" id="precio_maximo" placeholder="Máximo">
+                </div>
+
+                <div class="f-ordenar-por dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ordenar por
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <input type="radio" id="order-mas-vendidos" name="radio-ordenar-por">
+                            <label for="order-mas-vendidos">Más vendidos</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="order-mas-recientes" name="radio-ordenar-por">
+                            <label for="order-mas-recientes">Más recientes</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="order-mas-en-oferta" name="radio-ordenar-por">
+                            <label for="order-mas-en-oferta">En oferta</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="f-categorias dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Categorías
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <input type="checkbox" id="c-collares" name="check-categorias">
+                            <label for="c-collares">Collares</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c-vasijas" name="check-categorias">
+                            <label for="c-vasijas">Vasijas</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c-ponchos" name="check-categorias">
+                            <label for="c-ponchos">Ponchos</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c-chalinas" name="check-categorias">
+                            <label for="c-chalinas">Chalinas</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c-aretes" name="check-categorias">
+                            <label for="c-aretes">Aretes</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c-decoraciones" name="check-categorias">
+                            <label for="c-decoraciones">Decoraciones</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c-sombreros" name="check-categorias">
+                            <label for="c-sombreros">Sombreros</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="c-populares" name="check-categorias">
+                            <label for="c-populares">Populares</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="f-regiones dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Regiones
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <input type="checkbox" id="r-amazonas" name="check-regiones">
+                            <label for="r-amazonas">Amazonas</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-ancash" name="check-regiones">
+                            <label for="r-ancash">Áncash</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-apurimac" name="check-regiones">
+                            <label for="r-apurimac">Apurímac</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-arequipa" name="check-regiones">
+                            <label for="r-arequipa">Arequipa</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-ayacucho" name="check-regiones">
+                            <label for="r-ayacucho">Ayacucho</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-cajamarca" name="check-regiones">
+                            <label for="r-cajamarca">Cajamarca</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-cusco" name="check-regiones">
+                            <label for="r-cusco">Cusco</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-huancavelica" name="check-regiones">
+                            <label for="r-huancavelica">Huancavelica</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-huanuco" name="check-regiones">
+                            <label for="r-huanuco">Huánuco</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-ica" name="check-regiones">
+                            <label for="r-ica">Ica</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-junin" name="check-regiones">
+                            <label for="r-junin">Junín</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-la-libertad" name="check-regiones">
+                            <label for="r-la-libertad">La Libertad</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-lamayeque" name="check-regiones">
+                            <label for="r-lamayeque">Lambayeque</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-lima" name="check-regiones">
+                            <label for="r-lima">Lima</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-loreto" name="check-regiones">
+                            <label for="r-loreto">Loreto</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-madre-de-dios" name="check-regiones">
+                            <label for="r-madre-de-dios">Madre de Dios</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-moquegua" name="check-regiones">
+                            <label for="r-moquegua">Moquegua</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-pasco" name="check-regiones">
+                            <label for="r-pasco">Pasco</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-piura" name="check-regiones">
+                            <label for="r-piura">Piura</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-puno" name="check-regiones">
+                            <label for="r-puno">Puno</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-san-martin" name="check-regiones">
+                            <label for="r-san-martin">San Martín</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-tacna" name="check-regiones">
+                            <label for="r-tacna">Tacna</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-tumbes" name="check-regiones">
+                            <label for="r-tumbes">Tumbes</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="r-ucayali" name="check-regiones">
+                            <label for="r-ucayali">Ucayali</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container_productos col-md-9 col-sm-12 row">
+        </section>
     </main>
 
     <footer>
