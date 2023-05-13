@@ -1,47 +1,93 @@
-.menu {
-    height: 50px;
-    display: flex;
+header {
+    box-shadow: 0rem 0.2rem 0.2rem $color_7;
+    position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1.9fr 0.3fr;
+    grid-template-areas:
+    "logo secciones buscador iconos";
     align-items: center;
     text-align: center;
-}
+    background-color: $background-color_1;
+    color: $color_1;
+    height: 5rem;
+    padding: 0 3rem;
+    box-shadow: 0rem 0.2rem 0.2rem $color_7;
 
-.menu-item {
-    &:hover {
-        color: $color_2;
-        border-bottom: 3px solid #E46953;
-        padding-bottom: 4px;
-    }
-}
-
-.search-bar {
-    input[type="text"] {
-        height: 32px;
-        width: 250px;
-        border: none;
-        background-color: $background-color_2;
-        margin-right: 5px;
-        font-size: 14px;
-        padding: 0 10px;
-        border-radius: 5px;
-    }
-
-    button {
-        background-color: $background-color_3;
-        border: none;
-        width: 90px;
+    a {
+        text-decoration: none;
         color: $color_1;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        height: 32px;
-        margin-right: 5px;
-        font-size: 14px;
-        padding: 0 10px;
-        border-radius: 5px;
+    }
 
+    .logo {
+        grid-area: logo;
+    }
+    
+    .menu {
+        grid-area: secciones;
+        
+        height: 3.1rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .menu-item {
+        font-size: 0.8rem;
+    
         &:hover {
-            background-color: $background-color_4;
+            color: $color_2;
+            border-bottom: 0.2rem solid #E09898;
+            padding-bottom: 0.2rem;
+        }
+    }
+    
+    .search-bar {
+        grid-area: buscador;
+    
+        input[type="text"] {
+            height: 2rem;
+            width: 40%;
+            border: none;
+            background-color: $background-color_2;
+            margin-right: 0.3rem;
+            font-size: 0.8rem;
+            padding: 0 0.6rem;
+            border-radius: 0.3rem;
+        }
+    
+        button {
+            background-color: $background-color_3;
+            border: none;
+            width: 5.6rem;
             color: $color_1;
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: 2rem;
+            margin-right: 0.3rem;
+            font-size: 0.8rem;
+            padding: 0 0.6rem;
+            border-radius: 0.3rem;
+    
+            &:hover {
+                background-color: $background-color_4;
+                color: $color_1;
+                box-shadow: 0rem 0.2rem 0.2rem $color_7;
+            }
+        }
+    }
+    
+    .icons {
+        grid-area: iconos;
+    
+        i {
+            &:hover {
+                color:#00000086;
+            } 
         }
     }
 }

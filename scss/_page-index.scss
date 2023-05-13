@@ -1,135 +1,319 @@
+/* hero section */
 .fondo-inicio-img {
     background-image: url("../images/inicio.png");
     background-repeat: no-repeat;
     background-size: cover;
 
     h1 {
-        font-size: 59px;
+        font-size: 3rem;
         font-family: $font-family_2;
+        padding-bottom: 1.5rem;
+    }
+
+    p {
+        padding-bottom: 3rem;
     }
 }
 
 .inicio-fondo {
     background-color: $background-color_5;
-    padding: 150px;
+    padding: 5rem 15rem;
 
     button {
         background-color: $background-color_6;
-        border: none;
-        width: 180px;
         color: $color_3;
+        border: none;
+        width: 11.2rem;
+        height: 2.5rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 0 0.6rem;
+        border-radius: 0.9rem;
         cursor: pointer;
         transition: all 0.3s ease;
-        height: 40px;
-        margin-right: 5px;
-        font-size: 15px;
-        padding: 0 10px;
-        border-radius: 15px;
-        font-weight: bold;
 
         &:hover {
             background-color: $background-color_7;
             color: $color_3;
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0rem 0.2rem 0.2rem $color_7;
         }
     }
 }
 
-.popular-products {
+.banner {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+
+/* productos mas vendidos */
+.sold-products {
     .row {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        justify-items: center;
         align-items: center;
         text-align: center;
-        background-color: $background-color_8;
-        padding: 20px;
+        background-color: $background-color_1;
+        margin: auto;
+        width: 85%;
+    }
+
+    .grid-h3 {
+        padding-bottom: 0.5rem;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-content: center;
+        grid-template-areas:
+        "name price";
+    }
+    
+    .s-product {
+        padding: 0rem 0.6rem;
+        background-color: $background-color_1;
+    
+        img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+            border: solid 1px $color_9;
+            border-radius: 0.5rem;
+        }
+    
+        h3 {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    
+        .name-product {
+            grid-area: name;
+            padding: 0;
+            margin: 0;
+        }
+    
+        .price {
+            font-size: 0.8rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            grid-area: price;
+            margin: 0;
+        }
+    
+        .region {
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: $color_6;
+            margin: 0;
+        }
+    }
+}
+
+
+/* nuestros servicios */
+.our-services {
+    background-color: $background-color_11;
+    padding-bottom: 4%;
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        width: 83.5%;
+        margin: auto;
+
+        .col-md-3 {
+            margin: 0;
+            padding-left: 0;
+            padding-right: 0;
+            width: 24%;
+        }
     }
 
     h2 {
-        margin-top: 3%;
-        font-size: 24px;
+        padding-top: 4%;
     }
-}
 
-.product {
-    margin: 20px;
-    padding: 20px;
-    background-color: $background-color_9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    flex-basis: 20%;
-
-    img {
+    .fondo-services-img-1 {
+        background-image: url("../images/inicio.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .fondo-services-img-2 {
+        background-image: url("../images/inicio.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .fondo-services-img-3 {
+        background-image: url("../images/inicio.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .fondo-services-img-4 {
+        background-image: url("../images/inicio.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .services-fondo {
+        background-color: $background-color_10;
         width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-    }
-
-    h3 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-    }
-
-    .price {
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: $color_2;
-        margin-bottom: 10px;
-    }
-
-    .region {
-        font-size: 1rem;
-        color: $color_4;
-    }
-}
-
-.fondo-services-img-1 {
-    background-image: url("../images/inicio.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-services-img-2 {
-    background-image: url("../images/inicio.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-services-img-3 {
-    background-image: url("../images/inicio.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.fondo-services-img-4 {
-    background-image: url("../images/inicio.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.services-fondo {
-    background-color: $background-color_10;
-    padding: 50px;
-    color: $color_5;
-    gap: 100px;
-
-    &:hover {
-        background-color: $background-color_5;
-        color: $color_6;
-    }
-}
-
-.our-services {
-    background-color: $background-color_11;
-    padding: 0.5rem;
-    padding-bottom: 4rem;
-
-    .row {
+        height: 15rem;
+        padding: 1.2rem;
+        font-size: small;
+        color: $color_5;
+        gap: 6.2rem;
+        transition: all 0.5s ease;
+    
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 20px;
+    
+        &:hover {
+            background-color: $background-color_5;
+            color: $color_3;
+        }
+    }
+}
+
+
+/* regiones */
+.regiones {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        width: 83.5%;
+        margin: auto;
+
+        .col-md-12 {
+            margin: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .fondo-regiones-img {
+        background-image: url("../images/inicio.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 25rem;
+    }
+
+    .regiones-fondo {
+        width: 50%;
+        height: 25rem;
+        padding: 3.5rem;
+
+        font-size: small;
+        transition: all 0.5s ease;
+        color: $color_1;
+
+        .div-region {
+            background-color: $background-color_8;
+
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            text-align: start;
+
+            padding: 1% 15%;
+            height: 18rem;
+        }
+
+        p {
+            padding-bottom: 3rem;
+        }
+
+        button {
+            background-color: $background-color_6;
+            color: $color_3;
+            border: none;
+            width: 11.2rem;
+            height: 2.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0 0.6rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+    
+            &:hover {
+                background-color: $background-color_7;
+                color: $color_3;
+                box-shadow: 0rem 0.2rem 0.2rem $color_7;
+            }
+        }
+    }
+}
+
+
+/* nuestro equipo de trabajo */
+.our-team {
+    background-color: $background-color_13;
+    padding-bottom: 4%;
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        width: 85%;
+        margin: auto;
+
+        .col-sm-2 {
+            h3 {
+                padding-top: 1rem;
+                font-size: 1rem;
+                font-weight: 200;
+            }
+        }
+
+        .div-img-team {
+            height: 15rem;
+            width: 11rem;
+        }
+    }
+
+    h2 {
+        padding-top: 4%;
+    }
+
+    button {
+        background-color: $background-color_6;
+        color: $color_3;
+        border: none;
+        width: 11.2rem;
+        height: 2.5rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 0 0.6rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $background-color_7;
+            color: $color_3;
+            box-shadow: 0rem 0.2rem 0.2rem $color_7;
+        }
     }
 }

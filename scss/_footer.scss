@@ -2,32 +2,19 @@ footer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     background-color: $background-color_12;
-    color: $color_7;
-    padding: 50px 20px;
-    font-size: 16px;
+    color: $color_3;
+    padding: 1.8rem 1.2rem;
+    font-size: 1rem;
 
     h2 {
-        margin-bottom: 20px;
-        font-size: 20px;
-    }
-
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-        li {
-            margin-right: 10px;
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
+        margin-bottom: 1rem;
     }
 
     a {
         color: $color_3;
         text-decoration: none;
+        font-size: 0.7rem;
+        padding-left: 0.6rem;
 
         &:hover {
             color: $color_8;
@@ -35,18 +22,17 @@ footer {
     }
 
     i {
-        font-size: 25px;
+        font-size: 1.2rem;
+        padding-left: 0.6rem;
+
+        &:hover {
+            color:#ffffff9f;
+        }
     }
 }
 
 .footer-navigation {
     text-decoration: none;
-
-    a {
-        &:hover {
-            border-bottom: solid 1px #D3D3D3;
-        }
-    }
 }
 
 .inline {
