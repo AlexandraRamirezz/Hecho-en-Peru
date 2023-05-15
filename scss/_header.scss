@@ -2,7 +2,7 @@ header {
     box-shadow: 0rem 0.2rem 0.2rem $color_7;
     position: sticky;
 	top: 0;
-	z-index: 1;
+	z-index: 1000;
 }
 
 nav {
@@ -17,7 +17,6 @@ nav {
     height: 5rem;
     padding: 0 3rem;
     box-shadow: 0rem 0.2rem 0.2rem $color_7;
-
     a {
         text-decoration: none;
         color: $color_1;
