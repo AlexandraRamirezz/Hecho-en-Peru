@@ -376,6 +376,20 @@ nav .icons i:hover {
   box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
 }
 
+.container-catalogo {
+  width: 90%;
+  margin: auto;
+}
+.container-catalogo .filtro {
+  margin-top: 4%;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: #F5F5F5;
+  border-radius: 0.8rem;
+}
+.container-catalogo .filtro h3 {
+  margin-top: 1rem;
+}
 .container-catalogo .filtro .f-precio .price-input {
   display: flex;
   flex-wrap: wrap;
@@ -446,6 +460,114 @@ nav .icons i:hover {
   background-color: #ACDE7B;
   box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.219);
   pointer-events: auto;
+}
+.container-catalogo .container_productos {
+  margin: auto;
+  margin-top: 4%;
+  padding: 0;
+}
+.container-catalogo .container_productos .product {
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1.5rem;
+  border: solid white 0.5rem;
+  box-shadow: inset 0rem 0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.0431372549);
+}
+.container-catalogo .container_productos .product:hover figure {
+  box-shadow: inset 0 0.5rem 1rem rgba(0, 0, 0, 0.231372549);
+}
+.container-catalogo .container_productos .product:hover figure img {
+  transform: scale(1.1, 1.1);
+}
+.container-catalogo .container_productos .product .rating {
+  position: absolute;
+  align-self: flex-start;
+  top: 1.2rem;
+  left: 1.5rem;
+  z-index: 100;
+  background-color: rgba(255, 225, 253, 0.7568627451);
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  border-radius: 0.4rem;
+}
+.container-catalogo .container_productos .product .rating i {
+  color: #DE7BD7;
+}
+.container-catalogo .container_productos .product figure {
+  width: 90%;
+  margin-top: 0.9rem;
+  margin-bottom: 0;
+  border-radius: 0.9rem;
+  text-align: center;
+  overflow: hidden;
+}
+.container-catalogo .container_productos .product figure img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  transition: all 1s ease;
+}
+.container-catalogo .container_productos .product .info-product {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-catalogo .container_productos .product .info-product h4 {
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.container-catalogo .container_productos .product .info-product button {
+  margin-bottom: 1rem;
+  background-color: #242423;
+  color: #FFFFFF;
+  border: none;
+  width: 80%;
+  height: 32px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.container-catalogo .container_productos .product .info-product button:hover {
+  background-color: #0E0E0E;
+  color: #FFFFFF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
+}
+.container-catalogo .container_productos .pages {
+  display: flex;
+  justify-content: center;
+}
+.container-catalogo .container_productos .pages button {
+  background-color: white;
+  border: 0;
+  padding-inline: 0.7rem;
+}
+.container-catalogo .container_productos .pages button i {
+  opacity: 50%;
+}
+.container-catalogo .container_productos .pages #numero_pagina {
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 0.8rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  padding: 0.2rem;
+  text-align: center;
+  width: 3rem;
+}
+.container-catalogo .container_productos .pages #numero_pagina[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.container-catalogo .container_productos .pages #numero_pagina[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 footer {

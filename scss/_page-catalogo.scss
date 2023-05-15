@@ -1,5 +1,15 @@
 .container-catalogo {
+    width: 90%;
+    margin: auto;
     .filtro {
+        margin-top: 4%;
+        padding-left: 2%;
+        padding-right: 2%;
+        background-color: #F5F5F5;
+        border-radius: 0.8rem;
+        h3{
+            margin-top: 1rem;
+        }
         .f-precio{
             .price-input {
                 display: flex;
@@ -71,6 +81,121 @@
                     box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.219);
                     pointer-events: auto;
                 }*/
+            }
+        }
+    }
+    .container_productos {
+        margin: auto;
+        margin-top: 4%;
+        padding: 0;
+        .product {
+            position: relative;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 1.5rem;
+            border: solid white 0.5rem;
+            box-shadow: inset 0rem 0rem 0.2rem 0.3rem #0000000b;
+            &:hover{
+                figure{
+                    box-shadow: inset 0 0.5rem 1rem #0000003b;
+                    img{
+                        transform: scale(1.1, 1.1);
+                    }
+                }
+            }
+            .rating{
+                position: absolute;
+                align-self: flex-start;
+                top: 1.2rem;
+                left: 1.5rem;
+                z-index: 100;
+                background-color: #ffe1fdc1;
+                padding-left: 0.4rem;
+                padding-right: 0.4rem;
+                border-radius: 0.4rem;
+                i{
+                    color: #DE7BD7;
+                }
+            }
+            figure {
+                width: 90%;
+                margin-top: 0.9rem;
+                margin-bottom: 0;
+                border-radius: 0.9rem;
+                text-align: center;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 12rem;
+                    object-fit: cover;
+                    transition: all 1s ease;
+                }
+            }
+            .info-product{
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h4{
+                    text-align: center;
+                    font-family: $font-family_1;
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+                button {
+                    margin-bottom: 1rem;
+                    background-color: $background-color_12;
+                    color: $color_3;
+                    border: none;
+                    width: 80%;
+                    height: 32px;
+                    font-size: 0.7rem;
+                    font-weight: 600;
+                    padding: 0 10px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+            
+                    &:hover {
+                        background-color: $background-color_9;
+                        color: $color_3;
+                        box-shadow: 0px 3px 6px #0000001a;
+                    }
+                }
+            }
+        }
+
+        .pages{
+            display: flex;
+            justify-content: center;
+
+            button{
+                background-color: white;
+                border: 0;
+                padding-inline: 0.7rem;
+                i{
+                    opacity: 50%;
+                }
+            }
+
+            #numero_pagina{
+                background-color: #F2F2F2;
+                border: none;
+                border-radius: 0.8rem;
+                font-family: $font-family_1;
+                font-weight: 600;
+                padding: 0.2rem;
+                text-align: center;
+                width: 3rem;
+                &[type="number"]::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+                &[type="number"]::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                }
             }
         }
     }
