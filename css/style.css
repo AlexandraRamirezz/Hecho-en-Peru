@@ -496,6 +496,9 @@ nav .icons i:hover {
 .container-catalogo .container_productos .product .rating i {
   color: #DE7BD7;
 }
+.container-catalogo .container_productos .product .rating .rating-value {
+  font-weight: 600;
+}
 .container-catalogo .container_productos .product figure {
   width: 90%;
   margin-top: 0.9rem;
@@ -544,6 +547,7 @@ nav .icons i:hover {
 .container-catalogo .container_productos .pages {
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
 }
 .container-catalogo .container_productos .pages button {
   background-color: white;
@@ -568,6 +572,79 @@ nav .icons i:hover {
 }
 .container-catalogo .container_productos .pages #numero_pagina[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
+}
+
+#interest-products h2 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+#interest-products .carousel-inner .carousel-item {
+  padding: 0;
+  border-radius: 1.5rem;
+  border: solid white 0.5rem;
+  box-shadow: inset 0rem 0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.0431372549);
+}
+#interest-products .carousel-inner .carousel-item .rating {
+  align-self: flex-start;
+  top: 1.2rem;
+  left: 1.5rem;
+  z-index: 2;
+  background-color: rgba(255, 225, 253, 0.7568627451);
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  border-radius: 0.4rem;
+}
+#interest-products .carousel-inner .carousel-item .rating i {
+  color: #DE7BD7;
+}
+#interest-products .carousel-inner .carousel-item .rating .rating-value {
+  font-weight: 600;
+}
+#interest-products .carousel-inner .carousel-item figure {
+  width: 90%;
+  margin-top: 0.9rem;
+  margin-bottom: 0;
+  border-radius: 0.9rem;
+  text-align: center;
+  overflow: hidden;
+}
+#interest-products .carousel-inner .carousel-item figure img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  transition: all 1s ease;
+}
+#interest-products .carousel-inner .carousel-item .info-product {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#interest-products .carousel-inner .carousel-item .info-product h4 {
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+#interest-products .carousel-inner .carousel-item .info-product button {
+  margin-bottom: 1rem;
+  background-color: #242423;
+  color: #FFFFFF;
+  border: none;
+  width: 80%;
+  height: 32px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#interest-products .carousel-inner .carousel-item .info-product button:hover {
+  background-color: #0E0E0E;
+  color: #FFFFFF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
 }
 
 footer {
