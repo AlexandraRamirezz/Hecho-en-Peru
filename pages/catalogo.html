@@ -431,48 +431,86 @@
             </div>
         </section>
 
-        <section id="interest-products" class="carousel slide" data-bs-touch="false">
-            <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="rating">
-                    <i class="fa-solid fa-star"></i>
-                    <span class="rating-value">4.5</span>
-                </div>
-
-                <figure><img src="../images/catalogo/poncho.jpg" class="d-block w-100" alt="poncho"></figure>
-
-                <div class="info-product">
-                    <h4>Poncho de lana</h4>
-                    <p class="precio_product">s/.50.00</p>
-                    <button>Ver producto</button>
+        <section class="interest-products">
+            <h2>Productos que podrían interesarte</h2>
+            <div class="container-slider">
+                <div class="container-carousel">
+                    <i id="left" class="caret fa-solid fa-angle-left fa-2x"></i>
+                    <ul class="carousel">
+                        <li class="carousel-product">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="rating-value">4.5</span>
+                            </div>
+        
+                            <figure><img src="../images/poncho.jpg" class="d-block w-100" alt="poncho"></figure>
+        
+                            <div class="info-product">
+                                <h4>Poncho de lana 1</h4>
+                                <p class="precio_product">s/.50.00</p>
+                                <button>Ver producto</button>
+                            </div>
+                        </li>
+                        <li class="carousel-product">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="rating-value">4.5</span>
+                            </div>
+        
+                            <figure><img src="../images/catalogo/poncho.jpg" class="d-block w-100" alt="poncho"></figure>
+                            
+                            <div class="info-product">
+                                <h4>Poncho de lana 2</h4>
+                                <p class="precio_product">s/.50.00</p>
+                                <button>Ver producto</button>
+                            </div>
+                        </li>
+                        <li class="carousel-product">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="rating-value">4.5</span>
+                            </div>
+        
+                            <figure><img src="../images/poncho.jpg" class="d-block w-100" alt="poncho"></figure>
+                            
+                            <div class="info-product">
+                                <h4>Poncho de lana 3</h4>
+                                <p class="precio_product">s/.50.00</p>
+                                <button>Ver producto</button>
+                            </div>
+                        </li>
+                        <li class="carousel-product">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="rating-value">4.5</span>
+                            </div>
+        
+                            <figure><img src="../images/catalogo/poncho.jpg" class="d-block w-100" alt="poncho"></figure>
+                            
+                            <div class="info-product">
+                                <h4>Poncho de lana 4</h4>
+                                <p class="precio_product">s/.50.00</p>
+                                <button>Ver producto</button>
+                            </div>
+                        </li>
+                        <li class="carousel-product">
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="rating-value">4.5</span>
+                            </div>
+        
+                            <figure><img src="../images/poncho.jpg" class="d-block w-100" alt="poncho"></figure>
+                            
+                            <div class="info-product">
+                                <h4>Poncho de lana 5</h4>
+                                <p class="precio_product">s/.50.00</p>
+                                <button>Ver producto</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <i id="right" class="caret fa-solid fa-angle-right fa-2x"></i>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="rating">
-                    <i class="fa-solid fa-star"></i>
-                    <span class="rating-value">4.5</span>
-                </div>
-
-                <figure><img src="../images/bufanda.jpg" alt="poncho"></figure>
-
-                <div class="info-product">
-                    <h4>Poncho de lana</h4>
-                    <p class="precio_product">s/.50.00</p>
-                    <button>Ver producto</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-            </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#interest-products" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#interest-products" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </section>
     </main>
 
@@ -519,7 +557,8 @@
             </ul>
         </div>
     </footer>
-
+    <script src="../js/catalogo.js"></script>
+    <script src="../js/carousel.js" defer></script>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -529,6 +568,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <script src="../js/catalogo.js"></script>
 </body>
 </html>
