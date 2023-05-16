@@ -1,3 +1,23 @@
+//Filter
+
+//Ordenar por
+
+const selected = document.querySelector(".option-selected");
+const optionsContainer = document.querySelector(".options-container");
+
+const optionsList = document.querySelectorAll(".option");
+
+selected.addEventListener("click", () => {
+    optionsContainer.classList.toggle("active");
+});
+
+optionsList.forEach(o => {
+    o.addEventListener("click", () => {
+    selected.innerHTML = o.querySelector("label").innerHTML;
+    optionsContainer.classList.remove("active");
+    });
+});
+
 //Range slider
 
 const rangeInput = document.querySelectorAll(".range-input input"), priceInput = document.querySelectorAll(".price-input input"), range = document.querySelector(".slider .progress");

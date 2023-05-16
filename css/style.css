@@ -31,6 +31,10 @@ h6 {
   font-size: 1rem;
 }
 
+p {
+  font-size: 1rem;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -409,25 +413,42 @@ nav .icons i:hover {
 }
 .container-catalogo .filtro h3 {
   margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.container-catalogo .filtro .f-precio h4 {
+  margin-bottom: 1.5rem;
 }
 .container-catalogo .filtro .f-precio .price-input {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.container-catalogo .filtro .f-precio .price-input input {
-  width: 6rem;
+.container-catalogo .filtro .f-precio .price-input .field {
+  display: flex;
+  align-items: center;
+}
+.container-catalogo .filtro .f-precio .price-input .field span {
+  margin: 0 0.5rem;
+}
+.container-catalogo .filtro .f-precio .price-input .field input {
+  width: 5rem;
   font-size: 1rem;
   text-align: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   border-radius: 0.4rem;
   border: solid #4F4F4F 1px;
 }
-.container-catalogo .filtro .f-precio .price-input input[type=number]::-webkit-inner-spin-button {
+.container-catalogo .filtro .f-precio .price-input .field input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-.container-catalogo .filtro .f-precio .price-input input[type=number]::-webkit-outer-spin-button {
+.container-catalogo .filtro .f-precio .price-input .field input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
+}
+.container-catalogo .filtro .f-precio .price-input .separator {
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 .container-catalogo .filtro .f-precio .slider {
   height: 0.7rem;
@@ -480,6 +501,83 @@ nav .icons i:hover {
   background-color: #ACDE7B;
   box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.219);
   pointer-events: auto;
+}
+.container-catalogo .filtro .f-ordenar-por {
+  display: flex;
+  flex-direction: column;
+}
+.container-catalogo .filtro .f-ordenar-por .option-selected {
+  position: relative;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  order: 0;
+}
+.container-catalogo .filtro .f-ordenar-por .option-selected::after {
+  content: "";
+  background: url("../images/icons/angle-down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 1rem;
+  top: 0.2rem;
+  right: 0.5rem;
+  transition: all 0.4s;
+}
+.container-catalogo .filtro .f-ordenar-por .options-container {
+  max-height: 0;
+  width: 100%;
+  transition: all 0.4s;
+  overflow: hidden;
+  opacity: 0;
+  order: 1;
+}
+.container-catalogo .filtro .f-ordenar-por .options-container .option {
+  display: flex;
+}
+.container-catalogo .filtro .f-ordenar-por .options-container .option input {
+  cursor: pointer;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  border: solid black 0.1rem;
+  transform: translateY(0.25em);
+  display: grid;
+  place-content: center;
+  margin-inline: 0.5rem;
+}
+.container-catalogo .filtro .f-ordenar-por .options-container .option input[type=radio] {
+  -webkit-appearance: none;
+}
+.container-catalogo .filtro .f-ordenar-por .options-container .option input[type=radio]::before {
+  content: "";
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #ACDE7B;
+  border: solid #ACDE7B 0.1rem;
+}
+.container-catalogo .filtro .f-ordenar-por .options-container .option input[type=radio]:checked::before {
+  transform: scale(1);
+}
+.container-catalogo .filtro .f-ordenar-por .options-container .option input[type=radio]:checked {
+  border: solid #ACDE7B 0.1rem;
+}
+.container-catalogo .filtro .f-ordenar-por .options-container .option label {
+  cursor: pointer;
+}
+.container-catalogo .filtro .f-ordenar-por .options-container .option:hover input {
+  border: #ACDE7B solid 2px;
+}
+.container-catalogo .filtro .f-ordenar-por .options-container.active {
+  max-height: 8rem;
+  opacity: 1;
+}
+.container-catalogo .filtro .f-ordenar-por .options-container.active + .option-selected::after {
+  transform: rotateX(180deg);
+  top: -0.5rem;
 }
 .container-catalogo .container_productos {
   margin: auto;

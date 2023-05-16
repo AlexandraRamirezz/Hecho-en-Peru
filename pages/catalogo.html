@@ -83,69 +83,74 @@
                         <input type="range" class="range-max" min="10" max="2000" value="1500" step="10" style="cursor:pointer">
                     </div>
                     <div class="price-input">
-                        <input type="number" class="precio_minimo" placeholder="Mínimo" value="500">
-                        <input type="number" class="precio_maximo" placeholder="Máximo" value="1500">
+                        <div class="field">
+                            <span>Min</span><input type="number" class="precio_minimo" placeholder="Mínimo" value="500">
+                        </div>
+                        <div class="separator">-</div>
+                        <div class="field">
+                            <span>Max</span><input type="number" class="precio_maximo" placeholder="Máximo" value="1500">
+                        </div>
                     </div>
                 </div>
 
-                <div class="f-ordenar-por dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Ordenar por
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>
+                <div class="f-ordenar-por">
+                    <div class="options-container active">
+                        <div class="option">
                             <input type="radio" id="order-mas-vendidos" name="radio-ordenar-por">
                             <label for="order-mas-vendidos">Más vendidos</label>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="option">
                             <input type="radio" id="order-mas-recientes" name="radio-ordenar-por">
                             <label for="order-mas-recientes">Más recientes</label>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="option">
                             <input type="radio" id="order-mas-en-oferta" name="radio-ordenar-por">
                             <label for="order-mas-en-oferta">En oferta</label>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                    <div class="option-selected">
+                        <h4>Ordenar por</h4>
+                    </div>
                 </div>
 
-                <div class="f-categorias dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Categorías
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>
+                <div class="f-categorias">
+                    <div class="options-container active">
+                        <div class="option">
                             <input type="checkbox" id="c-collares" name="check-categorias">
                             <label for="c-collares">Collares</label>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="option">
                             <input type="checkbox" id="c-vasijas" name="check-categorias">
                             <label for="c-vasijas">Vasijas</label>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="option">
                             <input type="checkbox" id="c-ponchos" name="check-categorias">
                             <label for="c-ponchos">Ponchos</label>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="option">
                             <input type="checkbox" id="c-chalinas" name="check-categorias">
                             <label for="c-chalinas">Chalinas</label>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="option">
                             <input type="checkbox" id="c-aretes" name="check-categorias">
                             <label for="c-aretes">Aretes</label>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="option">
                             <input type="checkbox" id="c-decoraciones" name="check-categorias">
                             <label for="c-decoraciones">Decoraciones</label>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="option">
                             <input type="checkbox" id="c-sombreros" name="check-categorias">
                             <label for="c-sombreros">Sombreros</label>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="option">
                             <input type="checkbox" id="c-populares" name="check-categorias">
                             <label for="c-populares">Populares</label>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                    <div class="option-selected">
+                        <h4>Categorías</h4>
+                    </div>
                 </div>
 
                 <div class="f-regiones dropdown">

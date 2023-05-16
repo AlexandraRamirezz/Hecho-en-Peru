@@ -9,25 +9,42 @@
         border-radius: 0.8rem;
         h3{
             margin-top: 1rem;
+            margin-bottom: 1rem;
         }
         .f-precio{
+            h4{
+                margin-bottom: 1.5rem;
+            }
             .price-input {
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                input {
-                    width: 6rem;
-                    font-size: 1rem;
-                    text-align: center;
-                    font-family: $font-family_1;
-                    border-radius: 0.4rem;
-                    border: solid #4F4F4F 1px;
-                    &[type="number"]::-webkit-inner-spin-button {
-                        -webkit-appearance: none;
+                .field{
+                    display: flex;
+                    align-items: center;
+                    span{
+                        margin: 0 0.5rem;
                     }
-                    &[type="number"]::-webkit-outer-spin-button {
-                        -webkit-appearance: none;
+                    input {
+                        width: 5rem;
+                        font-size: 1rem;
+                        text-align: center;
+                        font-family: $font-family_1;
+                        border-radius: 0.4rem;
+                        border: solid #4F4F4F 1px;
+                        &[type="number"]::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                        }
+                        &[type="number"]::-webkit-outer-spin-button {
+                            -webkit-appearance: none;
+                        }
                     }
+                }
+                .separator{
+                    font-weight: 600;
+                    font-size: 1.5rem;
                 }
             }
             .slider {
@@ -81,6 +98,91 @@
                     box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.219);
                     pointer-events: auto;
                 }*/
+                
+            }
+        
+        }
+        .f-ordenar-por{
+            display: flex;
+            flex-direction: column;
+            .option-selected{
+                position: relative;
+                margin-bottom: 1rem;
+                cursor: pointer;
+                
+                order: 0;
+                &::after{
+                    content: "";
+                    background: url("../images/icons/angle-down.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
+                    position: absolute;
+                    height: 100%;
+                    width: 1rem;
+                    top: 0.20rem;
+                    right: 0.5rem;
+                    
+                    transition: all 0.4s;
+                }
+            }
+            .options-container{
+                max-height: 0;
+                width: 100%;
+                transition: all 0.4s;
+                overflow: hidden;
+                opacity: 0;
+
+                order: 1;
+                .option{
+                    display: flex;
+                    input{
+                        cursor: pointer;
+                        height: 1em;
+                        width: 1em;
+                        border-radius: 50%;
+                        border: solid black 0.1rem;
+                        transform: translateY(0.25em);
+                        display: grid;
+                        place-content: center;
+                        margin-inline: 0.5rem;
+                        &[type="radio"]{
+                            -webkit-appearance: none;
+                            &::before{
+                                content: "";
+                                width: 0.60em;
+                                height: 0.60em;
+                                border-radius: 50%;
+                                transform: scale(0);
+                                transition: 120ms transform ease-in-out;
+                                box-shadow: inset 1em 1em #ACDE7B;
+                                border: solid #ACDE7B 0.1rem;
+                            }
+                            &:checked::before{
+                                transform: scale(1);
+                            }
+                            &:checked{
+                                border: solid #ACDE7B 0.1rem;
+                            }
+                        }
+                    }
+                    label{
+                        cursor: pointer;
+                    }
+                    &:hover{
+                        input{
+                            border: #ACDE7B solid 2px;
+                        }
+                    }
+                }
+            }
+            .options-container.active{
+                max-height: 8rem;
+                opacity: 1;
+                & + .option-selected::after{
+                    transform: rotateX(180deg);
+                    top:-0.5rem;
+                }
             }
         }
     }
