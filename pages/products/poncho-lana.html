@@ -54,6 +54,70 @@
                 <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="./poncho-lana.html">This</a></li>
             </ul>
         </section>
+
+        <section class="product-container">
+            <div class="product-box">
+                <div class="small-images">
+                    <figure><img src="../../images/catalogo/poncho.jpg" onclick="clickImg(this)"></figure>
+                    <figure><img src="../../images/poncho.jpg" onclick="clickImg(this)"></figure>
+                    <figure><img src="../../images/bufanda.jpg" onclick="clickImg(this)"></figure>
+                    <figure><img src="../../images/chullo.jpeg" onclick="clickImg(this)"></figure>
+                </div>
+                <div class="main-images">
+                    <figure><img src="../../images/catalogo/poncho.jpg" id="image-box"></figure>
+                </div>
+            </div>
+            <div class="general-info">
+                <div class="rating-comments">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span class="rating-value">4.5</span>
+                    </div>
+                    <div class="comments">
+                        40 comentarios
+                    </div>
+                </div>
+                <h3>Poncho de lana</h3>
+                <h2>S/. 50.00</h2>
+                <h4>Color</h4>
+                <div class="color-options">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <h4>Talla</h4>
+                <div class="f-talla">
+                    <div class="options-container active">
+                        <div class="option">
+                            <input type="radio" id="talla-s" name="radio-talla">
+                            <label for="talla-s">Small (S)</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="talla-m" name="radio-talla">
+                            <label for="talla-m">Mediano (M)</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="talla-l" name="radio-talla">
+                            <label for="talla-l">Large (L)</label>
+                        </div>
+                    </div>
+                    <div class="option-selected">
+                        <h4>Seleccione una talla</h4>
+                    </div>
+                </div>
+                <h4>Número de unidades</h4>
+                <div class="cantidad">
+                    <button class="minus">-</button>
+                    <input type="number" class="unidades-selected" value="1">
+                    <button class="plus">+</button>
+                </div>
+                <button class="agregar-carrito">Agregar al carrito<i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="logo text-center">
@@ -100,6 +164,7 @@
     </footer>
 
     <script src="../../js/active-state.js"></script>
+    <script src="../../js/poncho-lana.js"></script>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
