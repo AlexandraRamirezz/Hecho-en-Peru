@@ -669,6 +669,96 @@ nav .icons i:hover {
   transform: rotateX(180deg);
   top: -0.5rem;
 }
+.container-catalogo .filtro .f-regiones {
+  display: flex;
+  flex-direction: column;
+}
+.container-catalogo .filtro .f-regiones .option-selected {
+  margin-top: 1rem;
+  position: relative;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  order: 0;
+}
+.container-catalogo .filtro .f-regiones .option-selected::after {
+  content: "";
+  background: url("../images/icons/angle-down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 1rem;
+  top: 0.2rem;
+  right: 0.5rem;
+  transition: all 0.4s;
+}
+.container-catalogo .filtro .f-regiones .options-container {
+  max-height: 0;
+  width: 100%;
+  transition: all 0.4s;
+  overflow: hidden;
+  opacity: 0;
+  margin-bottom: 1.5rem;
+  order: 1;
+}
+.container-catalogo .filtro .f-regiones .options-container::-webkit-scrollbar {
+  width: 0.5rem;
+  background: #CFC9C9;
+  border-radius: 0.5rem;
+}
+.container-catalogo .filtro .f-regiones .options-container::-webkit-scrollbar-thumb {
+  background-color: #ACDE7B;
+  border-radius: 0.5rem;
+}
+.container-catalogo .filtro .f-regiones .options-container .option {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.container-catalogo .filtro .f-regiones .options-container .option input {
+  cursor: pointer;
+  height: 1em;
+  width: 1em;
+  border: solid black 0.1rem;
+  transform: translateY(0.25em);
+  display: grid;
+  place-content: center;
+  margin-inline: 0.5rem;
+}
+.container-catalogo .filtro .f-regiones .options-container .option input[type=checkbox] {
+  -webkit-appearance: none;
+}
+.container-catalogo .filtro .f-regiones .options-container .option input[type=checkbox]::before {
+  content: "";
+  width: 0.6em;
+  height: 0.6em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #ffffff;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+.container-catalogo .filtro .f-regiones .options-container .option input[type=checkbox]:checked::before {
+  transform: scale(1);
+}
+.container-catalogo .filtro .f-regiones .options-container .option input[type=checkbox]:checked {
+  border: solid #ACDE7B 0.1rem;
+  background-color: #ACDE7B;
+}
+.container-catalogo .filtro .f-regiones .options-container .option label {
+  cursor: pointer;
+}
+.container-catalogo .filtro .f-regiones .options-container .option:hover input {
+  border: #ACDE7B solid 0.1rem;
+}
+.container-catalogo .filtro .f-regiones .options-container.active {
+  max-height: 8rem;
+  opacity: 1;
+  overflow-y: scroll;
+}
+.container-catalogo .filtro .f-regiones .options-container.active + .option-selected::after {
+  transform: rotateX(180deg);
+  top: -0.5rem;
+}
 .container-catalogo .container_productos {
   margin: auto;
   margin-top: 4%;

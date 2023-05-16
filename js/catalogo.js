@@ -2,21 +2,44 @@
 
 //Ordenar por
 
-const selected = document.querySelector(".option-selected");
-const optionsContainer = document.querySelector(".options-container");
+const selectedOrder = document.querySelector(".f-ordenar-por .option-selected");
+const optionsContainerOrder = document.querySelector(".f-ordenar-por .options-container");
 
 const optionsListOrder = document.querySelectorAll(".f-ordenar-por .option");
 
-selected.addEventListener("click", () => {
-    optionsContainer.classList.toggle("active");
+selectedOrder.addEventListener("click", () => {
+    optionsContainerOrder.classList.toggle("active");
 });
 
 optionsListOrder.forEach(o => {
     o.addEventListener("click", () => {
-    selected.innerHTML = o.querySelector("label").innerHTML;
-    optionsContainer.classList.remove("active");
+    selectedOrder.innerHTML = o.querySelector("label").innerHTML;
+    optionsContainerOrder.classList.remove("active");
     });
 });
+
+//Categorías
+
+const selectedCategory = document.querySelector(".f-categorias .option-selected");
+const optionsContainerCategory = document.querySelector(".f-categorias .options-container");
+
+const optionsListCategory = document.querySelectorAll(".f-categorias .option");
+
+selectedCategory.addEventListener("click", () => {
+    optionsContainerCategory.classList.toggle("active");
+});
+
+//Regiones
+
+const selectedRegions = document.querySelector(".f-regiones .option-selected");
+const optionsContainerRegions = document.querySelector(".f-regiones .options-container");
+
+const optionsListRegions = document.querySelectorAll(".f-regiones .option");
+
+selectedRegions.addEventListener("click", () => {
+    optionsContainerRegions.classList.toggle("active");
+});
+
 
 //Range slider
 
