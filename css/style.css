@@ -1037,12 +1037,13 @@ nav .icons i:hover {
 .product-container .product-box {
   width: 60%;
   display: flex;
-  border: solid black 1px;
+  align-items: center;
+  margin-bottom: 0;
 }
 .product-container .product-box .small-images {
   display: flex;
   flex-direction: column;
-  margin-right: 1.5rem;
+  margin-right: 3.5rem;
 }
 .product-container .product-box .small-images figure {
   margin-bottom: 0.5rem;
@@ -1050,7 +1051,7 @@ nav .icons i:hover {
   overflow: hidden;
 }
 .product-container .product-box .small-images figure img {
-  width: 6rem;
+  width: 8rem;
   border-radius: 0.6rem;
   transition: all 0.5s ease;
 }
@@ -1060,33 +1061,214 @@ nav .icons i:hover {
 .product-container .product-box .small-images figure:hover img {
   transform: scale(1.1, 1.1);
 }
+.product-container .product-box .small-images figure:last-child {
+  margin-bottom: 0;
+}
 .product-container .product-box .main-images figure {
   border-radius: 0.6rem;
 }
 .product-container .product-box .main-images figure #image-box {
-  width: 26rem;
+  width: 35rem;
   border-radius: 0.6rem;
 }
 .product-container .general-info {
-  border: solid black 1px;
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .product-container .general-info .rating-comments {
+  align-self: normal;
   display: flex;
+  justify-content: space-around;
   margin-bottom: 1.5rem;
 }
 .product-container .general-info h3 {
-  text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
 }
 .product-container .general-info h2 {
   text-align: center;
 }
-.product-container .general-info .color-options span {
-  width: 6rem;
-  height: 6rem;
+.product-container .general-info h4 {
+  align-self: flex-start;
+  margin-bottom: 1.5rem;
+  margin-left: 2rem;
+}
+.product-container .general-info .color-options {
+  align-self: normal;
+  margin-bottom: 1.5rem;
+}
+.product-container .general-info .color-options ul {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.product-container .general-info .color-options ul .color-item {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.product-container .general-info .color-options ul .color-item .option {
+  position: relative;
+  top: 0.15rem;
+  left: 0.15rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  border: none;
+}
+.product-container .general-info .color-options ul .color-item:nth-child(1) .option {
   background-color: #E09898;
-  border: solid black 1px;
+}
+.product-container .general-info .color-options ul .color-item:nth-child(2) .option {
+  background-color: #9d9d9d;
+}
+.product-container .general-info .color-options ul .color-item:nth-child(3) .option {
+  background-color: black;
+}
+.product-container .general-info .color-options ul .color-item:hover {
+  border: solid 2px #858585;
+}
+.product-container .general-info .color-options ul .color-item.selected {
+  border: solid 2px #858585;
+}
+.product-container .general-info .f-talla {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #F2F2F2;
+  border-radius: 0.8rem;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+.product-container .general-info .f-talla .option-selected {
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+  order: 0;
+}
+.product-container .general-info .f-talla .option-selected::after {
+  content: "";
+  background: url("../images/icons/angle-down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 1rem;
+  top: 0.2rem;
+  right: 0.5rem;
+  transition: all 0.4s;
+}
+.product-container .general-info .f-talla .options-container {
+  max-height: 0;
+  width: 100%;
+  transition: all 0.4s;
+  overflow: hidden;
+  opacity: 0;
+  order: 1;
+}
+.product-container .general-info .f-talla .options-container .option {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.product-container .general-info .f-talla .options-container .option input {
+  cursor: pointer;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  border: solid black 0.1rem;
+  transform: translateY(0.25em);
+  display: grid;
+  place-content: center;
+  margin-inline: 0.5rem;
+}
+.product-container .general-info .f-talla .options-container .option input[type=radio] {
+  -webkit-appearance: none;
+}
+.product-container .general-info .f-talla .options-container .option input[type=radio]::before {
+  content: "";
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #ACDE7B;
+  border: solid #ACDE7B 0.1rem;
+}
+.product-container .general-info .f-talla .options-container .option input[type=radio]:checked::before {
+  transform: scale(1);
+}
+.product-container .general-info .f-talla .options-container .option input[type=radio]:checked {
+  border: solid #ACDE7B 0.1rem;
+}
+.product-container .general-info .f-talla .options-container .option label {
+  cursor: pointer;
+}
+.product-container .general-info .f-talla .options-container .option:hover input {
+  border: #ACDE7B solid 2px;
+}
+.product-container .general-info .f-talla .options-container .option:first-child {
+  margin-top: 1rem;
+}
+.product-container .general-info .f-talla .options-container.active {
+  max-height: 8rem;
+  opacity: 1;
+}
+.product-container .general-info .f-talla .options-container.active + .option-selected::after {
+  transform: rotateX(180deg);
+  top: -0.5rem;
+}
+.product-container .general-info .cantidad {
+  display: flex;
+  justify-content: center;
+  height: 3rem;
+  margin-bottom: 2rem;
+}
+.product-container .general-info .cantidad .minus {
+  width: 3rem;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.product-container .general-info .cantidad .unidades-selected {
+  background-color: white;
+  border: none;
+  border-right: solid rgba(185, 185, 185, 0.6352941176) 1px;
+  border-left: solid rgba(185, 185, 185, 0.6352941176) 1px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  padding: 0.2rem;
+  text-align: center;
+  width: 4rem;
+}
+.product-container .general-info .cantidad .unidades-selected[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.product-container .general-info .cantidad .unidades-selected[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.product-container .general-info .cantidad .plus {
+  width: 3rem;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.product-container .general-info .agregar-carrito {
+  width: 85%;
+  border: none;
+  height: 3rem;
+  border-radius: 0.8rem;
+  background-color: #A9E5BB;
+  font-weight: 600;
+}
+.product-container .general-info .agregar-carrito span {
+  margin-right: 1rem;
 }
 
 footer {

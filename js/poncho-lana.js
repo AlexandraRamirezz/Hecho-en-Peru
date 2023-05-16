@@ -22,3 +22,38 @@ minus.addEventListener("click", ()=>{
     unidades -= 1;
     num.value = unidades;
 });
+
+//COLOR SELECTOR
+
+const colorItems = document.querySelectorAll('.color-item');
+
+colorItems.forEach((item) => {
+    const button = item.querySelector('.option');
+    button.addEventListener('click', () => {
+    // Remover la clase 'selected' de todos los color-item
+    colorItems.forEach((item) => {
+        item.classList.remove('selected');
+    });
+    
+    // Agregar la clase 'selected' al color-item padre del botón actual
+    item.classList.add('selected');
+    });
+});
+
+//TALLA DROPDOWN
+
+const selectedTalla = document.querySelector(".f-talla .option-selected");
+const optionsContainerTalla = document.querySelector(".f-talla .options-container");
+
+const optionsListTalla = document.querySelectorAll(".f-talla .option");
+
+selectedTalla.addEventListener("click", () => {
+    optionsContainerTalla.classList.toggle("active");
+});
+
+optionsListTalla.forEach(o => {
+    o.addEventListener("click", () => {
+    selectedTalla.innerHTML = o.querySelector("label").innerHTML;
+    optionsContainerTalla.classList.remove("active");
+    });
+});
