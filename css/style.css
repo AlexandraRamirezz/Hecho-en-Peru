@@ -90,6 +90,11 @@ nav .menu-item:hover {
   border-bottom: 0.2rem solid #E09898;
   padding-bottom: 0.2rem;
 }
+nav .menu-item.active {
+  color: #E46953;
+  border-bottom: 0.2rem solid #E09898;
+  padding-bottom: 0.2rem;
+}
 nav .search-bar {
   grid-area: buscador;
 }
@@ -989,6 +994,37 @@ nav .icons i:hover {
   background-color: #0E0E0E;
   color: #FFFFFF;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
+}
+
+.breadcrumbs {
+  margin-top: 1rem;
+  margin-left: 4rem;
+}
+.breadcrumbs ul {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.breadcrumbs ul .breadcrumbs-item:not(:last-of-type)::after {
+  content: "/";
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  color: #9d9d9d;
+  font-size: 1.3rem;
+}
+.breadcrumbs ul .breadcrumbs-item .breadcrumbs-link {
+  color: #858585;
+}
+.breadcrumbs ul .breadcrumbs-item .breadcrumbs-link:hover {
+  color: #E46953;
+  border-bottom: 0.2rem solid #E09898;
+  padding-bottom: 0.2rem;
+}
+.breadcrumbs ul .breadcrumbs-item .breadcrumbs-link.active {
+  color: #E46953;
+}
+.breadcrumbs ul li:last-child .breadcrumbs-link {
+  font-weight: bold;
 }
 
 footer {

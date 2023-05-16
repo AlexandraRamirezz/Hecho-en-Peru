@@ -44,6 +44,12 @@ nav {
             padding-bottom: 0.2rem;
         }
     }
+
+    .menu-item.active{
+        color: $color_2;
+        border-bottom: 0.2rem solid #E09898;
+        padding-bottom: 0.2rem;
+    }
     
     .search-bar {
         grid-area: buscador;

@@ -1,0 +1,32 @@
+.breadcrumbs{
+    margin-top: 1rem;
+    margin-left: 4rem;
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        .breadcrumbs-item{
+            &:not(:last-of-type)::after{
+                content: "/";
+                margin-left: 1rem;
+                margin-right: 0.5rem;
+                color:#9d9d9d;
+                font-size: 1.3rem;
+            }
+            .breadcrumbs-link{
+                color:#858585;
+                &:hover{
+                    color: $color_2;
+                    border-bottom: 0.2rem solid #E09898;
+                    padding-bottom: 0.2rem;
+                }
+            }
+            .breadcrumbs-link.active{
+                color: $color_2;
+            }
+        }
+        li:last-child .breadcrumbs-link{
+            font-weight: bold;
+        }
+    }
+}
