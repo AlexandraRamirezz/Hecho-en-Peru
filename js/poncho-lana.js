@@ -1,3 +1,18 @@
+//BREADCRUMB
+
+function updateBreadcrumb() {
+  const productName = document.querySelector(".general-info h3").textContent;
+  const breadcrumbLink = document.querySelector(".breadcrumbs-item:nth-child(3) .breadcrumbs-link");
+  breadcrumbLink.textContent = productName;
+}
+
+// Al cargar la página
+window.addEventListener("DOMContentLoaded", function() {
+  // Llamar a la función para actualizar el breadcrumb
+  updateBreadcrumb();
+});
+
+
 //SLICE IMG
 
 function clickImg(smallImg)
