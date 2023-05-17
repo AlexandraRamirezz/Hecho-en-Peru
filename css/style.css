@@ -1033,6 +1033,7 @@ nav .icons i:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 3rem;
 }
 .product-container .product-box {
   width: 60%;
@@ -1269,6 +1270,72 @@ nav .icons i:hover {
 }
 .product-container .general-info .agregar-carrito span {
   margin-right: 1rem;
+}
+
+.more-info-product {
+  width: 90%;
+  margin: auto;
+}
+.more-info-product .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.more-info-product .row figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.more-info-product .row .info-artesano h3 {
+  font-weight: 400;
+  border-bottom: 0.2rem solid black;
+  padding-bottom: 0.7rem;
+}
+.more-info-product .row .info-artesano h4 {
+  opacity: 70%;
+}
+.more-info-product .row .info-artesano p {
+  text-align: justify;
+  opacity: 70%;
+}
+.more-info-product .row .history-product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.more-info-product .row .history-product h3 {
+  font-weight: 400;
+  border-bottom: 0.2rem solid black;
+  padding-bottom: 0.7rem;
+}
+.more-info-product .row .history-product p {
+  text-align: justify;
+  opacity: 70%;
+}
+.more-info-product .row .history-product .region {
+  align-self: flex-end;
+  margin-top: 1.5rem;
+}
+.more-info-product .row .history-product .region .region-name {
+  margin-left: 0.3rem;
+  margin-right: 1.5rem;
+}
+.more-info-product .row .history-product .region .conocer-mas {
+  border: none;
+  background-color: #F9C846;
+  border-radius: 1rem;
+  width: 8.5rem;
+  height: 2rem;
+  font-weight: 500;
+}
+.more-info-product .product-details h3 {
+  font-weight: 400;
+  border-bottom: 0.2rem solid black;
+  padding-bottom: 0.7rem;
+}
+.more-info-product .product-details p {
+  text-align: justify;
+  opacity: 70%;
 }
 
 footer {

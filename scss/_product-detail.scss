@@ -37,6 +37,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 3rem;
     .product-box{
         width: 60%;
         display: flex;
@@ -284,6 +285,78 @@
             span{
                 margin-right: 1rem;
             }
+        }
+    }
+}
+
+.more-info-product{
+    width: 90%;
+    margin: auto;
+    .row{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        figure{
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .info-artesano{
+            h3{
+                font-weight: 400;
+                border-bottom: 0.2rem solid black;
+                padding-bottom: 0.7rem;
+            }
+            h4{
+                opacity: 70%;
+            }
+            p{
+                text-align: justify;
+                opacity: 70%;
+            }
+        }
+        .history-product{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            h3{
+                font-weight: 400;
+                border-bottom: 0.2rem solid black;
+                padding-bottom: 0.7rem;
+            }
+            p{
+                text-align: justify;
+                opacity: 70%;
+            }
+            .region{
+                align-self: flex-end;
+                margin-top: 1.5rem;
+                .region-name{
+                    margin-left: 0.3rem;
+                    margin-right: 1.5rem;
+                }
+                .conocer-mas{
+                    border: none;
+                    background-color: #F9C846;
+                    border-radius: 1rem;
+                    width: 8.5rem;
+                    height: 2rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .product-details{
+        h3{
+            font-weight: 400;
+            border-bottom: 0.2rem solid black;
+            padding-bottom: 0.7rem;
+        }
+        p{
+            text-align: justify;
+            opacity: 70%;
         }
     }
 }

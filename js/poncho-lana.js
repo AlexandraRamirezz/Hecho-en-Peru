@@ -57,3 +57,34 @@ optionsListTalla.forEach(o => {
     optionsContainerTalla.classList.remove("active");
     });
 });
+
+//CARRUSEL
+
+const carousel = document.querySelector(".carousel");
+const arrowBtns = document.querySelectorAll(".container-slider .caret");
+const firstCardWidth = carousel.querySelector(".carousel-product").offsetWidth;
+const carouselProducts = Array.from(carousel.querySelectorAll(".carousel-product"));
+const firstCard = carouselProducts[0];
+const lastCard = carouselProducts[carouselProducts.length - 1];
+
+let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+carouselProducts.slice(0, cardPerView).forEach((card) => {
+    const cloneFirstCard = card.cloneNode(true);
+    carousel.appendChild(cloneFirstCard);
+});
+
+carouselProducts.slice(-cardPerView).forEach((card) => {
+    const cloneLastCard = card.cloneNode(true);
+    carousel.insertBefore(cloneLastCard, firstCard);
+});
+
+carousel.classList.add("no-transition");
+carousel.scrollLeft = carousel.offsetWidth;
+carousel.classList.remove("no-transition");
+
+arrowBtns.forEach(btn => {
+    btn.addEventListener("click", () =>{
+        carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+    })
+});
