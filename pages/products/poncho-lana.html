@@ -126,6 +126,7 @@
                 <button class="agregar-carrito"><span>Agregar al carrito</span><i class="fa-solid fa-cart-shopping"></i></button>
             </div>
         </section>
+
         <section class="more-info-product">
             <div class="row">
                 <figure class="col-xl-3 col-lg-4"><img src="../../images/catalogo/poncho.jpg" alt=""></figure>
@@ -235,6 +236,43 @@
                     <i id="right" class="caret fa-solid fa-angle-right fa-2x"></i>
                 </div>
             </div>
+        </section>
+
+        <section class="comments-section">
+            <div class="comments-presentation">
+                <h3>Comentarios</h3>
+                <div class="new-comment-section">
+                    <div class="user-icon">
+                        <i class="fa-solid fa-user fa-2x"></i>
+                    </div>
+                    <div class="input-comment">
+                        <input id="newComment" type="text" placeholder="Agrega un comentario...">
+                        <div class="btn-comment">
+                            <button onclick="nComentario()">Comentar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul id="comments-list" class="comments-container">
+                <li class="comment">
+                    <div class="comment-user">
+                        <i class="fa-solid fa-user fa-2x"></i>
+                    </div>
+                    <div class="comment-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, maiores sapiente saepe obcaecati voluptates suscipit ex quidem ad sed modi.                        
+                    </div>
+                    <div class="comment-votes">
+                        <div class="liked-comment" onclick="likeComment(this)">
+                            <i class="fa-regular fa-thumbs-up fa-"></i>
+                            <p class="count">0</p>
+                        </div>
+                        <div class="dislike-comment" onclick="dislikeComment(this)">
+                            <i class="fa-regular fa-thumbs-down"></i>
+                            <p class="count">0</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </section>
     </main>
     <footer>
