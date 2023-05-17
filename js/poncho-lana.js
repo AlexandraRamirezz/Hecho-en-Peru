@@ -125,14 +125,16 @@ function nComentario() {
   
   document.getElementById("newComment").value = "";
   showComments();
+  updateCommentCount();
 }
 
 // Función para manejar el evento de presionar tecla en el campo de entrada
 function handleKeyPress(event) {
   // Verificar si la tecla presionada es "Enter" (código de tecla 13)
   if (event.keyCode === 13) {
-    nComentario();
-    showComments(); // Llamar a la función nComentario si se presiona "Enter"
+    nComentario();// Llamar a la función nComentario si se presiona "Enter"
+    showComments(); 
+    updateCommentCount();
   }
 }
 
@@ -232,6 +234,51 @@ function dislikeComment(element) {
     element.classList.add("selected");
   }
 }
+
+//STAR RATING
+
+function updateStarRating() {
+  const ratingValue = parseFloat(document.getElementsByClassName("rating-value")[0].textContent);
+  const stars = document.getElementsByClassName("fa-star");
+
+  // Recorrer los íconos de estrellas y aplicar el color adecuado
+  for (let i = 0; i < stars.length; i++) {
+    if (i < ratingValue) {
+      stars[i].classList.add("rated");
+    } else {
+      stars[i].classList.remove("rated");
+    }
+  }
+}
+
+// Al cargar la página
+window.addEventListener("DOMContentLoaded", function() {
+  // Llamar a la función para actualizar el rating de estrellas
+  updateStarRating();
+});
+
+// Después de cambiar el valor del rating
+/*function cambiarRating(nuevoRating) {
+  // ... tu código existente para cambiar el valor del rating ...
+
+  // Llamar a la función para actualizar el rating de estrellas
+  updateStarRating();
+}*/
+
+
+//NUMBER OF COMMENTS GENERAL INFO
+
+function updateCommentCount() {
+  const commentsList = document.getElementById("comments-list");
+  const commentCount = commentsList.getElementsByClassName("comment").length;
+  const commentsElement = document.getElementsByClassName("number-comments")[0];
+  commentsElement.textContent = `${commentCount} comentario${commentCount !== 1 ? "s" : ""}`;
+}
+
+window.addEventListener("DOMContentLoaded", function() {
+  // Llamar a la función para actualizar el número de comentarios
+  updateCommentCount();
+});
 
 //COMENTARIOS POR PÁGINA
 

@@ -87,6 +87,23 @@
             display: flex;
             justify-content: space-around;
             margin-bottom: 1.5rem;
+            .rating{
+                width: 50%;
+                text-align: center;
+                i{
+                    color:#e0dede;
+                }
+                .rated{
+                    color:#F9C846;
+                }
+                .rating-value{
+                    margin-left: 0.5rem;
+                }
+            }
+            .number-comments{
+                width: 50%;
+                text-align: center;
+            }
         }
         h3{
             margin-bottom: 2.5rem;

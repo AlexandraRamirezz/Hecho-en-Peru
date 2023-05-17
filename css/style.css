@@ -1084,6 +1084,23 @@ nav .icons i:hover {
   justify-content: space-around;
   margin-bottom: 1.5rem;
 }
+.product-container .general-info .rating-comments .rating {
+  width: 50%;
+  text-align: center;
+}
+.product-container .general-info .rating-comments .rating i {
+  color: #e0dede;
+}
+.product-container .general-info .rating-comments .rating .rated {
+  color: #F9C846;
+}
+.product-container .general-info .rating-comments .rating .rating-value {
+  margin-left: 0.5rem;
+}
+.product-container .general-info .rating-comments .number-comments {
+  width: 50%;
+  text-align: center;
+}
 .product-container .general-info h3 {
   margin-bottom: 2.5rem;
 }
