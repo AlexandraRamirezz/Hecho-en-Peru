@@ -1411,7 +1411,7 @@ nav .icons i:hover {
 .comments-section .comments-container {
   width: 90%;
   background-color: white;
-  height: 20rem;
+  height: auto;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -1422,6 +1422,7 @@ nav .icons i:hover {
 }
 .comments-section .comments-container .comment {
   width: 100%;
+  margin-bottom: 1.5rem;
   display: grid;
   grid-template-columns: 0.5fr 25fr 3fr;
   grid-template-rows: auto;
@@ -1452,6 +1453,31 @@ nav .icons i:hover {
 }
 .comments-section .comments-container .comment .comment-votes .dislike-comment .count {
   margin: 0;
+}
+.comments-section .pagination-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.comments-section .pagination-buttons button {
+  background-color: white;
+  border: 0;
+  padding-inline: 0.7rem;
+}
+.comments-section .pagination-buttons button i {
+  opacity: 50%;
+}
+.comments-section .pagination-buttons #currentPageIndicator {
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 0.8rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  padding: 0.2rem;
+  text-align: center;
+  width: 10rem;
 }
 
 footer {

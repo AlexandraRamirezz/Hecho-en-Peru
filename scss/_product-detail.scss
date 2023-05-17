@@ -435,7 +435,7 @@
     .comments-container{
         width: 90%;
         background-color: white;
-        height: 20rem;
+        height: auto;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
@@ -445,6 +445,8 @@
         padding: 1.5rem;
         .comment{
             width: 100%;
+            margin-bottom: 1.5rem;
+            //border: solid black 1px;
             display: grid; 
             grid-template-columns: 0.5fr 25fr 3fr;
             grid-template-rows: auto;
@@ -480,6 +482,31 @@
                     }
                 }
             }
+        }
+    }
+    .pagination-buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        button{
+            background-color: white;
+            border: 0;
+            padding-inline: 0.7rem;
+            i{
+                opacity: 50%;
+            }
+        }
+        #currentPageIndicator{
+            background-color: #F2F2F2;
+            border: none;
+            border-radius: 0.8rem;
+            font-family: $font-family_1;
+            font-weight: 600;
+            padding: 0.2rem;
+            text-align: center;
+            width: 10rem;
         }
     }
 }

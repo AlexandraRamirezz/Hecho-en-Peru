@@ -272,7 +272,30 @@
                         </div>
                     </div>
                 </li>
+                <li class="comment">
+                    <div class="comment-user">
+                        <i class="fa-solid fa-user fa-2x"></i>
+                    </div>
+                    <div class="comment-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, maiores sapiente saepe obcaecati voluptates suscipit ex quidem ad sed modi.                        
+                    </div>
+                    <div class="comment-votes">
+                        <div class="liked-comment" onclick="likeComment(this)">
+                            <i class="fa-regular fa-thumbs-up fa-"></i>
+                            <p class="count">0</p>
+                        </div>
+                        <div class="dislike-comment" onclick="dislikeComment(this)">
+                            <i class="fa-regular fa-thumbs-down"></i>
+                            <p class="count">0</p>
+                        </div>
+                    </div>
+                </li>
             </ul>
+            <div class="pagination-buttons">
+                <button id="prevPageBtn" onclick="showPreviousPage()"><i class="fa-solid fa-caret-left fa-2x"></i></button>
+                <span id="currentPageIndicator"></span>
+                <button id="nextPageBtn" onclick="showNextPage()"><i class="fa-solid fa-caret-right fa-2x"></i></button>
+            </div>
         </section>
     </main>
     <footer>
