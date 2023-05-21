@@ -14,10 +14,11 @@
             border-top-right-radius: 3px;
             padding: 0.5rem;
             border: transparent;
-            background-color: #F2F2F2;
-            color: black;
+            background-color: $background-color_2;
+            color: $color_2;
             font-size: 0.75rem;
-            border-bottom: solid black 1px;
+            border-bottom: solid $color_6 1px;
+            box-shadow: 0px 3px 6px #0000001a;
         }
 
         h6 {
@@ -61,23 +62,35 @@
     }
 
     #btn-contac-one {
-        background-color: black;
-        color: white;
+        background-color: $color_2;
+        color: $color_5;
+
+        &:hover {
+            background-color: $background-color_14;
+            color: $color_5;
+            box-shadow: 0px 3px 6px #0000001a;
+        }
     }
 
     #btn-contac-two {
-        background-color: #F9C846;
-        color: black;
+        background-color: $color_10;
+        color: $color_2;
+
+        &:hover {
+            background-color: $background-color_4;
+            color: $color_2;
+            box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
+        }
     }
 
     #input-menssage-contact {
         font-size: 0.75rem;
         padding: 0.5rem;
-        background-color: #F2F2F2;
+        background-color: $background-color_2;
         width: 100%;
         border: transparent;
         height: 13rem;
-        border-bottom: solid black 1px;
-
+        border-bottom: solid $color_6 1px;
+        box-shadow: 0px 3px 6px #0000001a;
     }
 }

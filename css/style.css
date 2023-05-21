@@ -1041,10 +1041,11 @@ nav .icons i:hover {
   border-top-right-radius: 3px;
   padding: 0.5rem;
   border: transparent;
-  background-color: #F2F2F2;
-  color: black;
+  background-color: #F3F3F3;
+  color: #000000;
   font-size: 0.75rem;
-  border-bottom: solid black 1px;
+  border-bottom: solid rgba(0, 0, 0, 0.6392156863) 1px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
 }
 .container-contacto .form-contact h6 {
   text-align: left;
@@ -1078,21 +1079,32 @@ nav .icons i:hover {
   padding-bottom: 1.7rem;
 }
 .container-contacto #btn-contac-one {
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.container-contacto #btn-contac-one:hover {
+  background-color: #0E0E0E;
+  color: #FFFFFF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
 }
 .container-contacto #btn-contac-two {
   background-color: #F9C846;
-  color: black;
+  color: #000000;
+}
+.container-contacto #btn-contac-two:hover {
+  background-color: #FBC431;
+  color: #000000;
+  box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
 }
 .container-contacto #input-menssage-contact {
   font-size: 0.75rem;
   padding: 0.5rem;
-  background-color: #F2F2F2;
+  background-color: #F3F3F3;
   width: 100%;
   border: transparent;
   height: 13rem;
-  border-bottom: solid black 1px;
+  border-bottom: solid rgba(0, 0, 0, 0.6392156863) 1px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
 }
 
 .breadcrumbs {
