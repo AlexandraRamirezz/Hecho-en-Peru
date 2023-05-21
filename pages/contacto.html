@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hecho en Perú | Chatbot</title>
 
-    <link href="images/favicon.png" rel="icon">
+    <link href="../images/favicon.png" rel="icon">
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -19,10 +20,16 @@
 
     <!-- CSS BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../estilos.css">
+    <!-- FUENTE: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -34,7 +41,7 @@
                 <a class="menu-item" href="../pages/catalogo.html">Catálogo</a>
                 <a class="menu-item" href="../pages/regiones.html">Regiones</a>
                 <a class="menu-item" href="../pages/quienessomos.html">Quiénes somos</a>
-                <a class="menu-item" href="../pages/contacto.html">Contacto</a>
+                <a class="menu-item" href="contacto.html">Contacto</a>
             </div>
             <div class="search-bar">
                 <input type="text" id="user-input" placeholder="Ingresa tu categoría aquí">
@@ -47,83 +54,75 @@
         </nav>
     </header>
 
-
-    
-    <section>
-        <div class="p-6 text-center fondo-inicio-img">
-            <div class="inicio-fondo">
-                <div class="d-flex justify-content-center align-items-center">
-                    <div class="text-white" data-aos="fade-up" data-aos-duration="2000">
-                        <h1 class="mb-3" style="background-color: black;">Contacto</h1>
-                        <p class="mb-3 d-grid gap-3" style="background-color: black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Corrupti excepturi hic repellat in quos eum, illum laborum assumenda quo molestias
-                            cupiditate deserunt dolorum sapiente minus alias eligendi accusamus quis temporibus.
-                            Dolore, eveniet a nulla alias quos repudiandae ipsum porro, deleniti voluptatem,
-                            temporibus tempore saepe. Hic, animi sequi. Officiis minus quasi optio quam dolorem
-                            rerum? Rem, commodi praesentium mollitia, vitae quibusdam ipsa dicta assumenda harum
-                            voluptatem sed maxime dolorum pariatur. Labore deleniti voluptate officia praesentium.
-                            Ab obcaecati, harum dolorem omnis reprehenderit in iusto minima impedit est rerum magni
-                            nostrum maxime eius voluptatem ipsa quasi, sint eligendi beatae odio modi ipsam fuga?
-                        </p>
+    <main>
+        <section>
+            <div class="p-6 text-center fondo-inicio-img">
+                <div class="inicio-fondo">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="text-white" data-aos="fade-up" data-aos-duration="2000">
+                            <h1>Contacto</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus pellentesque est,
+                                ut
+                                dictum mauris consequat vitae. Donec sed ipsum tempus, tincidunt leo et, luctus nibh.
+                                Quisque sit amet orci odio. Sed nunc felis, interdum id feugiat quis, lobortis quis
+                                turpis.
+                                Aliquam elementum nunc
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-    <main>
-
-        <section>
+        <section class="container-contacto">
             <div class="row form-contac-row">
                 <div class="col-6">
-                    <section  class=" form-inicio_sesion">
+                    <section class=" form-inicio_sesion">
                         <form class="form-contact">
-                            <div >
+                            <div class="padding-abajo">
                                 <div>
                                     <h6>Nombre</h6>
                                     <input type="name" placeholder="Ingresa tus nombres" required>
                                 </div>
                             </div>
-    
-                            <div>
+
+                            <div class="padding-abajo">
                                 <h6>Correo electrónico</h6>
                                 <input type="email" placeholder="Ingresa tu correo electrónico" required>
                             </div>
-    
-                            <div>
+
+                            <div class="padding-abajo">
                                 <h6>Asunto</h6>
                                 <input type="text" placeholder="Ingresa el motivo de tu mensaje" required>
                             </div>
 
-                            <div>
+                            <div class="padding-abajo">
                                 <h6>Mensaje</h6>
-                                <textarea id="input-menssage-contact" name="message" placeholder="Ingresa tu mensaje"></textarea>
+                                <textarea id="input-menssage-contact" name="message"
+                                    placeholder="Ingresa tu mensaje"></textarea>
                             </div>
-                            
+
                             <div class="btn-contac-submit">
                                 <button id="btn-contac-one" type="reset">Restrablecer</button>
                                 <button id="btn-contac-two" type="submit">Enviar</button>
                             </div>
-                            
+
                         </form>
 
                     </section>
 
                 </div>
 
-                <div class="col-6 img-contact">
-
-                    <img src="Llamita.jpg" alt="">
-
+                <div class="col-6 img-contact d-flex align-items-center">
+                    <img class="img-fluid" src="../images/banner-contacto.jpg" alt="Recepcionista agarrando el teléfono de la empresa">
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="logo text-center">
-            <a class="text-decoration-none" href="../index.html"><img src="../images/logo-footer.png" alt="Logo de Hecho en Perú"></a>
+        <div class="logo d-flex justify-content-center align-items-center">
+            <a class="text-decoration-none" href="#"><img src="../images/logo-footer.png" alt="Logo de Hecho en Perú"></a>
         </div>
         <div class="footer-navigation">
             <h2>Navegación</h2>
@@ -132,20 +131,20 @@
                 <li><a href="../pages/catalogo.html">Catálogo</a></li>
                 <li><a href="../pages/regiones.html">Regiones</a></li>
                 <li><a href="../pages/quienessomos.html">Quiénes somos</a></li>
-                <li><a href="../pages/contacto.html">Contacto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </div>
         <div class="footer-payment inline">
             <h2>Métodos de pago</h2>
             <ul>
-                <li><i class="fas fa-credit-card"></i></li>
-                <li><i class="fab fa-paypal"></i></li>
-                <li><i class="fas fa-money-bill-wave"></i></li>
+                <li><i class="fa-brands fa-cc-visa"></i></li>
+                <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                <li><i class="fa-brands fa-cc-paypal"></i></li>
             </ul>
             <ul>
-                <li><i class="fas fa-credit-card"></i></li>
-                <li><i class="fab fa-paypal"></i></li>
-                <li><i class="fas fa-money-bill-wave"></i></li>
+                <li><i class="fa-brands fa-cc-diners-club"></i></li>
+                <li><i class="fa-brands fa-cc-amex"></i></li>
+                <li><i class="fa-solid fa-qrcode"></i></li>
             </ul>
         </div>
         <div class="footer-shipping inline">
@@ -165,9 +164,8 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="perfil.js"></script>
-    
+    <script src="js/active-state.js"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
@@ -178,4 +176,5 @@
         crossorigin="anonymous"></script>
 
 </body>
+
 </html>

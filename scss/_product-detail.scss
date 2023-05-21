@@ -10,19 +10,19 @@
                 content: "/";
                 margin-left: 1rem;
                 margin-right: 0.5rem;
-                color:#9d9d9d;
+                color: $color_8;
                 font-size: 1.3rem;
             }
             .breadcrumbs-link{
                 color:#858585;
                 &:hover{
-                    color: $color_2;
+                    color: $color_3;
                     border-bottom: 0.2rem solid #E09898;
                     padding-bottom: 0.2rem;
                 }
             }
             .breadcrumbs-link.active{
-                color: $color_2;
+                color: $color_3;
             }
         }
         li:last-child .breadcrumbs-link{
@@ -91,10 +91,10 @@
                 width: 50%;
                 text-align: center;
                 i{
-                    color:#e0dede;
+                    color:$color_9;
                 }
                 .rated{
-                    color:#F9C846;
+                    color:$color_10;
                 }
                 .rating-value{
                     margin-left: 0.5rem;
@@ -139,7 +139,7 @@
                     }
                     &:nth-child(1){
                         .option{
-                            background-color: #E09898;
+                            background-color: $background-color_16;
                         }
                     }
                     &:nth-child(2){
@@ -149,7 +149,7 @@
                     }
                     &:nth-child(3){
                         .option{
-                            background-color: black;
+                            background-color: $background-color_17;
                         }
                     }
                     &:hover{
@@ -166,7 +166,7 @@
             margin: auto;
             display: flex;
             flex-direction: column;
-            background-color: #F2F2F2;
+            background-color: $background-color_2;
             border-radius: 0.8rem;
             padding: 0.8rem;
             margin-bottom: 1.5rem;
@@ -260,17 +260,17 @@
             margin-bottom: 2rem;
             .minus{
                 width: 3rem;
-                background-color: #F2F2F2;
+                background-color: $background-color_2;
                 border: none;
                 border-radius: 0.5rem 0 0 0.5rem;
                 font-size: 1.5rem;
                 font-weight: bold;
             }
             .unidades-selected{
-                background-color: white;
+                background-color: $background-color_1;
                 border: none;
-                border-right: solid #b9b9b9a2 1px;
-                border-left: solid #b9b9b9a2 1px;
+                border-right: solid $background-color_18 1px;
+                border-left: solid $background-color_18 1px;
                 font-family: $font-family_1;
                 font-weight: 600;
                 padding: 0.2rem;
@@ -285,7 +285,7 @@
             }
             .plus{
                 width: 3rem;
-                background-color: #F2F2F2;
+                background-color: $background-color_8;
                 border: none;
                 border-radius: 0 0.5rem 0.5rem 0;
                 font-size: 1.5rem;

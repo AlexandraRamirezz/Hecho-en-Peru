@@ -1,60 +1,53 @@
 header {
-    box-shadow: 0rem 0.2rem 0.2rem $color_7;
+    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
     position: sticky;
-	top: 0;
-	z-index: 1000;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
     display: grid;
     grid-template-columns: 0.5fr 2fr 1.9fr 0.3fr;
-    grid-template-areas:
-    "logo secciones buscador iconos";
+    grid-template-areas: "logo secciones buscador iconos";
     align-items: center;
     text-align: center;
     background-color: $background-color_1;
-    color: $color_1;
+    color: $color_2;
     height: 5rem;
     padding: 0 3rem;
-    box-shadow: 0rem 0.2rem 0.2rem $color_7;
+    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
+
     a {
         text-decoration: none;
-        color: $color_1;
+        color: $color_2;
     }
 
     .logo {
         grid-area: logo;
     }
-    
+
     .menu {
         grid-area: secciones;
-        
         height: 3.1rem;
         display: flex;
         align-items: center;
         text-align: center;
     }
-    
+
     .menu-item {
         font-size: 0.8rem;
-    
+
         &:hover {
-            color: $color_2;
+            color: $color_3;
             border-bottom: 0.2rem solid #E09898;
             padding-bottom: 0.2rem;
         }
     }
 
-    .menu-item.active{
-        color: $color_2;
-        border-bottom: 0.2rem solid #E09898;
-        padding-bottom: 0.2rem;
-    }
-    
     .search-bar {
         grid-area: buscador;
-    
-        input[type="text"] {
+
+        input[type=text] {
             height: 2rem;
             width: 40%;
             border: none;
@@ -64,12 +57,12 @@ nav {
             padding: 0 0.6rem;
             border-radius: 0.3rem;
         }
-    
+
         button {
             background-color: $background-color_3;
             border: none;
             width: 5.6rem;
-            color: $color_1;
+            color: $color_2;
             cursor: pointer;
             transition: all 0.3s ease;
             height: 2rem;
@@ -77,22 +70,22 @@ nav {
             font-size: 0.8rem;
             padding: 0 0.6rem;
             border-radius: 0.3rem;
-    
+
             &:hover {
                 background-color: $background-color_4;
-                color: $color_1;
-                box-shadow: 0rem 0.2rem 0.2rem $color_7;
+                color: $color_2;
+                box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
             }
         }
     }
-    
+
     .icons {
         grid-area: iconos;
-    
+
         i {
             &:hover {
-                color:#00000086;
-            } 
+                color: $color_4;
+            }
         }
     }
 }

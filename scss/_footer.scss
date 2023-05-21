@@ -1,17 +1,19 @@
 footer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    background-color: $background-color_12;
-    color: $color_3;
+    background-color: $background-color_13;
+    color: $color_5;
     padding: 1.8rem 1.2rem;
     font-size: 1rem;
 
     h2 {
         margin-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 400;
     }
 
     a {
-        color: $color_3;
+        color: $color_5;
         text-decoration: none;
         font-size: 0.7rem;
         padding-left: 0.6rem;
@@ -26,7 +28,7 @@ footer {
         padding-left: 0.6rem;
 
         &:hover {
-            color:#ffffff9f;
+            color: $color_9;
         }
     }
 }

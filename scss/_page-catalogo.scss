@@ -443,8 +443,8 @@
                 }
                 button {
                     margin-bottom: 1rem;
-                    background-color: $background-color_12;
-                    color: $color_3;
+                    background-color: $background-color_13;
+                    color: $color_5;
                     border: none;
                     width: 80%;
                     height: 32px;
@@ -456,8 +456,8 @@
                     transition: all 0.3s ease;
             
                     &:hover {
-                        background-color: $background-color_9;
-                        color: $color_3;
+                        background-color: $background-color_14;
+                        color: $color_5;
                         box-shadow: 0px 3px 6px #0000001a;
                     }
                 }
@@ -470,7 +470,7 @@
             margin-top: 2rem;
 
             button{
-                background-color: white;
+                background-color: $background-color_1;
                 border: 0;
                 padding-inline: 0.7rem;
                 i{
@@ -500,7 +500,7 @@
 
 .interest-products{
     margin: 3rem 0;
-    background-color: rgba(169, 229, 187, 0.20);
+    background-color: $background-color_8;
     h2{
         padding: 2rem 0;
         text-align: center;
@@ -542,7 +542,7 @@
                 }
                 .carousel-product{
                     scroll-snap-align: end;
-                    background-color: white;
+                    background-color: $background-color_1;
                     position: relative;
                     padding: 0;
                     display: flex;
@@ -556,12 +556,12 @@
                         top: 1.5rem;
                         left: 1.5rem;
                         z-index: 2;
-                        background-color: #ffe1fdc1;
+                        background-color: $background-color_15;
                         padding-left: 0.4rem;
                         padding-right: 0.4rem;
                         border-radius: 0.4rem;
                         i{
-                            color: #DE7BD7;
+                            color: $color_1;
                         }
                         .rating-value{
                             font-weight: 600; 
@@ -594,8 +594,8 @@
                         }
                         button {
                             margin-bottom: 1rem;
-                            background-color: $background-color_12;
-                            color: $color_3;
+                            background-color: $background-color_13;
+                            color: $color_5;
                             border: none;
                             width: 80%;
                             height: 32px;
@@ -607,8 +607,8 @@
                             transition: all 0.3s ease;
                     
                             &:hover {
-                                background-color: $background-color_9;
-                                color: $color_3;
+                                background-color: $background-color_14;
+                                color: $color_5;
                                 box-shadow: 0px 3px 6px #0000001a;
                             }
                         }
