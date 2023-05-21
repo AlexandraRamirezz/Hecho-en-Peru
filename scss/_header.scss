@@ -34,7 +34,7 @@ nav {
         text-align: center;
 
         .menu-item {
-            font-size: 0.8rem;
+            font-size: 1rem;
     
             &:hover {
                 color: $color_3;
@@ -59,7 +59,7 @@ nav {
             border: none;
             background-color: $background-color_2;
             margin-right: 0.3rem;
-            font-size: 0.8rem;
+            font-size: 1rem;
             padding: 0 0.6rem;
             border-radius: 0.3rem;
         }
@@ -73,7 +73,8 @@ nav {
             transition: all 0.3s ease;
             height: 2rem;
             margin-right: 0.3rem;
-            font-size: 0.8rem;
+            font-size: 1rem;
+            font-weight: 600;
             padding: 0 0.6rem;
             border-radius: 0.3rem;
 
