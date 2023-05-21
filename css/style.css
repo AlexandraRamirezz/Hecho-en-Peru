@@ -82,10 +82,15 @@ nav .menu {
   align-items: center;
   text-align: center;
 }
-nav .menu-item {
+nav .menu .menu-item {
   font-size: 0.8rem;
 }
-nav .menu-item:hover {
+nav .menu .menu-item:hover {
+  color: #E46953;
+  border-bottom: 0.2rem solid #E09898;
+  padding-bottom: 0.2rem;
+}
+nav .menu .menu-item.active {
   color: #E46953;
   border-bottom: 0.2rem solid #E09898;
   padding-bottom: 0.2rem;

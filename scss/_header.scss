@@ -32,12 +32,18 @@ nav {
         display: flex;
         align-items: center;
         text-align: center;
-    }
 
-    .menu-item {
-        font-size: 0.8rem;
-
-        &:hover {
+        .menu-item {
+            font-size: 0.8rem;
+    
+            &:hover {
+                color: $color_3;
+                border-bottom: 0.2rem solid #E09898;
+                padding-bottom: 0.2rem;
+            }
+        }
+    
+        .menu-item.active {
             color: $color_3;
             border-bottom: 0.2rem solid #E09898;
             padding-bottom: 0.2rem;
