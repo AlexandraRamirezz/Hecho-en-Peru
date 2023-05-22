@@ -104,7 +104,7 @@ arrowBtns.forEach(btn => {
     })
 });
 
-//NUEVO COMENTARIO
+/*//NUEVO COMENTARIO
 
 function nComentario() {
   let li = document.createElement("li");
@@ -132,7 +132,6 @@ function nComentario() {
         </div>
       </div>
     `;
-    /*document.getElementById("comments-list").appendChild(li);*/
     let commentsList = document.getElementById("comments-list");
     let firstComment = commentsList.firstChild;
     commentsList.insertBefore(li, firstComment);
@@ -248,7 +247,7 @@ function dislikeComment(element) {
     comment.classList.add("disliked");
     element.classList.add("selected");
   }
-}
+}*/
 
 //STAR RATING
 
@@ -281,7 +280,7 @@ window.addEventListener("DOMContentLoaded", function() {
 }*/
 
 
-//NUMBER OF COMMENTS GENERAL INFO
+/*//NUMBER OF COMMENTS GENERAL INFO
 
 function updateCommentCount() {
   const commentsList = document.getElementById("comments-list");
@@ -347,4 +346,4 @@ function showNextPage() {
 }
 
 // Llamar a la función showComments() para mostrar los comentarios al cargar la página
-showComments();
+showComments();*/
