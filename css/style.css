@@ -1651,7 +1651,7 @@ nav .icons i:hover {
   display: flex;
   justify-content: center;
   height: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .product-container .general-info .cantidad .minus {
   width: 3rem;
@@ -1775,13 +1775,13 @@ nav .icons i:hover {
 .comments-section .comments-presentation {
   background-color: #F2F2F2;
   width: 90%;
-  height: 12rem;
+  height: 18rem;
   padding: 1.5rem;
   margin: auto;
   border-radius: 2rem;
 }
 .comments-section .comments-presentation h3 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .comments-section .comments-presentation .new-comment-section {
   display: flex;
@@ -1792,14 +1792,20 @@ nav .icons i:hover {
   margin-right: 1rem;
   margin-top: 0.5rem;
 }
-.comments-section .comments-presentation .new-comment-section .input-comment {
+.comments-section .comments-presentation .new-comment-section .comment-column {
+  width: 100%;
+}
+.comments-section .comments-presentation .new-comment-section .comment-column h4 {
+  margin-left: 1rem;
+}
+.comments-section .comments-presentation .new-comment-section .comment-column .input-comment {
   width: 95%;
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: baseline;
 }
-.comments-section .comments-presentation .new-comment-section .input-comment #newComment {
+.comments-section .comments-presentation .new-comment-section .comment-column .input-comment #newComment {
   width: 100%;
   height: 3rem;
   outline: none;
@@ -1811,21 +1817,35 @@ nav .icons i:hover {
   transition: all 0.3s ease;
   align-self: flex-start;
 }
-.comments-section .comments-presentation .new-comment-section .input-comment #newComment::placeholder {
+.comments-section .comments-presentation .new-comment-section .comment-column .input-comment #newComment::placeholder {
   color: black;
   text-align: start;
 }
-.comments-section .comments-presentation .new-comment-section .input-comment #newComment:focus {
+.comments-section .comments-presentation .new-comment-section .comment-column .input-comment #newComment:focus {
   border-bottom: 2px solid #000000;
 }
-.comments-section .comments-presentation .new-comment-section .input-comment .btn-comment {
+.comments-section .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.comments-section .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .rating-input {
+  margin-left: 1rem;
+  color: #bfbfbf;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.comments-section .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .rating-input i.active {
+  color: #F9C846;
+}
+.comments-section .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .btn-comment {
   height: 3.5rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 1rem;
 }
-.comments-section .comments-presentation .new-comment-section .input-comment .btn-comment button {
+.comments-section .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .btn-comment button {
   height: 2.4rem;
   width: 8rem;
   font-size: 1rem;
@@ -1837,7 +1857,7 @@ nav .icons i:hover {
   color: white;
   transition: all 0.3s ease;
 }
-.comments-section .comments-presentation .new-comment-section .input-comment .btn-comment button:hover {
+.comments-section .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .btn-comment button:hover {
   background-color: #0E0E0E;
   color: #FFFFFF;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);

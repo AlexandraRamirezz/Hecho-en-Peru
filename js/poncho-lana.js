@@ -108,6 +108,7 @@ arrowBtns.forEach(btn => {
 
 function nComentario() {
   let li = document.createElement("li");
+  let userName = document.querySelector(".new-comment-section .comment-column h4").textContent;
   let valorIngresado = document.getElementById("newComment").value;
   let text = document.createTextNode(valorIngresado);
   li.appendChild(text);
@@ -120,7 +121,17 @@ function nComentario() {
       <div class="comment-user">
         <i class="fa-solid fa-user fa-2x"></i>
       </div>
-      <div class="comment-text">${valorIngresado}</div>
+      <div class="comment-text">
+        <h4>${userName}</h4>
+        <div class="rating-comment-box">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        ${valorIngresado}
+      </div>
       <div class="comment-votes">
         <div class="liked-comment" onclick="likeComment(this)">
           <i class="fa-regular fa-thumbs-up"></i>
@@ -249,7 +260,7 @@ function dislikeComment(element) {
   }
 }
 
-//STAR RATING
+//STAR RATING INFORMACIÓN GENERAL
 
 function updateStarRating() {
   const ratingValue = parseFloat(document.getElementsByClassName("rating-value")[0].textContent);
@@ -285,8 +296,11 @@ window.addEventListener("DOMContentLoaded", function() {
 function updateCommentCount() {
   const commentsList = document.getElementById("comments-list");
   const commentCount = commentsList.getElementsByClassName("comment").length;
-  const commentsElement = document.getElementsByClassName("number-comments")[0];
-  commentsElement.textContent = `${commentCount} comentario${commentCount !== 1 ? "s" : ""}`;
+  const commentsElement = document.getElementsByClassName("number-comments");
+
+  for(let i = 0; i < commentsElement.length; i++){
+    commentsElement[i].textContent = `${commentCount} comentario${commentCount !== 1 ? "s" : ""}`;
+  }
 }
 
 window.addEventListener("DOMContentLoaded", function() {
@@ -347,3 +361,18 @@ function showNextPage() {
 
 // Llamar a la función showComments() para mostrar los comentarios al cargar la página
 showComments();
+
+
+//STAR RATING COMENTARIO
+
+const stars_new_comment = document.querySelectorAll(".rating-input i");
+let stars_point_user = 0;
+
+stars_new_comment.forEach((star, index1) =>{
+  star.addEventListener("click", () =>{
+    stars_new_comment.forEach((star, index2)=>{
+      index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+      stars_point_user = index1;
+    });
+  });
+});
