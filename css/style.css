@@ -1971,6 +1971,14 @@ nav .icons i:hover {
   grid-area: "comment-text";
   justify-self: flex-start;
 }
+.comments-section .comments-container .comment .comment-text .rating-comment-box {
+  color: #bfbfbf;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.comments-section .comments-container .comment .comment-text .rating-comment-box i.active {
+  color: #F9C846;
+}
 .comments-section .comments-container .comment .comment-votes {
   display: flex;
   justify-self: center;

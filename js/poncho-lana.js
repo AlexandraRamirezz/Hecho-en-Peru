@@ -106,6 +106,8 @@ arrowBtns.forEach(btn => {
 
 //NUEVO COMENTARIO
 
+let sumStars = 9;
+
 function nComentario() {
   let li = document.createElement("li");
   let userName = document.querySelector(".new-comment-section .comment-column h4").textContent;
@@ -114,7 +116,9 @@ function nComentario() {
   li.appendChild(text);
 
   if (valorIngresado === '') {
-      alert("Ingrese un comentario");
+    alert("Ingrese un comentario");
+  } else if (stars_point_user === 0) {
+    alert("Seleccione al menos una estrella");
   } else {
     li.className = "comment";
     li.innerHTML = `
@@ -124,11 +128,7 @@ function nComentario() {
       <div class="comment-text">
         <h4>${userName}</h4>
         <div class="rating-comment-box">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
+          ${getStarIcons(stars_point_user)}
         </div>
         ${valorIngresado}
       </div>
@@ -146,11 +146,18 @@ function nComentario() {
     let commentsList = document.getElementById("comments-list");
     let firstComment = commentsList.firstChild;
     commentsList.insertBefore(li, firstComment);
+
+    sumStars += stars_point_user;
+
+    document.getElementById("newComment").value = "";
+    stars_new_comment.forEach((star) =>{
+      star.classList.remove("active");
+    });
+    stars_point_user = 0;
+    showComments();
+    updateCommentCount();
+    updateRatingCount();
   }
-  
-  document.getElementById("newComment").value = "";
-  showComments();
-  updateCommentCount();
 }
 
 // Función para manejar el evento de presionar tecla en el campo de entrada
@@ -166,6 +173,19 @@ function handleKeyPress(event) {
 // Agregar el evento de escucha de teclado al campo de entrada de comentarios
 document.getElementById("newComment").addEventListener("keypress", handleKeyPress);
   
+
+function getStarIcons(starCount) {
+  let starIcons = "";
+  for (let i = 0; i < 5; i++) {
+    if (i < starCount) {
+      starIcons += '<i class="fa-solid fa-star active"></i>';
+    } else {
+      starIcons += '<i class="fa-solid fa-star"></i>';
+    }
+  }
+  return starIcons;
+}
+
 function likeComment(element) {
   let comment = element.closest(".comment");
   let countElement = element.querySelector(".count");
@@ -290,6 +310,16 @@ window.addEventListener("DOMContentLoaded", function() {
   updateStarRating();
 }*/
 
+//RATING POINTS GENERAL INFO
+
+function updateRatingCount() {
+  const commentsList = document.getElementById("comments-list");
+  const commentCount = commentsList.getElementsByClassName("comment").length;
+  const ratingValue = document.getElementsByClassName("rating-value");
+
+    ratingValue[0].textContent = (sumStars/commentCount).toFixed(1);
+}
+
 
 //NUMBER OF COMMENTS GENERAL INFO
 
@@ -306,6 +336,7 @@ function updateCommentCount() {
 window.addEventListener("DOMContentLoaded", function() {
   // Llamar a la función para actualizar el número de comentarios
   updateCommentCount();
+  updateRatingCount();
 });
 
 //COMENTARIOS POR PÁGINA
@@ -372,7 +403,7 @@ stars_new_comment.forEach((star, index1) =>{
   star.addEventListener("click", () =>{
     stars_new_comment.forEach((star, index2)=>{
       index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
-      stars_point_user = index1;
+      stars_point_user = index1 + 1;
     });
   });
 });

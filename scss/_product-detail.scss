@@ -507,7 +507,15 @@
             .comment-text{
                 text-align: justify;
                 grid-area: "comment-text";
-                justify-self: flex-start; 
+                justify-self: flex-start;
+                .rating-comment-box{
+                    color: #bfbfbf;
+                    font-size: 1.2rem;
+                    margin-bottom: 1rem;
+                    i.active{
+                        color: #F9C846;
+                    }
+                }
             }
             .comment-votes{
                 display: flex;
