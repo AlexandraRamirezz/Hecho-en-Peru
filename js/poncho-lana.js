@@ -112,14 +112,26 @@ function nComentario() {
   let li = document.createElement("li");
   let userName = document.querySelector(".new-comment-section .comment-column h4").textContent;
   let valorIngresado = document.getElementById("newComment").value;
+  let inputBox = document.querySelector(".input-comment");
   let text = document.createTextNode(valorIngresado);
+  let commentError = document.querySelector(".error-input");
+  let ratingError = document.querySelector(".error-rating");
   li.appendChild(text);
 
-  if (valorIngresado === '') {
-    alert("Ingrese un comentario");
-  } else if (stars_point_user === 0) {
-    alert("Seleccione al menos una estrella");
-  } else {
+  if (valorIngresado === '' || stars_point_user === 0) {
+    //alert("Ingrese un comentario");
+    if (valorIngresado === '')
+    {
+      commentError.classList.add("active");
+      inputBox.classList.add("error");
+    }else{
+      commentError.classList.remove("active");
+      inputBox.classList.remove("error");
+    }
+    if (stars_point_user === 0)
+      ratingError.classList.add("active");
+    else ratingError.classList.remove("active");
+  }else {
     li.className = "comment";
     li.innerHTML = `
       <div class="comment-user">
@@ -153,6 +165,11 @@ function nComentario() {
     stars_new_comment.forEach((star) =>{
       star.classList.remove("active");
     });
+    
+    commentError.classList.remove("active");
+    inputBox.classList.remove("error");
+    ratingError.classList.remove("active");
+
     stars_point_user = 0;
     showComments();
     updateCommentCount();
