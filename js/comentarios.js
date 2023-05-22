@@ -2,13 +2,17 @@
 
 function nComentario() {
     let li = document.createElement("li");
-    let userName = document.querySelector(".new-comment-section .input-comment h4").textContent;
+    let userName = document.querySelector(".new-comment-section .input-box h4").textContent;
     let valorIngresado = document.getElementById("newComment").value;
+    let inputBox = document.querySelector(".input-comment");
     let text = document.createTextNode(valorIngresado);
+    let commentError = document.querySelector(".error-input");
     li.appendChild(text);
 
     if (valorIngresado === '') {
-        alert("Ingrese un comentario");
+        commentError.classList.add("active");
+        inputBox.classList.add("error");
+        console.log("error");
     } else {
         li.className = "comment";
         li.innerHTML = `
@@ -34,11 +38,13 @@ function nComentario() {
         let commentsList = document.getElementById("comments-list");
         let firstComment = commentsList.firstChild;
         commentsList.insertBefore(li, firstComment);
-    }
     
-    document.getElementById("newComment").value = "";
-    showComments();
-    updateCommentCount();
+        document.getElementById("newComment").value = "";
+        showComments();
+        updateCommentCount();
+        commentError.classList.remove("active");
+        inputBox.classList.remove("error");
+    }
 }
 
 // Función para manejar el evento de presionar tecla en el campo de entrada
@@ -164,7 +170,6 @@ function updateCommentCount() {
 window.addEventListener("DOMContentLoaded", function() {
     // Llamar a la función para actualizar el número de comentarios
     updateCommentCount();
-    updateRatingCount();
 });
 
 //COMENTARIOS POR PÁGINA
