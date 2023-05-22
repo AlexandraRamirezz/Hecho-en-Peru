@@ -2,6 +2,7 @@
 
 function nComentario() {
     let li = document.createElement("li");
+    let userName = document.querySelector(".new-comment-section .input-comment h4").textContent;
     let valorIngresado = document.getElementById("newComment").value;
     let text = document.createTextNode(valorIngresado);
     li.appendChild(text);
@@ -14,7 +15,10 @@ function nComentario() {
             <div class="comment-user">
             <i class="fa-solid fa-user fa-2x"></i>
             </div>
-            <div class="comment-text">${valorIngresado}</div>
+            <div class="comment-text">
+                <h4>${userName}</h4>
+                ${valorIngresado}
+            </div>
             <div class="comment-votes">
             <div class="liked-comment" onclick="likeComment(this)">
                 <i class="fa-regular fa-thumbs-up"></i>
@@ -146,19 +150,22 @@ function dislikeComment(element) {
     }
 }
 
-//NUMBER OF COMMENTS GENERAL INFO
+//NUMBER OF COMMENTS 
 
-/*function updateCommentCount() {
+function updateCommentCount() {
     const commentsList = document.getElementById("comments-list");
     const commentCount = commentsList.getElementsByClassName("comment").length;
-    const commentsElement = document.getElementsByClassName("number-comments")[0];
-    commentsElement.textContent = `${commentCount} comentario${commentCount !== 1 ? "s" : ""}`;
+    const commentsElement = document.getElementsByClassName("number-comments");
+
+    
+    commentsElement[0].textContent = `${commentCount} comentario${commentCount !== 1 ? "s" : ""}`;
 }
 
 window.addEventListener("DOMContentLoaded", function() {
     // Llamar a la función para actualizar el número de comentarios
     updateCommentCount();
-});*/
+    updateRatingCount();
+});
 
 //COMENTARIOS POR PÁGINA
 

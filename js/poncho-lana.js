@@ -302,14 +302,6 @@ window.addEventListener("DOMContentLoaded", function() {
   updateStarRating();
 });
 
-// Después de cambiar el valor del rating
-/*function cambiarRating(nuevoRating) {
-  // ... tu código existente para cambiar el valor del rating ...
-
-  // Llamar a la función para actualizar el rating de estrellas
-  updateStarRating();
-}*/
-
 //RATING POINTS GENERAL INFO
 
 function updateRatingCount() {

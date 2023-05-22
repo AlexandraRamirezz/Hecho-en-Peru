@@ -1354,6 +1354,9 @@ nav .icons i:hover {
   flex-direction: column;
   justify-content: baseline;
 }
+.comments-section-region .comments-presentation .new-comment-section .input-comment h4 {
+  margin-left: 1rem;
+}
 .comments-section-region .comments-presentation .new-comment-section .input-comment #newComment {
   width: 100%;
   height: 3rem;
