@@ -39,14 +39,14 @@
 .container-productos-vendidos {
     width: 90%;
     margin: auto;
-    margin-top: 3rem;
-    margin-bottom: 3.2rem;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
 }
 
 .container-regiones {
     width: 90%;
     margin: auto;
-    margin-top: 3rem;
+    margin-top: 3.5rem;
 }
 
 .sold-products {
@@ -73,13 +73,16 @@
     .s-product {
         padding: 0rem 0.6rem;
         background-color: $background-color_1;
+        margin-bottom: 3.2rem;
+        height: 20rem;
 
         img {
-            width: 100%;
-            height: 20rem;
             margin-bottom: 1rem;
             border: solid 1px rgba(0, 0, 0, 0.1882352941);
             border-radius: 1.25rem;
+            display: block;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -299,8 +302,8 @@
                 }
             }
 
-            h3 {
-                padding-top: 1.5rem;
+            p {
+                padding-top: 1rem;
             }
         }
     }

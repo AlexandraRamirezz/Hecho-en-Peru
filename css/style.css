@@ -174,14 +174,14 @@ nav .icons i:hover {
 .container-productos-vendidos {
   width: 90%;
   margin: auto;
-  margin-top: 3rem;
-  margin-bottom: 3.2rem;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
 }
 
 .container-regiones {
   width: 90%;
   margin: auto;
-  margin-top: 3rem;
+  margin-top: 3.5rem;
 }
 
 .sold-products .row {
@@ -205,13 +205,16 @@ nav .icons i:hover {
 .sold-products .s-product {
   padding: 0rem 0.6rem;
   background-color: #FFFFFF;
+  margin-bottom: 3.2rem;
+  height: 20rem;
 }
 .sold-products .s-product img {
-  width: 100%;
-  height: 20rem;
   margin-bottom: 1rem;
   border: solid 1px rgba(0, 0, 0, 0.1882352941);
   border-radius: 1.25rem;
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .sold-products .s-product .name-product {
@@ -404,8 +407,8 @@ nav .icons i:hover {
 .our-team .row .personal:hover img {
   transform: scale(1.06, 1.06);
 }
-.our-team .row .personal h3 {
-  padding-top: 1.5rem;
+.our-team .row .personal p {
+  padding-top: 1rem;
 }
 
 .container-testimonios {
@@ -1033,30 +1036,33 @@ nav .icons i:hover {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
 }
 
-.container-regiones {
+.container-reg {
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
   margin-bottom: 6rem;
 }
-.container-regiones .row .reg {
+.container-reg .row .reg {
   position: relative;
   display: inline-block;
   margin-top: 1.5rem;
   height: 15rem;
 }
-.container-regiones .row .reg img {
+.container-reg .row .reg img {
   border-radius: 0.5rem;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.container-regiones .row .reg .div-btn {
+.container-reg .row .reg .div-btn {
   width: 94%;
   position: absolute;
   bottom: 0.5rem;
   display: flex;
   justify-content: center;
 }
-.container-regiones .row .reg .div-btn button {
+.container-reg .row .reg .div-btn button {
   padding: 0.5rem 0;
   width: 12rem;
   background-color: rgba(169, 229, 187, 0.9333333333);
@@ -1524,7 +1530,7 @@ nav .icons i:hover {
 }
 .product-container .general-info .cantidad .plus {
   width: 3rem;
-  background-color: rgba(169, 229, 187, 0.231372549);
+  background-color: #F3F3F3;
   border: none;
   border-radius: 0 0.5rem 0.5rem 0;
   font-size: 1.5rem;
