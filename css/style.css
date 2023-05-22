@@ -1686,6 +1686,14 @@ nav .icons i:hover {
   font-size: 1.5rem;
   font-weight: bold;
 }
+.product-container .general-info .stock-producto {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.product-container .general-info .stock-producto span {
+  margin-left: 0.5rem;
+}
 .product-container .general-info .agregar-carrito {
   width: 85%;
   border: none;
@@ -1818,9 +1826,9 @@ nav .icons i:hover {
   padding: 1rem;
 }
 .comments-section .comments-presentation .new-comment-section .input-comment .btn-comment button {
-  height: 2.1rem;
-  width: 6rem;
-  font-size: 0.7rem;
+  height: 2.4rem;
+  width: 8rem;
+  font-size: 1rem;
   border: 0;
   outline: none;
   font-weight: 600;
