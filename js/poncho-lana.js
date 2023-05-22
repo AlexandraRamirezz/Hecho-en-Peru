@@ -12,13 +12,78 @@ window.addEventListener("DOMContentLoaded", function() {
   updateBreadcrumb();
 });
 
+// ZOOM IMG
+
+const imgContElm = document.querySelector(".main-images");
+const imgElm = document.querySelector(".main-images figure img");
+
+const zoom = 200;
+
+//Evemt mouse enter
+imgContElm.addEventListener("mouseenter", function(){
+  imgElm.style.width = zoom + "%";
+});
+
+//Event mouse leave
+imgContElm.addEventListener("mouseleave", function(){
+  imgElm.style.width = "100%";
+  imgElm.style.left = "0";
+  imgElm.style.top = "0";
+});
+
+//Event mouse move
+
+imgContElm.addEventListener("mousemove", function(){
+  let obj = imgContElm;
+  let obj_left = 0;
+  let obj_top = 0;
+  let xpos;
+  let ypos;
+
+  while(obj.offsetParent)
+  {
+    obj_left += obj.offsetLeft;
+    obj_top += obj.offsetTop;
+    obj = obj.offsetParent;
+  }
+
+  if (MouseEvent)
+  {
+    xpos = window.event.x + document.body.scrollLeft - 2;
+    ypos = window.event.y + document.body.scrollTop - 2;
+  }
+  
+  xpos -= obj_left;
+  ypos -= obj_top;
+
+  if (ypos < 0) ypos = 0;
+
+  console.log("x: " + xpos);
+  console.log("y: " +ypos);
+
+  const imgWidth = imgElm.clientWidth;
+  const imgHeight = imgElm.clientHeight;
+
+  imgElm.style.top = -(((imgHeight - this.clientHeight)*ypos)/this.clientHeight) + "px";
+  imgElm.style.left = -(((imgWidth - this.clientWidth)*xpos)/this.clientWidth) + "px";
+
+  console.log(imgElm.style.top);
+  console.log( imgElm.style.left);
+
+});
+
+function changeHeight(){
+  imgContElm.style.height = imgContElm.clientWidth + "px";
+}
+
+window.addEventListener("resize", changeHeight);
 
 //SLICE IMG
 
 function clickImg(smallImg)
 {
-    var fullImg = document.getElementById("image-box");
-    fullImg.src = smallImg.src;
+  var fullImg = document.getElementById("image-box");
+  fullImg.src = smallImg.src;
 }
 
 //NUMBER OF UNITS

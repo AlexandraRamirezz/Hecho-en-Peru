@@ -1717,12 +1717,27 @@ nav .icons i:hover {
 .product-container .product-box .small-images figure:last-child {
   margin-bottom: 0;
 }
-.product-container .product-box .main-images figure {
+.product-container .product-box .main-images {
+  width: 35rem;
+  height: 35rem;
+  position: relative;
   border-radius: 0.6rem;
 }
-.product-container .product-box .main-images figure #image-box {
-  width: 35rem;
+.product-container .product-box .main-images figure {
   border-radius: 0.6rem;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.product-container .product-box .main-images figure #image-box {
+  border-radius: 0.6rem;
+  object-fit: cover;
+  position: absolute;
+}
+.product-container .product-box .main-images:hover {
+  cursor: zoom-in;
 }
 .product-container .general-info {
   width: 40%;
@@ -1893,7 +1908,7 @@ nav .icons i:hover {
 .product-container .general-info .cantidad {
   display: flex;
   justify-content: center;
-  height: 3rem;
+  height: 2.5rem;
   margin-bottom: 1rem;
 }
 .product-container .general-info .cantidad .minus {

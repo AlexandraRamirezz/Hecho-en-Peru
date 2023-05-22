@@ -68,12 +68,25 @@
             }
         }
         .main-images{
+            width: 35rem;
+            height: 35rem;
+            position: relative;
+            border-radius: 0.6rem;
             figure{
                 border-radius: 0.6rem;
+                margin: 0;
+                overflow: hidden;
+                height: 100%;
+                width: 100%;
+                position: relative;
                 #image-box{
-                    width: 35rem;
                     border-radius: 0.6rem;
+                    object-fit: cover;
+                    position: absolute;
                 }
+            }
+            &:hover{
+                cursor: zoom-in;
             }
         }
     }
@@ -256,7 +269,7 @@
         .cantidad{
             display: flex;
             justify-content: center;
-            height: 3rem;
+            height: 2.5rem;
             margin-bottom: 1rem;
             .minus{
                 width: 3rem;
