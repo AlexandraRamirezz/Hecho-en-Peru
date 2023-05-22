@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* FUENTES */
 /* COLORES */
 * {
@@ -134,6 +135,155 @@ nav .icons {
 }
 nav .icons i:hover {
   color: rgba(0, 0, 0, 0.5254901961);
+}
+
+#chatbot-container {
+  background-color: #F8F8F8;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  width: 350px;
+  margin: 0 auto;
+  font-family: "Times New Roman", Times, serif;
+  margin: 1rem;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+}
+
+#chatbot-header {
+  background-color: white;
+  padding: 10px;
+  color: black;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  height: 4.5rem;
+}
+
+.nombre_p {
+  text-align: left;
+  height: 100%;
+}
+
+.nombre_p h4 {
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+
+.borde-butom {
+  width: 4rem;
+  height: 4rem;
+  background-color: #000000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px; /* Ajusta este valor según sea necesario */
+  right: 20px;
+  z-index: 1;
+}
+
+#toggleButton {
+  color: rgb(217, 217, 209);
+}
+
+.nombre_p p {
+  position: relative;
+  bottom: 10px;
+  font-size: 0.8rem;
+}
+
+.foo-chtbot {
+  padding: 10px;
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#chatbot-header img {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+#chatbot-body {
+  padding: 10px;
+}
+
+#chat-container {
+  background-color: rgb(235, 233, 233);
+  height: 250px;
+  overflow-y: scroll;
+  padding: 10px;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#input-container {
+  display: flex;
+}
+
+#faq-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.faq-button {
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: #595957;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+.faq-button:hover {
+  background-color: #393938;
+}
+
+.message {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.message.bot {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.message.user {
+  background-color: #F2F2F2;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#clear-chat-button {
+  position: relative;
+  left: 9rem;
+  top: 12px;
+}
+
+/* Estilos para los botones de preguntas relacionadas */
+.related-question-button {
+  display: inline-block;
+  margin: 5px;
+  margin-top: 1px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.related-question-button:hover {
+  background-color: #ccc;
 }
 
 .fondo-inicio-img {
