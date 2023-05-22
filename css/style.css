@@ -1215,11 +1215,15 @@ nav .icons i:hover {
 .container-reg .row .reg .div-btn button {
   padding: 0.5rem 0;
   width: 12rem;
-  background-color: rgba(169, 229, 187, 0.9333333333);
+  background-color: #a9e5bb;
   font-weight: bold;
   border: none;
   border-radius: 1.25rem;
   font-size: 1rem;
+}
+.container-reg .row .reg .div-btn button:hover {
+  background-color: #8ADAA1;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
 }
 
 .fondo-inicio-reg-img {
@@ -1321,6 +1325,79 @@ nav .icons i:hover {
 }
 .container-artesanos .row .art .info-art p {
   margin-top: 1.2rem;
+}
+
+.container-descripcion {
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+}
+.container-descripcion .bg-color {
+  background-color: #F6F6F6;
+  padding: 1rem;
+}
+
+.container-m-v {
+  width: 92%;
+  margin: auto;
+  margin-top: 3rem;
+}
+.container-m-v .bg-color {
+  background-color: #F6F6F6;
+  padding: 1rem;
+}
+.container-m-v .row {
+  margin-bottom: 6rem;
+  margin: auto;
+}
+.container-m-v .row .m-v {
+  margin-top: 1rem;
+}
+.container-m-v .row .m-v .img-m-v {
+  margin: 0;
+}
+.container-m-v .row .m-v .img-m-v img {
+  border-radius: 0.5rem;
+  margin-top: 2.2rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-equipo-de-trabajo {
+  margin: 6rem 0;
+}
+.container-equipo-de-trabajo .equipo-de-trabajo {
+  background-color: rgba(249, 201, 70, 0.1450980392);
+  padding: 3rem 10%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: auto;
+}
+.container-equipo-de-trabajo .equipo-de-trabajo .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.container-equipo-de-trabajo .equipo-de-trabajo .row .card-equipo {
+  padding: 1.3rem;
+  margin: 1rem;
+  background-color: #FFFFFF;
+  height: 26rem;
+  box-shadow: 0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.1019607843);
+}
+.container-equipo-de-trabajo .equipo-de-trabajo .row .card-equipo .per-img {
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+}
+.container-equipo-de-trabajo .equipo-de-trabajo .row .card-equipo p {
+  margin-top: 1rem;
 }
 
 .container-contacto {
