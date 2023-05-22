@@ -119,3 +119,162 @@
         }
     }
 }
+
+.comments-section-region{
+    .comments-presentation{
+        background-color: #F2F2F2;
+        width: 90%;
+        height: 18rem;
+        padding: 1.5rem;
+        margin: auto;
+        border-radius: 2rem;
+        h3{
+            margin-bottom: 1rem;
+        }
+        .new-comment-section{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            .user-icon{
+                margin-right: 1rem;
+                margin-top: 0.5rem;
+            }
+            .input-comment{
+                width: 95%;
+                margin-bottom: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: baseline;
+                #newComment{
+                    width: 100%;
+                    height: 3rem;
+                    outline: none;
+                    border: none;
+                    padding: 1rem;
+                    background-color: transparent;
+                    color: black;
+                    border-bottom: 2px solid rgba(255, 255, 255, 0);
+                    transition: all 0.3s ease;
+                    align-self: flex-start;
+                    &::placeholder{
+                        color:black;
+                        text-align: start;
+                    }
+                    &:focus{
+                        border-bottom: 2px solid #000000;
+                    }
+                }
+                .btn-comment{
+                    height: 3.5rem;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding: 1rem;
+                    button{
+                        height: 2.4rem;
+                        width: 8rem;
+                        font-size: 1rem;
+                        border: 0;
+                        outline: none;
+                        font-weight: 600;
+                        border-radius: 1rem;
+                        background-color: #242423;
+                        color: white;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            background-color: $background-color_14;
+                            color: $color_5;
+                            box-shadow: 0px 3px 6px #0000001a;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    .comments-container{
+        width: 90%;
+        background-color: white;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 1.5rem;
+        padding: 1.5rem;
+        .comment{
+            width: 100%;
+            margin-bottom: 1.5rem;
+            //border: solid black 1px;
+            display: grid; 
+            grid-template-columns: 0.5fr 25fr 3fr;
+            grid-template-rows: auto;
+            justify-content: flex-start; 
+            gap: 0 1.5rem;
+            grid-template-areas: 
+                "user-icon comment-text icons"; 
+            .comment-user{
+                align-self: center;
+                justify-self: flex-start;
+                grid-area: "user-icon";
+            }
+            .comment-text{
+                text-align: justify;
+                grid-area: "comment-text";
+                justify-self: flex-start;
+                .rating-comment-box{
+                    color: #bfbfbf;
+                    font-size: 1.2rem;
+                    margin-bottom: 1rem;
+                    i.active{
+                        color: #F9C846;
+                    }
+                }
+            }
+            .comment-votes{
+                display: flex;
+                justify-self: center;
+                align-self: center;
+                align-items: center ;
+                gap: 1rem;
+                grid-area: "icons";
+                .liked-comment{
+                    .count{
+                        margin: 0;
+                    }
+                }
+                .dislike-comment{
+                    .count{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .pagination-buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        button{
+            background-color: white;
+            border: 0;
+            padding-inline: 0.7rem;
+            i{
+                opacity: 50%;
+            }
+        }
+        #currentPageIndicator{
+            background-color: #F2F2F2;
+            border: none;
+            border-radius: 0.8rem;
+            font-family: $font-family_1;
+            font-weight: 600;
+            padding: 0.2rem;
+            text-align: center;
+            width: 10rem;
+        }
+    }
+}

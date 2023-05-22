@@ -1327,6 +1327,156 @@ nav .icons i:hover {
   margin-top: 1.2rem;
 }
 
+.comments-section-region .comments-presentation {
+  background-color: #F2F2F2;
+  width: 90%;
+  height: 18rem;
+  padding: 1.5rem;
+  margin: auto;
+  border-radius: 2rem;
+}
+.comments-section-region .comments-presentation h3 {
+  margin-bottom: 1rem;
+}
+.comments-section-region .comments-presentation .new-comment-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.comments-section-region .comments-presentation .new-comment-section .user-icon {
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+.comments-section-region .comments-presentation .new-comment-section .input-comment {
+  width: 95%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+}
+.comments-section-region .comments-presentation .new-comment-section .input-comment #newComment {
+  width: 100%;
+  height: 3rem;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  background-color: transparent;
+  color: black;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+.comments-section-region .comments-presentation .new-comment-section .input-comment #newComment::placeholder {
+  color: black;
+  text-align: start;
+}
+.comments-section-region .comments-presentation .new-comment-section .input-comment #newComment:focus {
+  border-bottom: 2px solid #000000;
+}
+.comments-section-region .comments-presentation .new-comment-section .input-comment .btn-comment {
+  height: 3.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+}
+.comments-section-region .comments-presentation .new-comment-section .input-comment .btn-comment button {
+  height: 2.4rem;
+  width: 8rem;
+  font-size: 1rem;
+  border: 0;
+  outline: none;
+  font-weight: 600;
+  border-radius: 1rem;
+  background-color: #242423;
+  color: white;
+  transition: all 0.3s ease;
+}
+.comments-section-region .comments-presentation .new-comment-section .input-comment .btn-comment button:hover {
+  background-color: #0E0E0E;
+  color: #FFFFFF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
+}
+.comments-section-region .comments-container {
+  width: 90%;
+  background-color: white;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+}
+.comments-section-region .comments-container .comment {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: 0.5fr 25fr 3fr;
+  grid-template-rows: auto;
+  justify-content: flex-start;
+  gap: 0 1.5rem;
+  grid-template-areas: "user-icon comment-text icons";
+}
+.comments-section-region .comments-container .comment .comment-user {
+  align-self: center;
+  justify-self: flex-start;
+  grid-area: "user-icon";
+}
+.comments-section-region .comments-container .comment .comment-text {
+  text-align: justify;
+  grid-area: "comment-text";
+  justify-self: flex-start;
+}
+.comments-section-region .comments-container .comment .comment-text .rating-comment-box {
+  color: #bfbfbf;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.comments-section-region .comments-container .comment .comment-text .rating-comment-box i.active {
+  color: #F9C846;
+}
+.comments-section-region .comments-container .comment .comment-votes {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  align-items: center;
+  gap: 1rem;
+  grid-area: "icons";
+}
+.comments-section-region .comments-container .comment .comment-votes .liked-comment .count {
+  margin: 0;
+}
+.comments-section-region .comments-container .comment .comment-votes .dislike-comment .count {
+  margin: 0;
+}
+.comments-section-region .pagination-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.comments-section-region .pagination-buttons button {
+  background-color: white;
+  border: 0;
+  padding-inline: 0.7rem;
+}
+.comments-section-region .pagination-buttons button i {
+  opacity: 50%;
+}
+.comments-section-region .pagination-buttons #currentPageIndicator {
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 0.8rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  padding: 0.2rem;
+  text-align: center;
+  width: 10rem;
+}
+
 .container-descripcion {
   width: 90%;
   margin: auto;
@@ -1849,7 +1999,7 @@ nav .icons i:hover {
   opacity: 70%;
 }
 
-.comments-section .comments-presentation {
+.comments-section-product .comments-presentation {
   background-color: #F2F2F2;
   width: 90%;
   height: 18rem;
@@ -1857,32 +2007,32 @@ nav .icons i:hover {
   margin: auto;
   border-radius: 2rem;
 }
-.comments-section .comments-presentation h3 {
+.comments-section-product .comments-presentation h3 {
   margin-bottom: 1rem;
 }
-.comments-section .comments-presentation .new-comment-section {
+.comments-section-product .comments-presentation .new-comment-section {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
-.comments-section .comments-presentation .new-comment-section .user-icon {
+.comments-section-product .comments-presentation .new-comment-section .user-icon {
   margin-right: 1rem;
   margin-top: 0.5rem;
 }
-.comments-section .comments-presentation .new-comment-section .comment-column {
+.comments-section-product .comments-presentation .new-comment-section .comment-column {
   width: 100%;
 }
-.comments-section .comments-presentation .new-comment-section .comment-column h4 {
+.comments-section-product .comments-presentation .new-comment-section .comment-column h4 {
   margin-left: 1rem;
 }
-.comments-section .comments-presentation .new-comment-section .comment-column .input-comment {
+.comments-section-product .comments-presentation .new-comment-section .comment-column .input-comment {
   width: 95%;
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: baseline;
 }
-.comments-section .comments-presentation .new-comment-section .comment-column .input-comment #newComment {
+.comments-section-product .comments-presentation .new-comment-section .comment-column .input-comment #newComment {
   width: 100%;
   height: 3rem;
   outline: none;
@@ -1894,35 +2044,35 @@ nav .icons i:hover {
   transition: all 0.3s ease;
   align-self: flex-start;
 }
-.comments-section .comments-presentation .new-comment-section .comment-column .input-comment #newComment::placeholder {
+.comments-section-product .comments-presentation .new-comment-section .comment-column .input-comment #newComment::placeholder {
   color: black;
   text-align: start;
 }
-.comments-section .comments-presentation .new-comment-section .comment-column .input-comment #newComment:focus {
+.comments-section-product .comments-presentation .new-comment-section .comment-column .input-comment #newComment:focus {
   border-bottom: 2px solid #000000;
 }
-.comments-section .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input {
+.comments-section-product .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.comments-section .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .rating-input {
+.comments-section-product .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .rating-input {
   margin-left: 1rem;
   color: #bfbfbf;
   font-size: 1.2rem;
   cursor: pointer;
 }
-.comments-section .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .rating-input i.active {
+.comments-section-product .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .rating-input i.active {
   color: #F9C846;
 }
-.comments-section .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .btn-comment {
+.comments-section-product .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .btn-comment {
   height: 3.5rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 1rem;
 }
-.comments-section .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .btn-comment button {
+.comments-section-product .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .btn-comment button {
   height: 2.4rem;
   width: 8rem;
   font-size: 1rem;
@@ -1934,12 +2084,12 @@ nav .icons i:hover {
   color: white;
   transition: all 0.3s ease;
 }
-.comments-section .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .btn-comment button:hover {
+.comments-section-product .comments-presentation .new-comment-section .comment-column .input-comment .bottom-input .btn-comment button:hover {
   background-color: #0E0E0E;
   color: #FFFFFF;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
 }
-.comments-section .comments-container {
+.comments-section-product .comments-container {
   width: 90%;
   background-color: white;
   height: auto;
@@ -1951,7 +2101,7 @@ nav .icons i:hover {
   margin-top: 1.5rem;
   padding: 1.5rem;
 }
-.comments-section .comments-container .comment {
+.comments-section-product .comments-container .comment {
   width: 100%;
   margin-bottom: 1.5rem;
   display: grid;
@@ -1961,25 +2111,25 @@ nav .icons i:hover {
   gap: 0 1.5rem;
   grid-template-areas: "user-icon comment-text icons";
 }
-.comments-section .comments-container .comment .comment-user {
+.comments-section-product .comments-container .comment .comment-user {
   align-self: center;
   justify-self: flex-start;
   grid-area: "user-icon";
 }
-.comments-section .comments-container .comment .comment-text {
+.comments-section-product .comments-container .comment .comment-text {
   text-align: justify;
   grid-area: "comment-text";
   justify-self: flex-start;
 }
-.comments-section .comments-container .comment .comment-text .rating-comment-box {
+.comments-section-product .comments-container .comment .comment-text .rating-comment-box {
   color: #bfbfbf;
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
-.comments-section .comments-container .comment .comment-text .rating-comment-box i.active {
+.comments-section-product .comments-container .comment .comment-text .rating-comment-box i.active {
   color: #F9C846;
 }
-.comments-section .comments-container .comment .comment-votes {
+.comments-section-product .comments-container .comment .comment-votes {
   display: flex;
   justify-self: center;
   align-self: center;
@@ -1987,28 +2137,28 @@ nav .icons i:hover {
   gap: 1rem;
   grid-area: "icons";
 }
-.comments-section .comments-container .comment .comment-votes .liked-comment .count {
+.comments-section-product .comments-container .comment .comment-votes .liked-comment .count {
   margin: 0;
 }
-.comments-section .comments-container .comment .comment-votes .dislike-comment .count {
+.comments-section-product .comments-container .comment .comment-votes .dislike-comment .count {
   margin: 0;
 }
-.comments-section .pagination-buttons {
+.comments-section-product .pagination-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
-.comments-section .pagination-buttons button {
+.comments-section-product .pagination-buttons button {
   background-color: white;
   border: 0;
   padding-inline: 0.7rem;
 }
-.comments-section .pagination-buttons button i {
+.comments-section-product .pagination-buttons button i {
   opacity: 50%;
 }
-.comments-section .pagination-buttons #currentPageIndicator {
+.comments-section-product .pagination-buttons #currentPageIndicator {
   background-color: #F2F2F2;
   border: none;
   border-radius: 0.8rem;
