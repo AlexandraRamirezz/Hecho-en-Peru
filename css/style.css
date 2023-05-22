@@ -4,6 +4,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 h1 {
@@ -173,6 +175,7 @@ nav .icons i:hover {
   width: 90%;
   margin: auto;
   margin-top: 3rem;
+  margin-bottom: 3.2rem;
 }
 
 .container-regiones {
@@ -202,7 +205,6 @@ nav .icons i:hover {
 .sold-products .s-product {
   padding: 0rem 0.6rem;
   background-color: #FFFFFF;
-  padding-bottom: 3.2rem;
 }
 .sold-products .s-product img {
   width: 100%;
@@ -1031,6 +1033,140 @@ nav .icons i:hover {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
 }
 
+.container-regiones {
+  margin-bottom: 6rem;
+}
+.container-regiones .row .reg {
+  position: relative;
+  display: inline-block;
+  margin-top: 1.5rem;
+  height: 15rem;
+}
+.container-regiones .row .reg img {
+  border-radius: 0.5rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-regiones .row .reg .div-btn {
+  width: 94%;
+  position: absolute;
+  bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+.container-regiones .row .reg .div-btn button {
+  padding: 0.5rem 0;
+  width: 12rem;
+  background-color: rgba(169, 229, 187, 0.9333333333);
+  font-weight: bold;
+  border: none;
+  border-radius: 1.25rem;
+  font-size: 1rem;
+}
+
+.fondo-inicio-reg-img {
+  background-image: url("../images/regiones/Cusco.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.inicio-fondo-region {
+  background-color: rgba(0, 0, 0, 0.6392156863);
+  padding: 10rem 18rem;
+  width: 100%;
+}
+.inicio-fondo-region .h1-desc-reg {
+  font-size: 5rem;
+  font-family: "Kavoon", cursive;
+  color: rgba(224, 222, 222, 0.8);
+}
+
+.container-historia {
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+}
+.container-historia .bg-color {
+  background-color: #F6F6F6;
+  padding: 1rem;
+}
+
+.container-lugares {
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+}
+.container-lugares .bg-color {
+  background-color: #F6F6F6;
+  padding: 1rem;
+}
+.container-lugares .row {
+  margin-bottom: 6rem;
+  margin: auto;
+}
+.container-lugares .row .lug {
+  margin-top: 1rem;
+  padding: 1.2rem;
+}
+.container-lugares .row .lug .img-lug {
+  margin: 0;
+}
+.container-lugares .row .lug .img-lug img {
+  border-radius: 0.5rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-lugares .row .lug .info-lug h3 {
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px black solid;
+}
+.container-lugares .row .lug .info-lug p {
+  margin-top: 1.2rem;
+}
+
+.container-artesanos {
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.container-artesanos .bg-color {
+  background-color: #F6F6F6;
+  padding: 1rem;
+}
+.container-artesanos .row {
+  margin-bottom: 6rem;
+  margin: auto;
+}
+.container-artesanos .row .art {
+  margin-top: 1rem;
+  padding: 1.2rem;
+}
+.container-artesanos .row .art .img-art {
+  margin: 0;
+  height: 17rem;
+}
+.container-artesanos .row .art .img-art img {
+  border-radius: 0.5rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-artesanos .row .art .info-art h3 {
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px black solid;
+}
+.container-artesanos .row .art .info-art p {
+  margin-top: 1.2rem;
+}
+
 .container-contacto {
   padding: 4rem 0;
 }
@@ -1206,7 +1342,7 @@ nav .icons i:hover {
   text-align: center;
 }
 .product-container .general-info .rating-comments .rating i {
-  color: #e0dede;
+  color: rgba(224, 222, 222, 0.8);
 }
 .product-container .general-info .rating-comments .rating .rated {
   color: #F9C846;
@@ -1538,8 +1674,8 @@ nav .icons i:hover {
   transition: all 0.3s ease;
 }
 .comments-section .comments-presentation .new-comment-section .input-comment .btn-comment button:hover {
-  background-color: rgba(0, 0, 0, 0);
-  color: #E46953;
+  background-color: #0E0E0E;
+  color: #FFFFFF;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
 }
 .comments-section .comments-container {
@@ -1641,7 +1777,7 @@ footer i {
   padding-left: 0.6rem;
 }
 footer i:hover {
-  color: #e0dede;
+  color: rgba(224, 222, 222, 0.8);
 }
 
 .footer-navigation {
