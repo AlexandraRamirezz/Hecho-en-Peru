@@ -6,10 +6,8 @@ footer {
     padding: 1.8rem 1.2rem;
     font-size: 1rem;
 
-    h2 {
-        margin-bottom: 1rem;
-        font-size: 1rem;
-        font-weight: 400;
+    h3 {
+        margin-bottom: 1.5rem;
     }
 
     a {
@@ -31,6 +29,11 @@ footer {
             color: $color_9;
         }
     }
+}
+
+footer div:nth-child(2) h3
+{
+    margin-bottom: 1rem;
 }
 
 .footer-navigation {

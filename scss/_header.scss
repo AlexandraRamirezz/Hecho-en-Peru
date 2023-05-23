@@ -90,6 +90,8 @@ nav {
         grid-area: iconos;
 
         i {
+            font-size: 1.5rem;
+            padding-inline: 1rem;
             &:hover {
                 color: $color_4;
             }
