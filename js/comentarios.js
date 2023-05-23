@@ -34,7 +34,7 @@ function nComentario() {
             </div>
             </div>
         `;
-        /*document.getElementById("comments-list").appendChild(li);*/
+        
         let commentsList = document.getElementById("comments-list");
         let firstComment = commentsList.firstChild;
         commentsList.insertBefore(li, firstComment);

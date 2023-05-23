@@ -1041,6 +1041,7 @@ nav .icons i:hover {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  order: 1000;
 }
 .container-catalogo .container_productos .pages button {
   background-color: #FFFFFF;

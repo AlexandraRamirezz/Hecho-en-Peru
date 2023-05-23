@@ -468,7 +468,7 @@
             display: flex;
             justify-content: center;
             margin-top: 2rem;
-
+            order: 1000;
             button{
                 background-color: $background-color_1;
                 border: 0;
