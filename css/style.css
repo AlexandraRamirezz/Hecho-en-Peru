@@ -2239,14 +2239,14 @@ footer h2 {
 footer a {
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 0.7rem;
+  font-size: 1rem;
   padding-left: 0.6rem;
 }
 footer a:hover {
   color: #D3D3D3;
 }
 footer i {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding-left: 0.6rem;
 }
 footer i:hover {
@@ -2255,6 +2255,9 @@ footer i:hover {
 
 .footer-navigation {
   text-decoration: none;
+}
+.footer-navigation ul {
+  line-height: 2;
 }
 
 .inline ul li {

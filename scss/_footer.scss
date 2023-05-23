@@ -15,7 +15,7 @@ footer {
     a {
         color: $color_5;
         text-decoration: none;
-        font-size: 0.7rem;
+        font-size: 1rem;
         padding-left: 0.6rem;
 
         &:hover {
@@ -24,7 +24,7 @@ footer {
     }
 
     i {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         padding-left: 0.6rem;
 
         &:hover {
@@ -35,6 +35,9 @@ footer {
 
 .footer-navigation {
     text-decoration: none;
+    ul{
+        line-height: 2;
+    }
 }
 
 .inline {
