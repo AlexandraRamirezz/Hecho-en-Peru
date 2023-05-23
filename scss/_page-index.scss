@@ -15,8 +15,8 @@
         border: none;
         width: 11.2rem;
         height: 2.5rem;
-        font-size: 0.9rem;
-        font-weight: 500;
+        font-size: 1rem;
+        font-weight: 600;
         padding: 0 0.6rem;
         border-radius: 0.9rem;
         cursor: pointer;
@@ -47,6 +47,7 @@
     width: 90%;
     margin: auto;
     margin-top: 3.5rem;
+    border: 1px solid black;
 }
 
 .sold-products {
@@ -74,7 +75,7 @@
         padding: 0rem 0.6rem;
         background-color: $background-color_1;
         margin-bottom: 3.2rem;
-        height: 20rem;
+        height: 17rem;
 
         img {
             margin-bottom: 1rem;
@@ -93,7 +94,7 @@
         }
 
         .price {
-            font-size: 0.8rem;
+            font-size: 1rem;
             font-weight: 400;
             display: flex;
             align-items: center;
@@ -104,7 +105,7 @@
         }
 
         .region {
-            font-size: 0.8rem;
+            font-size: 1rem;
             font-weight: 300;
             color: $color_6;
             margin: 0;
