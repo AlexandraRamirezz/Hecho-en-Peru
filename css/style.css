@@ -315,10 +315,9 @@ nav .icons i:hover {
   color: #FFFFFF;
   border: none;
   width: 11.2rem;
-  height: 2.5rem;
   font-size: 1rem;
   font-weight: 600;
-  padding: 0 0.6rem;
+  padding: 0.6rem 0.6rem;
   border-radius: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -338,14 +337,13 @@ nav .icons i:hover {
   width: 90%;
   margin: auto;
   margin-top: 4rem;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 .container-regiones {
   width: 90%;
   margin: auto;
   margin-top: 3.5rem;
-  border: 1px solid black;
 }
 
 .sold-products .row {
@@ -358,6 +356,7 @@ nav .icons i:hover {
   background-color: #FFFFFF;
 }
 .sold-products .grid-h3 {
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -369,11 +368,10 @@ nav .icons i:hover {
 .sold-products .s-product {
   padding: 0rem 0.6rem;
   background-color: #FFFFFF;
-  margin-bottom: 3.2rem;
+  margin-bottom: 6rem;
   height: 17rem;
 }
 .sold-products .s-product img {
-  margin-bottom: 1rem;
   border: solid 1px rgba(0, 0, 0, 0.1882352941);
   border-radius: 1.25rem;
   display: block;
@@ -430,25 +428,25 @@ nav .icons i:hover {
   width: 24%;
 }
 .our-services .fondo-services-img-1 {
-  background-image: url("../images/inicio.png");
+  background-image: url("../images/servicios/1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0.25rem;
 }
 .our-services .fondo-services-img-2 {
-  background-image: url("../images/inicio.png");
+  background-image: url("../images/servicios/2.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0.25rem;
 }
 .our-services .fondo-services-img-3 {
-  background-image: url("../images/inicio.png");
+  background-image: url("../images/servicios/3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0.25rem;
 }
 .our-services .fondo-services-img-4 {
-  background-image: url("../images/inicio.png");
+  background-image: url("../images/servicios/4.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0.25rem;
@@ -456,9 +454,9 @@ nav .icons i:hover {
 .our-services .services-fondo {
   background-color: rgba(0, 0, 0, 0);
   width: 100%;
-  height: 15rem;
-  padding: 1.2rem;
-  font-size: small;
+  height: 19rem;
+  padding: 1.4rem;
+  font-size: 1rem;
   color: rgba(0, 0, 0, 0);
   gap: 6.2rem;
   transition: all 0.5s ease;
@@ -607,6 +605,10 @@ nav .icons i:hover {
 .container-testimonios .testimonios .p {
   padding-top: 1rem;
   margin-bottom: 0;
+}
+
+.h6-form {
+  padding-top: 3rem;
 }
 
 .container-catalogo {
@@ -1691,6 +1693,173 @@ nav .icons i:hover {
 }
 .container-contacto #sbmit-error {
   color: red;
+}
+
+#btn-crear-cuenta {
+  width: 100%;
+  border-radius: 8px;
+  padding: 0.8rem;
+  border: transparent;
+  background-color: #E9806E;
+  margin-top: 2rem;
+  color: white;
+}
+#btn-crear-cuenta:hover {
+  background-color: #E46953;
+  box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
+}
+
+.Other_sesion button {
+  display: flex;
+  padding: 0.75rem;
+  border: transparent;
+  box-shadow: #000000;
+}
+.Other_sesion img {
+  width: 1.5rem;
+  margin-right: 0.6rem;
+}
+
+REgistro sassss .Registrate_ {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: space-evenly;
+  color: #b4b3b3;
+  margin-top: 3rem;
+}
+REgistro sassss .Registrate_ a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.registro-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.registro-group:placeholder-shown {
+  font-size: 1rem;
+}
+.registro-group p {
+  text-align: start;
+  font-size: 16px;
+  color: red;
+}
+.registro-group input.invalid {
+  border: 2px solid red;
+}
+.registro-group input.valid {
+  border: 2px solid green;
+}
+.registro-group input {
+  font-size: 1rem;
+}
+
+.form-h1-espacio {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.espacio {
+  margin-top: 3rem;
+}
+
+.formulario {
+  margin-bottom: 5rem;
+}
+
+.box_inicio_sesion {
+  width: 90%;
+  margin: auto;
+}
+
+.image_llama img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  opacity: 0.3;
+  border-radius: 1rem;
+  padding-top: 0.6rem;
+}
+
+.form-inicio_sesion {
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.formulario {
+  padding: 1rem;
+}
+
+.form-info {
+  margin-top: 2rem;
+  width: 90%;
+  margin: auto;
+}
+.form-info input {
+  margin: auto;
+  width: 100%;
+  height: 3rem;
+  border-radius: 8px;
+  padding: 0.5rem;
+  border: transparent;
+  background-color: #F2F2F2;
+  color: black;
+  font-size: 0.75rem;
+}
+.form-info p {
+  font-size: 0.75rem;
+  text-align: end;
+  margin-top: 0.5rem;
+  color: #b4b3b3;
+}
+.form-info h6 {
+  text-align: left;
+  width: auto;
+  font-size: 1rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+#btn-iniciar-sesion {
+  width: 100%;
+  border-radius: 8px;
+  padding: 0.8rem;
+  border: transparent;
+  background-color: #a9e5bb;
+  margin-top: 2rem;
+}
+#btn-iniciar-sesion:hover {
+  background-color: #8ADAA1;
+  box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
+}
+
+.Other_sesion {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.iniciar-sesion-group {
+  position: relative;
+}
+.iniciar-sesion-group input.invalid {
+  border: 2px solid red;
+}
+.iniciar-sesion-group input.valid {
+  border: 2px solid green;
+}
+.iniciar-sesion-group:placeholder-shown {
+  font-size: 1rem;
+}
+.iniciar-sesion-group p {
+  text-align: start;
+  font-size: 16px;
+  color: red;
+}
+.iniciar-sesion-group input {
+  font-size:  1rem;
 }
 
 .breadcrumbs {

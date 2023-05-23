@@ -1,0 +1,99 @@
+.box_inicio_sesion {
+    width: 90%;
+    margin: auto;
+}
+
+.image_llama {
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        opacity: 0.3;
+        border-radius: 1rem;
+        padding-top: 0.6rem;
+    }
+}
+
+.form-inicio_sesion {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.formulario {
+    padding: 1rem;
+}
+
+.form-info {
+    margin-top: 2rem;
+    width: 90%;
+    margin: auto;
+
+    input {
+        margin: auto;
+        width: 100%;
+        height: 3rem;
+        border-radius: 8px;
+        padding: 0.5rem;
+        border: transparent;
+        background-color: #F2F2F2;
+        color: black;
+        font-size: 0.75rem;
+    }
+
+    p {
+        font-size: 0.75rem;
+        text-align: end;
+        margin-top: 0.5rem;
+        color: #b4b3b3;
+    }
+
+    h6 {
+        text-align: left;
+        width: auto;
+        font-size: 1rem;
+        margin-top: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+}
+
+#btn-iniciar-sesion {
+    width: 100%;
+    border-radius: 8px;
+    padding: 0.8rem;
+    border: transparent;
+    background-color: $background-color_19;
+    margin-top: 2rem;
+        &:hover {
+            background-color: $background-color_21;
+            box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
+        }
+}
+
+.Other_sesion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.iniciar-sesion-group {
+	input.invalid {
+		border: 2px solid red;
+	}
+	input.valid {
+		border: 2px solid green;
+	}
+	position: relative;
+    
+	&:placeholder-shown {
+		font-size: 1rem;
+	}
+	p {
+		text-align: start;
+		font-size: 16px;
+		color: red;
+	}
+	input {
+		font-size:  1rem;
+	}
+}

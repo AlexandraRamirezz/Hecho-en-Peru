@@ -1,0 +1,84 @@
+#btn-crear-cuenta {
+    width: 100%;
+    border-radius: 8px;
+    padding: 0.8rem;
+    border: transparent;
+    background-color: $background-color_6;
+    margin-top: 2rem;
+    color: white;
+
+    &:hover {
+        background-color: $background-color_7;
+        box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
+    }
+}
+
+.Other_sesion {
+    button {
+        display: flex;
+        padding: 0.75rem;
+        border: transparent;
+        box-shadow: #000000;
+    }
+
+    img {
+        width: 1.5rem;
+        margin-right: 0.6rem;
+    }
+}
+
+REgistro sassss
+
+.Registrate_ {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-evenly;
+    color: #b4b3b3;
+    margin-top: 3rem;
+
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+}
+
+.registro-group {
+    position: relative;
+    margin-bottom: 2rem;
+
+    &:placeholder-shown {
+        font-size: 1rem;
+    }
+
+    p {
+        text-align: start;
+        font-size: 16px;
+        color: red;
+    }
+
+    input.invalid {
+        border: 2px solid red;
+    }
+
+    input.valid {
+        border: 2px solid green;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+}
+
+.form-h1-espacio {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.espacio {
+    margin-top: 3rem;
+}
+
+.formulario {
+    margin-bottom: 5rem;
+}
