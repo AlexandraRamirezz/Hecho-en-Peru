@@ -53,8 +53,10 @@
                 overflow: hidden;
                 img{
                     width: 8rem;
+                    height: 8rem;
                     border-radius: 0.6rem;
                     transition: all 0.5s ease;
+                    object-fit: cover;
                 }
                 &:hover{
                     box-shadow: inset 0 0.5rem 1rem #0000003b;

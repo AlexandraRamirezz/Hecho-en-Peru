@@ -1019,7 +1019,7 @@ nav .icons i:hover {
   background-color: #242423;
   color: #FFFFFF;
   border: none;
-  width: 100%;
+  width: 10rem;
   height: 32px;
   font-size: 1rem;
   font-weight: 600;
@@ -1750,8 +1750,10 @@ nav .icons i:hover {
 }
 .product-container .product-box .small-images figure img {
   width: 8rem;
+  height: 8rem;
   border-radius: 0.6rem;
   transition: all 0.5s ease;
+  object-fit: cover;
 }
 .product-container .product-box .small-images figure:hover {
   box-shadow: inset 0 0.5rem 1rem rgba(0, 0, 0, 0.231372549);
