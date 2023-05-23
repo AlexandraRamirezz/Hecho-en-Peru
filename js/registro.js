@@ -248,7 +248,7 @@ function validateForm() {
     }, 10000);
 
     // Redirigir al usuario a la página de inicio de sesión
-    window.location.href = 'inicio.html';
+    window.location.href = 'iniciosesion.html';
 
     return true;
     
