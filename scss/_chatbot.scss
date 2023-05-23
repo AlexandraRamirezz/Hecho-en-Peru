@@ -85,6 +85,11 @@
     margin-bottom: 10px;
 }
 
+/*#chat-log{
+    height: 16rem;
+    overflow-y: scroll;
+}*/
+
 #input-container {
     display: flex;
 }
@@ -157,5 +162,5 @@
     
     &:hover {
     background-color: #ccc;
-  }
+    }
 }

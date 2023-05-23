@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   var chatLog = document.getElementById("chat-log");
+  var chatContainer = document.getElementById("chat-container");
   var faqButtons = document.getElementsByClassName("faq-button");
   var relatedQuestionButtons = document.getElementsByClassName("related-question-button");
   var clearChatButton = document.getElementById("clear-chat-button");
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Desplazar automáticamente hacia abajo
     setTimeout(function () {
-      chatLog.scrollTop = chatLog.scrollHeight;
+      chatContainer.scrollTop = chatContainer.scrollHeight;
     }, 100);
   }
 
@@ -96,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
     messageContainer.style.fontSize = "0.8rem";
 
     chatLog.appendChild(messageContainer);
-    chatLog.scrollTop = chatLog.scrollHeight;
+    chatContainer.scrollTop = chatContainer.scrollHeight;
     if (sender === "bot") {
       messageContainer.style.backgroundColor = "white";
       messageContainer.style.width = "80%";
@@ -149,12 +150,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // Agregar evento submit al formulario de entrada
-  userInputForm.addEventListener("submit", function (event) {
+  /*userInputForm.addEventListener("submit", function (event) {
     event.preventDefault();
     sendUserQuestion();
-  });
+  });*/
 
-  function sendUserQuestion() {
+  /*function sendUserQuestion() {
     var userQuestion = userInput.value;
     if (userQuestion.trim() !== "") {
       addMessage(userQuestion, "user");
@@ -163,10 +164,10 @@ document.addEventListener("DOMContentLoaded", function () {
       userInput.value = ""; // Limpiar el campo de entrada después de enviar la pregunta
       scrollChatLog();
     }
-  }
+  }*/
 
 
-  function generateBotResponse(userQuestion) {
+  /*function generateBotResponse(userQuestion) {
     var botResponse = "Lo siento, no tengo una respuesta para esa pregunta en este momento.";
 
     // Compara la pregunta del usuario con las preguntas registradas y proporciona una respuesta adecuada
@@ -179,10 +180,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     return botResponse;
-  }
+  }*/
 
-  function scrollChatLog() {
+  /*function scrollChatLog() {
     chatLog.scrollTop = chatLog.scrollHeight;
-  }
+  }*/
 
 });

@@ -225,6 +225,10 @@ nav .icons i:hover {
   margin-bottom: 10px;
 }
 
+/*#chat-log{
+    height: 16rem;
+    overflow-y: scroll;
+}*/
 #input-container {
   display: flex;
 }
@@ -664,30 +668,13 @@ nav .icons i:hover {
 .container-catalogo .filtro .f-precio .slider .progress {
   height: 100%;
   position: absolute;
-  left: 25%;
+  left: 0;
   right: 25%;
   border-radius: 0.6rem;
   background-color: #ACDE7B;
 }
 .container-catalogo .filtro .f-precio .range-input {
   position: relative;
-  /*.range-min::-webkit-slider-thumb{
-      -webkit-appearance: none;
-      height: 0.7rem;
-      width: 20%;
-      border-radius: 0.6rem;
-      background-color: #ACDE7B;
-      pointer-events: auto;
-  }
-  .range-max::-webkit-slider-thumb{
-      -webkit-appearance: none;
-      height: 1.2rem;
-      width: 1.2rem;
-      border-radius: 50%;
-      background-color: #ACDE7B;
-      box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.219);
-      pointer-events: auto;
-  }*/
 }
 .container-catalogo .filtro .f-precio .range-input input {
   -webkit-appearance: none;
@@ -1133,12 +1120,17 @@ nav .icons i:hover {
   border-radius: 1.5rem;
   box-shadow: inset 0rem 0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.0431372549);
 }
+.interest-products .container-slider .container-carousel .carousel .carousel-product:hover figure {
+  box-shadow: inset 0 0.5rem 1rem rgba(0, 0, 0, 0.231372549);
+}
+.interest-products .container-slider .container-carousel .carousel .carousel-product:hover figure img {
+  transform: scale(1.1, 1.1);
+}
 .interest-products .container-slider .container-carousel .carousel .carousel-product .rating {
   position: absolute;
   align-self: flex-start;
   top: 1.5rem;
   left: 1.5rem;
-  z-index: 2;
   background-color: rgba(255, 225, 253, 0.7568627451);
   padding-left: 0.4rem;
   padding-right: 0.4rem;
