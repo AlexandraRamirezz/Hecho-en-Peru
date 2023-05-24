@@ -29,6 +29,11 @@
         width: 1.5rem;
         margin-right: 0.6rem;
     }
+
+    .col-md-6 {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .registro-group {
