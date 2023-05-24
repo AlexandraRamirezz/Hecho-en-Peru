@@ -1,5 +1,5 @@
 .fondo-inicio-img {
-    background-image: url("../images/inicio.png");
+    background-image: url("../images/inicio-fondo.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -97,7 +97,7 @@
             display: flex;
             align-items: center;
             text-align: center;
-            justify-content: center;
+            justify-content: start;
             grid-area: price;
             margin: 0;
         }
@@ -140,31 +140,35 @@
     }
 
     .fondo-services-img-1 {
-        background-image: url("../images/servicios/1.jpg");
+        background-image: url("../images/inicio/servicios/1.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        border-radius: 0.25rem;
+        border-radius: 0.5rem;
+        opacity: 0.9;
     }
 
     .fondo-services-img-2 {
-        background-image: url("../images/servicios/2.jpeg");
+        background-image: url("../images/inicio/servicios/2.jpeg");
         background-repeat: no-repeat;
         background-size: cover;
-        border-radius: 0.25rem;
+        border-radius: 0.5rem;
+        opacity: 0.9;
     }
 
     .fondo-services-img-3 {
-        background-image: url("../images/servicios/3.jpg");
+        background-image: url("../images/inicio/servicios/3.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        border-radius: 0.25rem;
+        border-radius: 0.5rem;
+        opacity: 0.9;
     }
 
     .fondo-services-img-4 {
-        background-image: url("../images/servicios/4.png");
+        background-image: url("../images/inicio/servicios/4.png");
         background-repeat: no-repeat;
         background-size: cover;
-        border-radius: 0.25rem;
+        border-radius: 0.5rem;
+        opacity: 0.9;
     }
 
     .services-fondo {
@@ -196,7 +200,7 @@
     }
 
     .fondo-regiones-img {
-        background-image: url("../images/banner-regiones.jpg");
+        background-image: url("../images/inicio/banner-regiones.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 0.25rem;
@@ -221,6 +225,10 @@
             padding: 1rem 4rem;
             height: 18rem;
             width: 100%;
+
+            .p-regiones {
+                margin-bottom: 3.5rem;
+            }
         }
 
         button {
@@ -290,7 +298,8 @@
             position: relative;
 
             img {
-                border-radius: 0.3rem;
+                margin-top: 2rem;
+                border-radius: 0.4rem;
                 height: 70%;
                 object-fit: cover;
             }
@@ -302,7 +311,9 @@
             }
 
             p {
+                padding: 0.3rem;
                 padding-top: 1rem;
+                font-weight: 500;
             }
         }
     }
@@ -351,4 +362,8 @@
 
 .h6-form {
     padding-top: 3rem;
+}
+
+.opacidad-img {
+    opacity: 0.7;
 }
