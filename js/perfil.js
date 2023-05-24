@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
       event.preventDefault(); // Evitar el envío del formulario
   
       // Redirigir a la página principal
-      window.location.href = "index.html";
+      window.location.href = "../index.html";
     });
   
     // Recuperar el correo electrónico almacenado al cargar la página

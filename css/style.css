@@ -269,7 +269,7 @@ nav .icons i:hover {
 .message.user {
   background-color: #F8E4AF;
   margin-left: 3.7rem;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem 0 0.5rem 0.5rem;
   padding: 0.3em 0.5rem;
   text-align: left;
   width: 80%;
@@ -292,7 +292,7 @@ nav .icons i:hover {
   border: 1px solid #DDD;
   color: #333;
   border: none;
-  border-radius: 5px;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
   cursor: pointer;
 }
 .related-question-button:hover {
@@ -300,13 +300,13 @@ nav .icons i:hover {
 }
 
 .fondo-inicio-img {
-  background-image: url("../images/inicio.png");
+  background-image: url("../images/inicio-fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .inicio-fondo {
-  background-color: rgba(0, 0, 0, 0.6392156863);
+  background-color: rgba(0, 0, 0, 0.7607843137);
   padding: 4rem 18rem;
   width: 100%;
 }
@@ -337,7 +337,7 @@ nav .icons i:hover {
   width: 90%;
   margin: auto;
   margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .container-regiones {
@@ -390,7 +390,7 @@ nav .icons i:hover {
   display: flex;
   align-items: center;
   text-align: center;
-  justify-content: center;
+  justify-content: start;
   grid-area: price;
   margin: 0;
 }
@@ -428,28 +428,32 @@ nav .icons i:hover {
   width: 24%;
 }
 .our-services .fondo-services-img-1 {
-  background-image: url("../images/servicios/1.jpg");
+  background-image: url("../images/inicio/servicios/1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
+  opacity: 0.9;
 }
 .our-services .fondo-services-img-2 {
-  background-image: url("../images/servicios/2.jpeg");
+  background-image: url("../images/inicio/servicios/2.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
+  opacity: 0.9;
 }
 .our-services .fondo-services-img-3 {
-  background-image: url("../images/servicios/3.jpg");
+  background-image: url("../images/inicio/servicios/3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
+  opacity: 0.9;
 }
 .our-services .fondo-services-img-4 {
-  background-image: url("../images/servicios/4.png");
+  background-image: url("../images/inicio/servicios/4.png");
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
+  opacity: 0.9;
 }
 .our-services .services-fondo {
   background-color: rgba(0, 0, 0, 0);
@@ -467,7 +471,7 @@ nav .icons i:hover {
   border-radius: 0.25rem;
 }
 .our-services .services-fondo:hover {
-  background-color: rgba(0, 0, 0, 0.6392156863);
+  background-color: rgba(0, 0, 0, 0.7607843137);
   color: #FFFFFF;
 }
 
@@ -476,7 +480,7 @@ nav .icons i:hover {
   padding-right: 0;
 }
 .regiones .fondo-regiones-img {
-  background-image: url("../images/banner-regiones.jpg");
+  background-image: url("../images/inicio/banner-regiones.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0.25rem;
@@ -500,6 +504,9 @@ nav .icons i:hover {
   padding: 1rem 4rem;
   height: 18rem;
   width: 100%;
+}
+.regiones .regiones-fondo .div-region .p-regiones {
+  margin-bottom: 3.5rem;
 }
 .regiones .regiones-fondo button {
   background-color: #E9806E;
@@ -562,7 +569,8 @@ nav .icons i:hover {
   position: relative;
 }
 .our-team .row .personal img {
-  border-radius: 0.3rem;
+  margin-top: 2rem;
+  border-radius: 0.4rem;
   height: 70%;
   object-fit: cover;
 }
@@ -570,7 +578,9 @@ nav .icons i:hover {
   transform: scale(1.06, 1.06);
 }
 .our-team .row .personal p {
+  padding: 0.3rem;
   padding-top: 1rem;
+  font-weight: 500;
 }
 
 .container-testimonios {
@@ -609,6 +619,16 @@ nav .icons i:hover {
 
 .h6-form {
   padding-top: 3rem;
+}
+
+.opacidad-img {
+  opacity: 0.7;
+}
+
+.fondo-catalogo-img {
+  background-image: url("../images/catalogo-fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container-catalogo {
@@ -1067,7 +1087,7 @@ nav .icons i:hover {
 }
 
 .interest-products {
-  margin: 3rem 0;
+  margin: 5rem 0;
   background-color: rgba(169, 229, 187, 0.231372549);
 }
 .interest-products h2 {
@@ -1175,7 +1195,7 @@ nav .icons i:hover {
   background-color: #242423;
   color: #FFFFFF;
   border: none;
-  width: 100%;
+  width: 10rem;
   height: 32px;
   font-size: 1rem;
   font-weight: 600;
@@ -1188,6 +1208,12 @@ nav .icons i:hover {
   background-color: #0E0E0E;
   color: #FFFFFF;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
+}
+
+.fondo-regiones-img {
+  background-image: url("../images/regiones-fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container-reg {
@@ -1237,7 +1263,7 @@ nav .icons i:hover {
 }
 
 .inicio-fondo-region {
-  background-color: rgba(0, 0, 0, 0.6392156863);
+  background-color: rgba(0, 0, 0, 0.7607843137);
   padding: 10rem 18rem;
   width: 100%;
 }
@@ -1254,7 +1280,8 @@ nav .icons i:hover {
 }
 .container-historia .bg-color {
   background-color: #F6F6F6;
-  padding: 1rem;
+  padding: 1.2rem;
+  text-align: justify;
 }
 
 .container-lugares {
@@ -1264,7 +1291,8 @@ nav .icons i:hover {
 }
 .container-lugares .bg-color {
   background-color: #F6F6F6;
-  padding: 1rem;
+  padding: 1.2rem;
+  text-align: justify;
 }
 .container-lugares .row {
   margin-bottom: 6rem;
@@ -1281,7 +1309,7 @@ nav .icons i:hover {
   border-radius: 0.5rem;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 17rem;
   object-fit: cover;
 }
 .container-lugares .row .lug .info-lug h3 {
@@ -1291,6 +1319,7 @@ nav .icons i:hover {
 }
 .container-lugares .row .lug .info-lug p {
   margin-top: 1.2rem;
+  text-align: justify;
 }
 
 .container-artesanos {
@@ -1301,7 +1330,8 @@ nav .icons i:hover {
 }
 .container-artesanos .bg-color {
   background-color: #F6F6F6;
-  padding: 1rem;
+  padding: 1.2rem;
+  text-align: justify;
 }
 .container-artesanos .row {
   margin-bottom: 6rem;
@@ -1313,14 +1343,14 @@ nav .icons i:hover {
 }
 .container-artesanos .row .art .img-art {
   margin: 0;
-  height: 17rem;
 }
 .container-artesanos .row .art .img-art img {
   border-radius: 0.5rem;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 22rem;
   object-fit: cover;
+  object-position: top;
 }
 .container-artesanos .row .art .info-art h3 {
   margin-top: 1rem;
@@ -1329,6 +1359,7 @@ nav .icons i:hover {
 }
 .container-artesanos .row .art .info-art p {
   margin-top: 1.2rem;
+  text-align: justify;
 }
 
 .comments-section-region .comments-presentation {
@@ -1497,6 +1528,12 @@ nav .icons i:hover {
   width: 10rem;
 }
 
+.fondo-quienes-somos-img {
+  background-image: url("../images/quienes-somos-fondo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .container-descripcion {
   width: 90%;
   margin: auto;
@@ -1504,7 +1541,8 @@ nav .icons i:hover {
 }
 .container-descripcion .bg-color {
   background-color: #F6F6F6;
-  padding: 1rem;
+  padding: 1.2rem;
+  text-align: justify;
 }
 
 .container-m-v {
@@ -1514,7 +1552,8 @@ nav .icons i:hover {
 }
 .container-m-v .bg-color {
   background-color: #F6F6F6;
-  padding: 1rem;
+  padding: 1.2rem;
+  text-align: justify;
 }
 .container-m-v .row {
   margin-bottom: 6rem;
@@ -1557,7 +1596,7 @@ nav .icons i:hover {
   padding: 1.3rem;
   margin: 1rem;
   background-color: #FFFFFF;
-  height: 26rem;
+  height: 35rem;
   box-shadow: 0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.1019607843);
 }
 .container-equipo-de-trabajo .equipo-de-trabajo .row .card-equipo .per-img {
@@ -1567,7 +1606,17 @@ nav .icons i:hover {
   object-fit: cover;
 }
 .container-equipo-de-trabajo .equipo-de-trabajo .row .card-equipo p {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
+}
+.container-equipo-de-trabajo .equipo-de-trabajo .row .card-equipo .p-personal {
+  text-align: center;
+  padding: 0rem 0.4rem;
+}
+
+.fondo-contacto-img {
+  background-image: url("../images/contacto-fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container-contacto {
@@ -1709,6 +1758,11 @@ nav .icons i:hover {
   box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
 }
 
+.Other_sesion {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
 .Other_sesion button {
   display: flex;
   padding: 0.75rem;
@@ -1718,19 +1772,6 @@ nav .icons i:hover {
 .Other_sesion img {
   width: 1.5rem;
   margin-right: 0.6rem;
-}
-
-REgistro sassss .Registrate_ {
-  display: flex;
-  width: 50%;
-  margin: auto;
-  justify-content: space-evenly;
-  color: #b4b3b3;
-  margin-top: 3rem;
-}
-REgistro sassss .Registrate_ a {
-  text-decoration: none;
-  color: #000000;
 }
 
 .registro-group {
@@ -1764,10 +1805,6 @@ REgistro sassss .Registrate_ a {
   margin-top: 3rem;
 }
 
-.formulario {
-  margin-bottom: 5rem;
-}
-
 .box_inicio_sesion {
   width: 90%;
   margin: auto;
@@ -1785,11 +1822,7 @@ REgistro sassss .Registrate_ a {
 .form-inicio_sesion {
   text-align: center;
   padding: 1rem;
-  margin-bottom: 2rem;
-}
-
-.formulario {
-  padding: 1rem;
+  margin-bottom: 4rem;
 }
 
 .form-info {
@@ -1812,7 +1845,6 @@ REgistro sassss .Registrate_ a {
   font-size: 0.75rem;
   text-align: end;
   margin-top: 0.5rem;
-  color: #b4b3b3;
 }
 .form-info h6 {
   text-align: left;
@@ -1833,12 +1865,6 @@ REgistro sassss .Registrate_ a {
 #btn-iniciar-sesion:hover {
   background-color: #8ADAA1;
   box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
-}
-
-.Other_sesion {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3rem;
 }
 
 .iniciar-sesion-group {

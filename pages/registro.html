@@ -62,26 +62,26 @@
                     <form class="form-info" id="registration-form">
                         <div class="names_form">
                             <div class="espacio registro-group">
-                                <h2 class="text-start">Nombre</h2>
+                                <h3 class="text-start">Nombre</h3>
                                 <input type="text" placeholder="Ingresa tus nombres" id="registro-name" onkeyup="validateName()">
                             <p id="name-error" class="error-message"></p>
                             </div>
 
                             <div class="espacio registro-group">
-                                <h2 class="text-start">Apellido</h2>
+                                <h3 class="text-start">Apellido</h3>
                                 <input type="text" placeholder="Ingresa tus apellidos" id="registro-LastName" onkeyup="validateLastName()">
                             <p id="LastName-error" class="error-message"></p>
                             </div>
                         </div>
 
                         <div class="espacio registro-group">
-                            <h2 class="text-start">Correo electrónico</h2>
+                            <h3 class="text-start">Correo electrónico</h3>
                             <input type="email" placeholder="Ingresa tu correo electrónico" name="email" id="registro-email" onkeyup="validateEmail()">
                             <p id="email-error" class="error-message"></p>
                         </div>
 
                         <div class="espacio registro-group">
-                            <h2 class="text-start">Contraseña</h2>
+                            <h3 class="text-start">Contraseña</h3>
                             <input type="password" placeholder="Ingresa tu contraseña" id="registro-password" onkeyup="validatePassword()">
                             <p id="password-error" class="error-message"></p>
                         </div>
@@ -94,20 +94,20 @@
                             <p id="subit-error"></p>
                         </div>
 
-                        <div class="Other_sesion">
-                            <div> 
+                        <div class="Other_sesion row">
+                            <div class="col-md-6"> 
                                 <button> <li><img src="../images/google.png" alt=""></li> Crear cuenta con Google</button>
                             </div>
     
-                            <div> 
+                            <div class="col-md-6"> 
                                 <button> <li><img src="../images/microsoft.png" alt=""></li> Crear cuenta con Microsoft</button>
                             </div>
                         </div>
                     </form>
 
-                    <div class="Registrate_">
+                    <div>
                         <h6 class="h6-form">¿Ya tienes una cuenta?</h6>
-                        <a href="iniciosesion.html">Inicia Sesión</a>
+                        <a href="iniciosesion.html">Inicia sesión</a>
                     </div>
                 </div>
             </section>
@@ -116,7 +116,6 @@
                 <img src="../images/2-llamitas.jpg" alt="llamita">
             </figure>
         </section>
-
     </main>
 
     <footer>
@@ -167,8 +166,6 @@
     <script src="../js/active-state.js"></script>
 
     <script src="../js/registro.js"></script>
-
-    <script src="../js/iniciosesion.js"></script>
 
     <script src="../js/perfil.js"></script>
 

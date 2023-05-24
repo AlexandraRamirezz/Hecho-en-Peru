@@ -19,7 +19,7 @@ loginForm.addEventListener('submit', function(event) {
 
     if (foundUser) {
         // El usuario existe, inicia sesión exitosamente
-        window.location.href = "index.html";
+        window.location.href = "../index.html";
         // Aquí puedes redirigir al usuario a la página de inicio después de iniciar sesión
     } else {
         // El usuario no existe, muestra mensajes de error y resalta los campos incorrectos

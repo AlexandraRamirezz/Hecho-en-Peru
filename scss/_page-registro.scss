@@ -14,6 +14,10 @@
 }
 
 .Other_sesion {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+
     button {
         display: flex;
         padding: 0.75rem;
@@ -24,22 +28,6 @@
     img {
         width: 1.5rem;
         margin-right: 0.6rem;
-    }
-}
-
-REgistro sassss
-
-.Registrate_ {
-    display: flex;
-    width: 50%;
-    margin: auto;
-    justify-content: space-evenly;
-    color: #b4b3b3;
-    margin-top: 3rem;
-
-    a {
-        text-decoration: none;
-        color: #000000;
     }
 }
 
@@ -77,8 +65,4 @@ REgistro sassss
 
 .espacio {
     margin-top: 3rem;
-}
-
-.formulario {
-    margin-bottom: 5rem;
 }

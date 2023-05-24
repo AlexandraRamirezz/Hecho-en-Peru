@@ -1,3 +1,9 @@
+.fondo-catalogo-img {
+    background-image: url("../images/catalogo-fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .container-catalogo {
     width: 90%;
     margin: auto;
@@ -480,7 +486,7 @@
 }
 
 .interest-products{
-    margin: 3rem 0;
+    margin: 5rem 0;
     background-color: $background-color_8;
     h2{
         padding: 2rem 0;
@@ -585,7 +591,7 @@
                             background-color: $background-color_13;
                             color: $color_5;
                             border: none;
-                            width: 100%;
+                            width: 10rem;
                             height: 32px;
                             font-size: 1rem;
                             font-weight: 600;
