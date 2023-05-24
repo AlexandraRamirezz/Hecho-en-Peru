@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (sender === "bot") {
       messageContainer.style.backgroundColor = "white";
       messageContainer.style.width = "80%";
-      messageContainer.style.borderRadius = "0.5rem";
+      messageContainer.style.borderRadius = "0 0.5rem 0.5rem 0.5rem";
       messageContainer.style.margin = "0.8rem 0.5rem";
       messageContainer.style.boxShadow = "0px 2px 2px #0000001a";
     }

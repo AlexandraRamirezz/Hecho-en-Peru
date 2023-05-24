@@ -269,7 +269,7 @@ nav .icons i:hover {
 .message.user {
   background-color: #F8E4AF;
   margin-left: 3.7rem;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem 0 0.5rem 0.5rem;
   padding: 0.3em 0.5rem;
   text-align: left;
   width: 80%;
@@ -292,7 +292,7 @@ nav .icons i:hover {
   border: 1px solid #DDD;
   color: #333;
   border: none;
-  border-radius: 5px;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
   cursor: pointer;
 }
 .related-question-button:hover {
