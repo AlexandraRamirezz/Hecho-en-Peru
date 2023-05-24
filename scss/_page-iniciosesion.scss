@@ -17,11 +17,7 @@
 .form-inicio_sesion {
     text-align: center;
     padding: 1rem;
-    margin-bottom: 2rem;
-}
-
-.formulario {
-    padding: 1rem;
+    margin-bottom: 4rem;
 }
 
 .form-info {
@@ -45,7 +41,6 @@
         font-size: 0.75rem;
         text-align: end;
         margin-top: 0.5rem;
-        color: #b4b3b3;
     }
 
     h6 {
@@ -68,12 +63,6 @@
             background-color: $background-color_21;
             box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
         }
-}
-
-.Other_sesion {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3rem;
 }
 
 .iniciar-sesion-group {

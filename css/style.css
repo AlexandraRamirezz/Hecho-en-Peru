@@ -337,7 +337,7 @@ nav .icons i:hover {
   width: 90%;
   margin: auto;
   margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .container-regiones {
@@ -1758,6 +1758,11 @@ nav .icons i:hover {
   box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
 }
 
+.Other_sesion {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
 .Other_sesion button {
   display: flex;
   padding: 0.75rem;
@@ -1767,19 +1772,6 @@ nav .icons i:hover {
 .Other_sesion img {
   width: 1.5rem;
   margin-right: 0.6rem;
-}
-
-REgistro sassss .Registrate_ {
-  display: flex;
-  width: 50%;
-  margin: auto;
-  justify-content: space-evenly;
-  color: #b4b3b3;
-  margin-top: 3rem;
-}
-REgistro sassss .Registrate_ a {
-  text-decoration: none;
-  color: #000000;
 }
 
 .registro-group {
@@ -1813,10 +1805,6 @@ REgistro sassss .Registrate_ a {
   margin-top: 3rem;
 }
 
-.formulario {
-  margin-bottom: 5rem;
-}
-
 .box_inicio_sesion {
   width: 90%;
   margin: auto;
@@ -1834,11 +1822,7 @@ REgistro sassss .Registrate_ a {
 .form-inicio_sesion {
   text-align: center;
   padding: 1rem;
-  margin-bottom: 2rem;
-}
-
-.formulario {
-  padding: 1rem;
+  margin-bottom: 4rem;
 }
 
 .form-info {
@@ -1861,7 +1845,6 @@ REgistro sassss .Registrate_ a {
   font-size: 0.75rem;
   text-align: end;
   margin-top: 0.5rem;
-  color: #b4b3b3;
 }
 .form-info h6 {
   text-align: left;
@@ -1882,12 +1865,6 @@ REgistro sassss .Registrate_ a {
 #btn-iniciar-sesion:hover {
   background-color: #8ADAA1;
   box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
-}
-
-.Other_sesion {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3rem;
 }
 
 .iniciar-sesion-group {
