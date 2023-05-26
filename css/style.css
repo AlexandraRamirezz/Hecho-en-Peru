@@ -1809,6 +1809,21 @@ nav .icons i:hover {
   margin-top: 3rem;
 }
 
+.box-contorno {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  margin: auto;
+}
+.box-contorno h6 {
+  font-weight: 400;
+}
+.box-contorno a {
+  padding-left: 1.4rem;
+  margin-bottom: 8px;
+  color: rgba(128, 128, 128, 0.7882352941);
+}
+
 .box_inicio_sesion {
   width: 90%;
   margin: auto;

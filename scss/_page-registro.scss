@@ -71,3 +71,20 @@
 .espacio {
     margin-top: 3rem;
 }
+
+.box-contorno {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    margin: auto;
+
+    h6 {
+        font-weight: 400;
+    }
+
+    a {
+        padding-left: 1.4rem;
+        margin-bottom: 8px;
+        color: #808080c9;
+    }
+}
