@@ -40,6 +40,7 @@
                         font-family: $font-family_1;
                         border-radius: 0.4rem;
                         border: solid #4F4F4F 1px;
+                        -moz-appearance: textfield;
                         &[type="number"]::-webkit-inner-spin-button {
                             -webkit-appearance: none;
                         }
@@ -86,9 +87,18 @@
                         box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.219);
                         pointer-events: auto;
                     }
+                    &[type="range"]::-moz-range-thumb {
+                        -moz-appearance: none;
+                        height: 1.2rem;
+                        width: 1.2rem;
+                        border: none;
+                        border-radius: 50%;
+                        background-color: #ACDE7B;
+                        box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.219);
+                        pointer-events: auto;
+                    }
                 }
             }
-        
         }
         .f-ordenar-por{
             display: flex;
@@ -612,5 +622,3 @@
         }
     }
 }
-
-
