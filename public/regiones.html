@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hecho en Perú | Regiones</title>
+
+    <link href="./assests/images/logo-navbar.png" rel="icon">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- ANIMATE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- ÍCONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- CSS BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- FUENTE: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assests/styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html"><img src="./assests/images/logo-navbar.png" alt="Logo de Hecho en Perú"></a>
+            </div>
+            <div class="menu d-flex justify-content-around">
+                <a class="menu-item" href="../index.html">Inicio</a>
+                <a class="menu-item" href="catalogo.html">Catálogo</a>
+                <a class="menu-item" href="regiones.html">Regiones</a>
+                <a class="menu-item" href="quienes-somos.html">Quiénes somos</a>
+                <a class="menu-item" href="contacto.html">Contacto</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Ingresa tu categoría aquí">
+                <button type="submit">Buscar</button>
+            </div>
+            <div class="icons d-flex justify-content-around">
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a href="./login.html"><i class="fas fa-user"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section><!--Hero Section-->
+            <div class="p-6 text-center fondo-regiones-img">
+                <div class="inicio-fondo">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="text-white" data-aos="fade-up" data-aos-duration="2000">
+                            <h1>Regiones</h1>
+                            <p>Descubre la diversidad cultural a través de nuestras artesanías por regiones. Explora las
+                                diferentes tradiciones y técnicas artesanales que se encuentran en cada rincón del
+                                mundo. Desde las coloridas artesanías latinoamericanas hasta las elegantes creaciones
+                                asiáticas, cada región tiene su propio estilo distintivo. Déjate inspirar por la riqueza
+                                cultural y el ingenio de nuestros artesanos de todo el mundo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- chatbot -->
+        <section>
+            <div class="borde-butom">
+                <li id="toggleButton"><i class="fa-solid fa-message fa-2x"></i></li>
+
+                <div id="chatbotContainer">
+                    <div class="chatbox-wrapper">
+                        <div id="chatbot-container">
+                            <div id="chatbot-header">
+                                <img src="assests/images/chatbot.jpg" alt="Chatbot Image">
+                                <div class="nombre_p">
+                                    <h4>Pacha la llama</h4>
+                                    <p>en línea</p>
+                                </div>
+
+                                <li id="clear-chat-button"><i class="fa-regular fa-trash-can"></i></li>
+
+                            </div>
+
+                            <div id="chatbot-body">
+                                <div id="chat-container">
+                                    <div id="chat-log"></div>
+                                </div>
+                            </div>
+
+                            <div class="foo-chtbot">
+                                <div id="faq-buttons-container">
+                                    <button class="faq-button" data-question="¿Cuál es el horario de atención?">¿Cuál es
+                                        el
+                                        horario de atención?</button>
+                                    <button class="faq-button"
+                                        data-question="¿Cuáles son los métodos de pago aceptados?">¿Cuáles son los
+                                        métodos de
+                                        pago aceptados?</button>
+                                    <button class="faq-button"
+                                        data-question="¿Cómo puedo contactar al servicio al cliente?">¿Cómo puedo
+                                        contactar al
+                                        servicio al cliente?</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container-reg">
+            <div class="row">
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Amazonas.jpg" alt="Fotografía de la región Amazonas">
+                    <div class="div-btn">
+                        <a href="regiones/amazonas.html"><button>Amazonas</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Ancash.jpg" alt="Fotografía de la región Áncash">
+                    <div class="div-btn">
+                        <a href="regiones/ancash.html"><button>Áncash</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Apurímac.jpg" alt="Fotografía de la región Apurímac">
+                    <div class="div-btn">
+                        <a href="regiones/apurimac.html"><button>Apurímac</button></a>
+                    </div>
+                </div>
+
+
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Arequipa.jpg" alt="Fotografía de la región Arequipa">
+                    <div class="div-btn">
+                        <a href="regiones/arequipa.html"><button>Arequipa</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Ayacucho.jpg" alt="Fotografía de la región Ayacucho">
+                    <div class="div-btn">
+                        <a href="regiones/ayacucho.html"><button>Ayacucho</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Cajamarca.jpg"
+                        alt="Fotografía de la región Cajamarca">
+                    <div class="div-btn">
+                        <a href="regiones/cajamarca.html"><button>Cajamarca</button></a>
+                    </div>
+                </div>
+
+
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Cusco.jpg" alt="Fotografía de la región Cusco">
+                    <div class="div-btn">
+                        <a href="regiones/cusco.html"><button>Cusco</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Huancavelica.jpg"
+                        alt="Fotografía de la región Huancavelica">
+                    <div class="div-btn">
+                        <a href="regiones/huancavelica.html"><button>Huancavelica</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Huánuco.jpg" alt="Fotografía de la región Huánuco">
+                    <div class="div-btn">
+                        <a href="regiones/huanuco.html"><button>Huánuco</button></a>
+                    </div>
+                </div>
+
+
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Ica.jpg" alt="Fotografía de la región Ica">
+                    <div class="div-btn">
+                        <a href="regiones/ica.html"><button>Ica</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Junín.jpg" alt="Fotografía de la región Junín">
+                    <div class="div-btn">
+                        <a href="regiones/junin.html"><button>Junín</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/La Libertad.jpg"
+                        alt="Fotografía de la región La Libertad">
+                    <div class="div-btn">
+                        <a href="regiones/la-libertad.html"><button>La Libertad</button></a>
+                    </div>
+                </div>
+
+
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Lambayeque.jpg"
+                        alt="Fotografía de la región Lambayeque">
+                    <div class="div-btn">
+                        <a href="regiones/lambayeque.html"><button>Lambayeque</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Lima.jpg" alt="Fotografía de la región Lima">
+                    <div class="div-btn">
+                        <a href="regiones/lima.html"><button>Lima</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Loreto.jpg" alt="Fotografía de la región Loreto">
+                    <div class="div-btn">
+                        <a href="regiones/loreto.html"><button>Loreto</button></a>
+                    </div>
+                </div>
+
+
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Madre de Dios.jpg"
+                        alt="Fotografía de la región Madre de Dios">
+                    <div class="div-btn">
+                        <a href="regiones/madre-de-dios.html"><button>Madre de Dios</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Moquegua.jpg" alt="Fotografía de la región Moquegua">
+                    <div class="div-btn">
+                        <a href="regiones/moquegua.html"><button>Moquegua</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Pasco.jpg" alt="Fotografía de la región Pasco">
+                    <div class="div-btn">
+                        <a href="regiones/pasco.html"><button>Pasco</button></a>
+                    </div>
+                </div>
+
+
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Piura.jpg" alt="Fotografía de la región Piura">
+                    <div class="div-btn">
+                        <a href="regiones/piura.html"><button>Piura</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Puno.jpg" alt="Fotografía de la región Puno">
+                    <div class="div-btn">
+                        <a href="regiones/puno.html"><button>Puno</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/San Martín.jpg"
+                        alt="Fotografía de la región San Martín">
+                    <div class="div-btn">
+                        <a href="regiones/san-martin.html"><button>San Martín</button></a>
+                    </div>
+                </div>
+
+
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Tacna.jpg" alt="Fotografía de la región Tacna">
+                    <div class="div-btn">
+                        <a href="regiones/tacna.html"><button>Tacna</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Tumbes.png" alt="Fotografía de la región Tumbes">
+                    <div class="div-btn">
+                        <a href="regiones/tumbes.html"><button>Tumbes</button></a>
+                    </div>
+                </div>
+                <div class="reg col-lg-4 col-md-4 col-sm-12 col-12">
+                    <img class="img-fluid" src="assests/images/regiones/Ucayali.jpg" alt="Fotografía de la región Ucayali">
+                    <div class="div-btn">
+                        <a href="regiones/ucayali.html"><button>Ucayali</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo d-flex justify-content-center align-items-center">
+            <a class="text-decoration-none" href="../index.html"><img src="./assests/images/logo-footer.png"
+                    alt="Logo de Hecho en Perú"></a>
+        </div>
+        <div class="footer-navigation">
+            <h3>Navegación</h3>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="regiones.html">Regiones</a></li>
+                <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-payment inline">
+            <h3>Métodos de pago</h3>
+            <ul>
+                <li><i class="fa-brands fa-cc-visa"></i></li>
+                <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                <li><i class="fa-brands fa-cc-paypal"></i></li>
+            </ul>
+            <ul>
+                <li><i class="fa-brands fa-cc-diners-club"></i></li>
+                <li><i class="fa-brands fa-cc-amex"></i></li>
+                <li><i class="fa-solid fa-qrcode"></i></li>
+            </ul>
+        </div>
+        <div class="footer-shipping inline">
+            <h3>Métodos de envío</h3>
+            <ul>
+                <li><i class="fas fa-shipping-fast"></i></li>
+                <li><i class="fas fa-truck"></i></li>
+            </ul>
+        </div>
+        <div class="footer-social d-inline-block inline">
+            <h3>Redes sociales</h3>
+            <ul>
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-whatsapp"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="./assests/scripts/active-state.js"></script>
+    <script src="./assests/scripts/chatbot.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

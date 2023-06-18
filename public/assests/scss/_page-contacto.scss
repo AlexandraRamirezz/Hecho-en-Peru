@@ -1,0 +1,161 @@
+.fondo-contacto-img {
+    background-image: url("../images/hero-section/contacto-fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-contacto {
+    padding: 4rem 0;
+
+    .form-contact {
+        margin-top: 2rem;
+        width: 90%;
+        margin: auto;
+
+        h6 {
+            text-align: left;
+            width: auto;
+            font-size: 1rem;
+            margin-top: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+    }
+
+    .btn-contac-submit {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+
+        button {
+            padding: 0.5rem;
+            width: 48%;
+            border-radius: 4px;
+            border: transparent;
+        }
+    }
+
+    .form-contac-row {
+        width: 90%;
+        margin: auto;
+    }
+
+    .img-contact {
+        img {
+            width: 100%;
+            border-radius: 1rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .padding-abajo {
+        padding-bottom: 1.7rem;
+    }
+
+    #btn-contac-one {
+        background-color: $color_2;
+        color: $color_5;
+
+        &:hover {
+            background-color: $background-color_14;
+            color: $color_5;
+            box-shadow: 0px 3px 6px #0000001a;
+        }
+    }
+
+    #btn-contac-two {
+        background-color: $color_10;
+        color: $color_2;
+
+        &:hover {
+            background-color: $background-color_4;
+            color: $color_2;
+            box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
+        }
+    }
+
+    .input-menssage-contact {
+        font-size: 1rem;
+        padding: 0.5rem;
+        background-color: $background-color_2;
+        width: 100%;
+        border: transparent;
+        height: 13rem;
+        border-bottom: solid $color_6 1px;
+        box-shadow: 0px 3px 6px #0000001a;
+    }
+
+    .input-group {
+        input {
+            position: relative;
+            margin: auto;
+            width: 100%;
+            height: 2.5rem;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            padding: 0.5rem;
+            border: transparent;
+            background-color: $background-color_2;
+            color: $color_2;
+            font-size: 1rem;
+            border-bottom: solid $color_6 1px;
+            box-shadow: 0px 3px 6px #0000001a;
+        }
+
+        i {
+            position: absolute;
+            right: 1.5rem;
+            bottom: 2.5rem;
+            font-size: 1rem;
+            
+            height: 1rem;
+        }
+
+        span {
+            
+            bottom: 10px;
+            right: 17px;
+            font-size: 14px;
+            color: red;
+            height: auto;
+
+            i {
+                color: green;
+            }
+        }
+
+        input.invalid {
+            border: 2px solid red;
+        }
+
+        input.valid {
+            border: 2px solid green;
+        }
+
+        textarea.invalid {
+            border: 2px solid red;
+        }
+
+        textarea.valid {
+            border: 2px solid green;
+        }
+    }
+
+    .input-group:last-child() {
+        i {
+            top: 0;
+            bottom: 1.5rem;
+            border: solid 1px rgb(186, 24, 24);
+        }
+    }
+
+    .span-btn {
+        margin: 2rem;
+        text-align: end;
+        margin-right: 0;
+    }
+
+    #sbmit-error {
+        color: red;
+    }
+}
