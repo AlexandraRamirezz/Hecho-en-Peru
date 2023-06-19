@@ -48,7 +48,39 @@
                 <button type="submit">Buscar</button>
             </div>
             <div class="icons d-flex justify-content-around">
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <!--Cart icon-->
+                <i class="fas fa-shopping-cart" style="cursor: pointer;"></i>
+                <!--Cart section-->
+                <section class="cart">
+                    <h3>Tu carrito</h3>
+                    <div class="cart-content">
+                        <div class="cart-box">
+                            <figure><img src="assests/images/img-catalogo/poncho-tejido-crochet-main.jpg" alt="poncho"></figure>
+
+                            <div class="detail-box">
+                                <h4>Poncho de lana</h4>
+                                <p class="cart-price">s/.150.00</p>
+                                <div class="cart-quantity">
+                                    <button class="minus">-</button>
+                                    <input type="number" class="unidades-selected" value="1">
+                                    <button class="plus">+</button>
+                                </div>
+                            </div>
+
+                            <!--Remove item-->
+                            <button id="remove-cart"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                        <!--Total-->
+                        <div class="cart-total">
+                            <h4>Total</h4>
+                            <div class="total-price">s/. 150.00</div>
+                        </div>
+                        <!--Buy Button-->
+                        <button type="button" class="btn-buy-cart">Comprar ahora</button>
+                        <!--Close cart-->
+                        <button id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </section>
                 <a href="./login.html"><i class="fas fa-user"></i></a>
             </div>
         </nav>
