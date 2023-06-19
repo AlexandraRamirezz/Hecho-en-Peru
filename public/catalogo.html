@@ -49,7 +49,7 @@
             </div>
             <div class="icons d-flex justify-content-around">
                 <!--Cart icon-->
-                <i class="fas fa-shopping-cart" style="cursor: pointer;"></i>
+                <i id="cart-icon" class="fas fa-shopping-cart" style="cursor: pointer;"></i>
                 <!--Cart section-->
                 <section class="cart">
                     <h3>Tu carrito</h3>
@@ -68,7 +68,39 @@
                             </div>
 
                             <!--Remove item-->
-                            <button id="remove-cart"><i class="fa-solid fa-trash-can"></i></button>
+                            <i class="fa-solid fa-trash-can remove-cart"></i>
+                        </div>
+                        <div class="cart-box">
+                            <figure><img src="assests/images/img-catalogo/poncho-tejido-crochet-main.jpg" alt="poncho"></figure>
+
+                            <div class="detail-box">
+                                <h4>Poncho de lana</h4>
+                                <p class="cart-price">s/.150.00</p>
+                                <div class="cart-quantity">
+                                    <button class="minus">-</button>
+                                    <input type="number" class="unidades-selected" value="1">
+                                    <button class="plus">+</button>
+                                </div>
+                            </div>
+
+                            <!--Remove item-->
+                            <i class="fa-solid fa-trash-can remove-cart"></i>
+                        </div>
+                        <div class="cart-box">
+                            <figure><img src="assests/images/img-catalogo/poncho-tejido-crochet-main.jpg" alt="poncho"></figure>
+
+                            <div class="detail-box">
+                                <h4>Poncho de lana</h4>
+                                <p class="cart-price">s/.150.00</p>
+                                <div class="cart-quantity">
+                                    <button class="minus">-</button>
+                                    <input type="number" class="unidades-selected" value="1">
+                                    <button class="plus">+</button>
+                                </div>
+                            </div>
+
+                            <!--Remove item-->
+                            <i class="fa-solid fa-trash-can remove-cart"></i>
                         </div>
                         <!--Total-->
                         <div class="cart-total">
@@ -656,6 +688,7 @@
     <script src="./assests/scripts/chatbot.js"></script>
     <script src="./assests/scripts/catalogo.js"></script>
     <script src="./assests/scripts/catalogo-filters.js"></script>
+    <script src="./assests/scripts/shopping-cart.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
