@@ -27,9 +27,12 @@ for (var i = 0; i < removeCartButtons.length; i++)
 
 //Update total
 
+const cartContent = document.querySelector(".cart-content");
+// Obtener todos los elementos con la clase "cart-box"
+const cartBoxes = cartContent.getElementsByClassName("cart-box");
+
 function updateTotal(){
-    var cartContent = document.getElementsByClassName("cart-content")[0];
-    var cartBoxes = document.getElementsByClassName("cart-box");
+    //var cartBoxes = document.getElementsByClassName("cart-box");
     var total = 0;
     if (cartBoxes.length == 0) document.getElementsByClassName("total-price")[0].innerText = "s/. 0.00";
     else{
@@ -53,17 +56,24 @@ window.addEventListener("DOMContentLoaded", function() {
 
 //Número de unidades
 
-const plus = document.querySelector(".plus"), minus = document.querySelector(".minus"), num = document.querySelector(".unidades-selected");
+// Iterar sobre cada elemento del carrito
+for (var i = 0; i < cartBoxes.length; i++){
+    var cartItem = cartBoxes[i];
+    const plus = cartItem.querySelector(".plus");
+    const minus = cartItem.querySelector(".minus");
+    const num = cartItem.querySelector(".unidades-selected");
 
-let unidades = parseInt(num.value);
+    let unidades = parseInt(num.value);
 
-plus.addEventListener("click", ()=>{
-    unidades+=1;
-    num.value = unidades;
-});
+    plus.addEventListener("click", () => {
+        unidades += 1;
+        num.value = unidades;
+    });
 
-minus.addEventListener("click", ()=>{
-    if(unidades > 1)
-    unidades -= 1;
-    num.value = unidades;
-});
+    minus.addEventListener("click", () => {
+        if (unidades > 1) {
+        unidades -= 1;
+        num.value = unidades;
+        }
+    });
+}
