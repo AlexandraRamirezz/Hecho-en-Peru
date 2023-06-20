@@ -58,15 +58,36 @@ function buyButtonClicked(){
 
 //Remove item
 
-function removeCartItem(event){
+/*function removeCartItem(event){
     var buttonClicked = event.target;
     buttonClicked.parentElement.remove();
     updateTotal();
+}*/
+
+
+function removeCartItem(event) {
+    var buttonClicked = event.target;
+    var cartItem = buttonClicked.parentElement;
+    var title = cartItem.querySelector('.cart-product-title').innerText;
+    cartItem.remove();
+    updateTotal();
+    removeCartItemFromLocalStorage(title); // Eliminar el producto del local storage
+}
+
+function removeCartItemFromLocalStorage(title) {
+    var cartData = localStorage.getItem("cart");
+    if (cartData) {
+        var cartItems = JSON.parse(cartData);
+        var updatedCartItems = cartItems.filter(function(item) {
+            return item.title !== title;
+        });
+        localStorage.setItem("cart", JSON.stringify(updatedCartItems));
+    }
 }
 
 //Quantity product
 
-function quitUnitProduct() {
+/*function quitUnitProduct() {
     var input = this.nextElementSibling;
     var currentValue = parseInt(input.value);
     if (currentValue > 1) {
@@ -80,7 +101,47 @@ function addUnitProduct() {
     var currentValue = parseInt(input.value);
     input.value = currentValue + 1;
     updateTotal();
+}*/
+
+function quitUnitProduct() {
+    var input = this.nextElementSibling;
+    var currentValue = parseInt(input.value);
+    if (currentValue > 1) {
+        input.value = currentValue - 1;
+        var title = getTitleFromCartItemElement(this);
+        updateCartItemQuantity(title, currentValue - 1);
+    }
+    updateTotal();
 }
+
+function addUnitProduct() {
+    var input = this.previousElementSibling;
+    var currentValue = parseInt(input.value);
+    input.value = currentValue + 1;
+    var title = getTitleFromCartItemElement(this);
+    updateCartItemQuantity(title, currentValue + 1);
+    updateTotal();
+}
+
+function getTitleFromCartItemElement(element) {
+    var cartItem = element.closest('.cart-box');
+    return cartItem.querySelector('.cart-product-title').innerText;
+}
+
+function updateCartItemQuantity(title, quantity) {
+    var cartData = localStorage.getItem("cart");
+    if (cartData) {
+        var cartItems = JSON.parse(cartData);
+        for (var i = 0; i < cartItems.length; i++) {
+            if (cartItems[i].title === title) {
+                cartItems[i].quantity = quantity;
+                localStorage.setItem("cart", JSON.stringify(cartItems));
+                return;
+            }
+        }
+    }
+}
+
 
 //Add to cart
 
@@ -108,13 +169,23 @@ function addProductToCart(title, price, productImg){
             return;
         }
     }*/
-
+    /*
     for (var i = 0; i < cartItemsNames.length; i++) {
         if (cartItemsNames[i].innerText == title) {
             var cartQuantityInput = cartItemsNames[i].parentElement.querySelector('.unidades-selected');
             var currentQuantity = parseInt(cartQuantityInput.value);
             cartQuantityInput.value = currentQuantity + 1;
             updateTotal();
+            return;
+        }
+    }*/
+    for (var i = 0; i < cartItemsNames.length; i++) {
+        if (cartItemsNames[i].innerText == title) {
+            var cartQuantityInput = cartItemsNames[i].parentElement.querySelector('.unidades-selected');
+            var currentQuantity = parseInt(cartQuantityInput.value);
+            cartQuantityInput.value = currentQuantity + 1;
+            updateTotal();
+            updateCartItemQuantity(title, currentQuantity + 1); // Actualizar la cantidad en el local storage
             return;
         }
     }
@@ -138,6 +209,44 @@ function addProductToCart(title, price, productImg){
     cartShopBox.getElementsByClassName("remove-cart")[0].addEventListener("click", removeCartItem);
     cartShopBox.getElementsByClassName("plus")[0].addEventListener("click", addUnitProduct);
     cartShopBox.getElementsByClassName("minus")[0].addEventListener("click", quitUnitProduct);
+    saveCartItemToLocalStorage(title, price, productImg, 1);
+}
+
+function saveCartItemToLocalStorage(title, price, productImg, quantity) {
+    var cartData = localStorage.getItem("cart");
+    var cartItems = cartData ? JSON.parse(cartData) : [];
+
+    for (var i = 0; i < cartItems.length; i++) {
+        if (cartItems[i].title === title) {
+            cartItems[i].quantity = quantity;
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+            return;
+        }
+    }
+
+    var item = {
+        title: title,
+        price: price,
+        productImg: productImg,
+        quantity: quantity
+    };
+
+    cartItems.push(item);
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+}
+
+function updateCartItemQuantity(title, quantity) {
+    var cartData = localStorage.getItem("cart");
+    if (cartData) {
+        var cartItems = JSON.parse(cartData);
+        for (var i = 0; i < cartItems.length; i++) {
+            if (cartItems[i].title === title) {
+                cartItems[i].quantity = quantity;
+                localStorage.setItem("cart", JSON.stringify(cartItems));
+                return;
+            }
+        }
+    }
 }
 
 //Update total
