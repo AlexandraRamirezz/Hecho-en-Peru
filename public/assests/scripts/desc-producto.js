@@ -58,9 +58,6 @@ imgContElm.addEventListener("mousemove", function(){
 
     if (ypos < 0) ypos = 0;
 
-    console.log("x: " + xpos);
-    console.log("y: " +ypos);
-
     const imgWidth = imgElm.clientWidth;
     const imgHeight = imgElm.clientHeight;
 
@@ -84,7 +81,7 @@ function clickImg(smallImg)
 
 //NUMBER OF UNITS
 
-const plus = document.querySelector(".plus"), minus = document.querySelector(".minus"), num = document.querySelector(".unidades-selected");
+const plus = document.querySelector(".info-plus"), minus = document.querySelector(".info-minus"), num = document.querySelector(".info-unidades-selected");
 
 let unidades = parseInt(num.value);
 

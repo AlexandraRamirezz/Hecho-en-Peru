@@ -261,10 +261,11 @@ function updateTotal(){
         var cartBox = cartBoxes[i];
         var priceElement = cartBox.getElementsByClassName("cart-price")[0];
         var quantityElement = cartBox.getElementsByClassName("unidades-selected")[0];
+        console.log(cartBox);
         var price = parseFloat(priceElement.innerText.replace("s/.",""));
         var quantity = quantityElement.value;
         total = total + (price * quantity);
-
+        console.log(total);
         //document.getElementsByClassName("total-price")[0].innerText = "s/." + total.toFixed(2);
     }
 
@@ -353,3 +354,54 @@ window.addEventListener("load", function() {
     loadCartItems();
     updateTotal();
 });
+
+//Add to cart from desc-product
+
+function addProduct(event){
+    var button = event.target;
+    var shopProducts = button.parentElement.parentElement;
+    var title = shopProducts.getElementsByClassName("product-title")[0].innerText;
+    var price = shopProducts.getElementsByClassName("precio-product")[0].innerText;
+    var productImg = shopProducts.getElementsByClassName("product-img")[0].src;
+    var unidadesSelected = parseInt(shopProducts.querySelector('.info-unidades-selected').value);
+    
+    var cartShopBox = document.createElement("div");
+    cartShopBox.classList.add("cart-box");
+    var cartItems = document.getElementsByClassName("cart-content")[0];
+    var cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
+
+    for (var i = 0; i < cartItemsNames.length; i++) {
+        if (cartItemsNames[i].innerText == title) {
+            var cartQuantityInput = cartItemsNames[i].parentElement.querySelector('.unidades-selected');
+            var currentQuantity = parseInt(cartQuantityInput.value);
+            cartQuantityInput.value = currentQuantity + unidadesSelected;
+            updateTotal();
+            updateCartItemQuantity(title, currentQuantity + unidadesSelected); // Actualizar la cantidad en el local storage
+            return;
+        }
+    }
+
+    var cartBoxContent = `
+        <figure><img src="${productImg}" class="product-img" alt="poncho"></figure>
+        <div class="detail-box">
+            <h4 class="cart-product-title">${title}</h4>
+            <p class="cart-price">${price}</p>
+            <div class="cart-quantity">
+                <button class="minus">-</button>
+                <input type="number" class="unidades-selected" value="${unidadesSelected}">
+                <button class="plus">+</button>
+            </div>
+        </div>
+        <i class="fa-solid fa-trash-can remove-cart"></i>
+    `;
+
+    cartShopBox.innerHTML = cartBoxContent;
+    console.log(cartBoxContent);
+    cartItems.append(cartShopBox);
+    cartShopBox.getElementsByClassName("remove-cart")[0].addEventListener("click", removeCartItem);
+    cartShopBox.getElementsByClassName("plus")[0].addEventListener("click", addUnitProduct);
+    cartShopBox.getElementsByClassName("minus")[0].addEventListener("click", quitUnitProduct);
+    saveCartItemToLocalStorage(title, price, productImg, unidadesSelected);
+
+    updateTotal();
+}

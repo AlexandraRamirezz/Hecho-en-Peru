@@ -139,7 +139,7 @@
 
                 </div>
                 <div class="main-images">
-                    <figure><img src="../assests/images/catalogo/poncho-lana-main.jpg" id="image-box"></figure>
+                    <figure><img src="../assests/images/catalogo/poncho-lana-main.jpg" id="image-box" class="product-img"></figure>
                 </div>
             </div>
             <div class="general-info">
@@ -157,8 +157,8 @@
                         40 comentarios
                     </a>
                 </div>
-                <h3>Poncho de lana</h3>
-                <h2>S/. 150.00</h2>
+                <h3 class="product-title">Poncho de lana</h3>
+                <h2 class="precio-product">s/.150.00</h2>
                 <h4>Color</h4>
                 <div class="color-options">
                     <ul>
@@ -195,15 +195,15 @@
                 </div>
                 <h4>Número de unidades</h4>
                 <div class="cantidad">
-                    <button class="minus">-</button>
-                    <input type="number" class="unidades-selected" value="1">
-                    <button class="plus">+</button>
+                    <button class="info-minus">-</button>
+                    <input type="number" class="info-unidades-selected" value="1">
+                    <button class="info-plus">+</button>
                 </div>
                 <div class="stock-producto">
                     <h4>Stock: </h4>
                     <span>10 unidades</span>
                 </div>
-                <button class="agregar-carrito"><span>Agregar al carrito</span><i
+                <button class="agregar-carrito" onclick="addProduct(event)"><span>Agregar al carrito</span><i
                         class="fa-solid fa-cart-shopping"></i></button>
             </div>
         </section>

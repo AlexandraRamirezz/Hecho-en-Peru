@@ -1893,7 +1893,7 @@ nav .icons i:hover {
   height: 2.5rem;
   margin-bottom: 1rem;
 }
-.product-container .general-info .cantidad .minus {
+.product-container .general-info .cantidad .info-minus {
   width: 3rem;
   background-color: #F3F3F3;
   border: none;
@@ -1901,7 +1901,7 @@ nav .icons i:hover {
   font-size: 1.5rem;
   font-weight: bold;
 }
-.product-container .general-info .cantidad .unidades-selected {
+.product-container .general-info .cantidad .info-unidades-selected {
   background-color: #FFFFFF;
   border: none;
   border-right: solid rgba(185, 185, 185, 0.6352941176) 1px;
@@ -1912,13 +1912,13 @@ nav .icons i:hover {
   text-align: center;
   width: 4rem;
 }
-.product-container .general-info .cantidad .unidades-selected[type=number]::-webkit-inner-spin-button {
+.product-container .general-info .cantidad .info-unidades-selected[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-.product-container .general-info .cantidad .unidades-selected[type=number]::-webkit-outer-spin-button {
+.product-container .general-info .cantidad .info-unidades-selected[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
-.product-container .general-info .cantidad .plus {
+.product-container .general-info .cantidad .info-plus {
   width: 3rem;
   background-color: #F3F3F3;
   border: none;
