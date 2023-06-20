@@ -46,6 +46,14 @@ function ready()
         var button = addCart[i];
         button.addEventListener("click", addCartClicked);
     }
+
+    //Buy Button
+    document.getElementsByClassName("btn-buy-cart")[0].addEventListener("click", buyButtonClicked);
+}
+
+//Buy Button
+function buyButtonClicked(){
+    alert("Su compra ha sido procesada.");
 }
 
 //Remove item
@@ -126,6 +134,7 @@ function updateTotal(){
     var cartContent = document.getElementsByClassName("cart-content")[0];
     var cartBoxes = cartContent.getElementsByClassName("cart-box");
     var total = 0;
+
     for (var i = 0; i < cartBoxes.length; i++)
     {
         var cartBox = cartBoxes[i];
@@ -135,8 +144,23 @@ function updateTotal(){
         var quantity = quantityElement.value;
         total = total + (price * quantity);
 
-        document.getElementsByClassName("total-price")[0].innerText = "s/." + total.toFixed(2);
+        //document.getElementsByClassName("total-price")[0].innerText = "s/." + total.toFixed(2);
     }
+
+    if (total == 0)
+    {
+        console.log(document.getElementsByClassName("empty-cart")[0]);
+        console.log(document.getElementsByClassName("btn-buy-cart")[0]);
+        document.getElementsByClassName("empty-cart")[0].style.display = "block";
+        document.getElementsByClassName("btn-buy-cart")[0].style.display = "none";
+    }else{
+        console.log(document.getElementsByClassName("empty-cart")[0]);
+        console.log(document.getElementsByClassName("btn-buy-cart")[0]);
+        document.getElementsByClassName("empty-cart")[0].style.display = "none";
+        document.getElementsByClassName("btn-buy-cart")[0].style.display = "block";
+    }
+
+    document.getElementsByClassName("total-price")[0].innerText = "s/." + total.toFixed(2);
 }
 
 
@@ -144,29 +168,3 @@ window.addEventListener("DOMContentLoaded", function() {
     // Llamar a la función para actualizar el número de comentarios
     updateTotal();
 });
-
-//Número de unidades
-
-// Iterar sobre cada elemento del carrito
-/*for (var i = 0; i < cartBoxes.length; i++){
-    var cartItem = cartBoxes[i];
-    const plus = cartItem.querySelector(".plus");
-    const minus = cartItem.querySelector(".minus");
-    const num = cartItem.querySelector(".unidades-selected");
-
-    let unidades = parseInt(num.value);
-
-    plus.addEventListener("click", () => {
-        unidades += 1;
-        num.value = unidades;
-        updateTotal();
-    });
-
-    minus.addEventListener("click", () => {
-        if (unidades > 1) {
-        unidades -= 1;
-        num.value = unidades;
-        }
-        updateTotal();
-    });
-}*/
