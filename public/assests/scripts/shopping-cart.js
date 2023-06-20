@@ -79,7 +79,45 @@ function addUnitProduct() {
 function addCartClicked(event){
     var button = event.target;
     var shopProducts = button.parentElement;
-    var title = shopProducts.getElementsByClassName()
+    var title = shopProducts.getElementsByClassName("product-title")[0].innerText;
+    var price = shopProducts.getElementsByClassName("precio-product")[0].innerText;
+    var productImg = shopProducts.getElementsByClassName("product-img")[0].src;
+    addProductToCart(title, price, productImg);
+    updateTotal();
+}
+
+function addProductToCart(title, price, productImg){
+    var cartShopBox = document.createElement("div");
+    cartShopBox.classList.add("cart-box");
+    var cartItems = document.getElementsByClassName("cart-content")[0];
+    var cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
+    for (var i = 0; i < cartItemsNames.length; i++)
+    {
+        if (cartItemsNames[i].innerText == title)
+        {
+            alert("El producto ya ha sido agregado al carrito");
+            return;
+        }
+    }
+    var cartBoxContent = `
+        <figure><img src="${productImg}" class="product-img" alt="poncho"></figure>
+        <div class="detail-box">
+            <h4 class="cart-product-title">${title}</h4>
+            <p class="cart-price">${price}</p>
+            <div class="cart-quantity">
+                <button class="minus">-</button>
+                <input type="number" class="unidades-selected" value="1">
+                <button class="plus">+</button>
+            </div>
+        </div>
+        <i class="fa-solid fa-trash-can remove-cart"></i>
+    `;
+
+    cartShopBox.innerHTML = cartBoxContent;
+    cartItems.append(cartShopBox);
+    cartShopBox.getElementsByClassName("remove-cart")[0].addEventListener("click", removeCartItem);
+    cartShopBox.getElementsByClassName("plus")[0].addEventListener("click", addUnitProduct);
+    cartShopBox.getElementsByClassName("minus")[0].addEventListener("click", quitUnitProduct);
 }
 
 //Update total
