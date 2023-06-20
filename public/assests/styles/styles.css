@@ -716,7 +716,7 @@ nav .icons i:hover {
 .cart .cart-content .cart-box #remove-cart:hover i {
   color: rgba(0, 0, 0, 0.5254901961);
 }
-.cart .cart-content .cart-total {
+.cart .cart-total {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   display: flex;
@@ -726,14 +726,14 @@ nav .icons i:hover {
   border-top: #4F4F4F solid 1px;
   padding-top: 1rem;
 }
-.cart .cart-content .cart-total h4 {
+.cart .cart-total h4 {
   padding: 0;
   margin: 0;
 }
-.cart .cart-content .cart-total .total-price {
+.cart .cart-total .total-price {
   padding: 0;
 }
-.cart .cart-content .btn-buy-cart {
+.cart .btn-buy-cart {
   margin: auto;
   margin-bottom: 1.5rem;
   padding: 0.5rem 1rem;
@@ -745,12 +745,12 @@ nav .icons i:hover {
   font-weight: 600;
   transition: all 0.3s ease;
 }
-.cart .cart-content .btn-buy-cart:hover {
+.cart .btn-buy-cart:hover {
   background-color: #0E0E0E;
   color: #FFFFFF;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
 }
-.cart .cart-content #close-cart {
+.cart #close-cart {
   position: absolute;
   top: 1rem;
   right: 0rem;
@@ -760,12 +760,12 @@ nav .icons i:hover {
   font-size: 1.5rem;
   text-align: center;
 }
-.cart .cart-content #close-cart i {
+.cart #close-cart i {
   padding: 0;
   font-size: 1.5rem;
   color: #a6a5a5;
 }
-.cart .cart-content #close-cart:hover i {
+.cart #close-cart:hover i {
   color: rgba(0, 0, 0, 0.5254901961);
 }
 
