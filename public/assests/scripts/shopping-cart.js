@@ -99,14 +99,26 @@ function addProductToCart(title, price, productImg){
     cartShopBox.classList.add("cart-box");
     var cartItems = document.getElementsByClassName("cart-content")[0];
     var cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
-    for (var i = 0; i < cartItemsNames.length; i++)
+    
+    /*for (var i = 0; i < cartItemsNames.length; i++)
     {
         if (cartItemsNames[i].innerText == title)
         {
             alert("El producto ya ha sido agregado al carrito");
             return;
         }
+    }*/
+
+    for (var i = 0; i < cartItemsNames.length; i++) {
+        if (cartItemsNames[i].innerText == title) {
+            var cartQuantityInput = cartItemsNames[i].parentElement.querySelector('.unidades-selected');
+            var currentQuantity = parseInt(cartQuantityInput.value);
+            cartQuantityInput.value = currentQuantity + 1;
+            updateTotal();
+            return;
+        }
     }
+
     var cartBoxContent = `
         <figure><img src="${productImg}" class="product-img" alt="poncho"></figure>
         <div class="detail-box">
@@ -149,13 +161,9 @@ function updateTotal(){
 
     if (total == 0)
     {
-        console.log(document.getElementsByClassName("empty-cart")[0]);
-        console.log(document.getElementsByClassName("btn-buy-cart")[0]);
         document.getElementsByClassName("empty-cart")[0].style.display = "block";
         document.getElementsByClassName("btn-buy-cart")[0].style.display = "none";
     }else{
-        console.log(document.getElementsByClassName("empty-cart")[0]);
-        console.log(document.getElementsByClassName("btn-buy-cart")[0]);
         document.getElementsByClassName("empty-cart")[0].style.display = "none";
         document.getElementsByClassName("btn-buy-cart")[0].style.display = "block";
     }
