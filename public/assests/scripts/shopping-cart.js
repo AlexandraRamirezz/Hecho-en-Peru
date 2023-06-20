@@ -30,18 +30,27 @@ for (var i = 0; i < removeCartButtons.length; i++)
 const cartContent = document.querySelector(".cart-content");
 // Obtener todos los elementos con la clase "cart-box"
 const cartBoxes = cartContent.getElementsByClassName("cart-box");
+const emptyCart = document.getElementsByClassName("empty-cart")[0];
+const btnBuyCart = cartContent.getElementsByClassName("btn-buy-cart")[0];
 
 function updateTotal(){
     //var cartBoxes = document.getElementsByClassName("cart-box");
     var total = 0;
-    if (cartBoxes.length == 0) document.getElementsByClassName("total-price")[0].innerText = "s/. 0.00";
-    else{
+    if (cartBoxes.length == 0)
+    {
+        document.getElementsByClassName("total-price")[0].innerText = "s/. 0.00";
+        emptyCart.style.display = "block";
+        btnBuyCart.style.display = "none";
+    }else{
+        emptyCart.style.display = "none";
+        btnBuyCart.style.display = "block";
         for (var i = 0; i < cartBoxes.length; i++){
             var cartBox = cartBoxes[i];
             var priceElement = cartBox.getElementsByClassName("cart-price")[0];
             var quantityElement = cartBox.getElementsByClassName("unidades-selected")[0];
             var price = parseFloat(priceElement.innerText.replace("s/.",""));
             var quantity = quantityElement.value;
+            console.log(quantityElement);
             total = total + (price * quantity);
     
             document.getElementsByClassName("total-price")[0].innerText = "s/. " + total.toFixed(2);
@@ -68,6 +77,7 @@ for (var i = 0; i < cartBoxes.length; i++){
     plus.addEventListener("click", () => {
         unidades += 1;
         num.value = unidades;
+        updateTotal();
     });
 
     minus.addEventListener("click", () => {
@@ -75,5 +85,6 @@ for (var i = 0; i < cartBoxes.length; i++){
         unidades -= 1;
         num.value = unidades;
         }
+        updateTotal();
     });
 }
