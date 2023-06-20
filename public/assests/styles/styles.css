@@ -665,6 +665,9 @@ nav .icons i:hover {
   row-gap: 0.3rem;
   justify-items: flex-start;
 }
+.cart .cart-content .cart-box .detail-box .cart-product-title {
+  text-align: start;
+}
 .cart .cart-content .cart-box .detail-box .cart-quantity {
   display: flex;
 }

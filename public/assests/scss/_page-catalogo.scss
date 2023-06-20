@@ -36,6 +36,9 @@
                 display: grid;
                 row-gap: 0.3rem;
                 justify-items: flex-start;
+                .cart-product-title{
+                    text-align: start;
+                }
                 .cart-quantity{
                     display: flex;
                     .minus{
