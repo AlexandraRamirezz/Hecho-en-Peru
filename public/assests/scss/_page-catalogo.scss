@@ -586,25 +586,25 @@
                     font-size: 1rem;
                     font-weight: 600;
                 }
-                button {
-                    margin-bottom: 1rem;
-                    background-color: $background-color_13;
+            }
+            button {
+                margin-bottom: 1rem;
+                background-color: $background-color_13;
+                color: $color_5;
+                border: none;
+                width: 10rem;
+                height: 32px;
+                font-size: 1rem;
+                font-weight: 600;
+                padding: 0 10px;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+        
+                &:hover {
+                    background-color: $background-color_14;
                     color: $color_5;
-                    border: none;
-                    width: 10rem;
-                    height: 32px;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    padding: 0 10px;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-            
-                    &:hover {
-                        background-color: $background-color_14;
-                        color: $color_5;
-                        box-shadow: 0px 3px 6px #0000001a;
-                    }
+                    box-shadow: 0px 3px 6px #0000001a;
                 }
             }
         }

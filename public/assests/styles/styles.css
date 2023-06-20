@@ -1189,7 +1189,7 @@ nav .icons i:hover {
   font-size: 1rem;
   font-weight: 600;
 }
-.container-catalogo .container_productos .product .info-product button {
+.container-catalogo .container_productos .product button {
   margin-bottom: 1rem;
   background-color: #242423;
   color: #FFFFFF;
@@ -1203,7 +1203,7 @@ nav .icons i:hover {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.container-catalogo .container_productos .product .info-product button:hover {
+.container-catalogo .container_productos .product button:hover {
   background-color: #0E0E0E;
   color: #FFFFFF;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1019607843);
