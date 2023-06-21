@@ -153,6 +153,7 @@ function addCartClicked(event){
     var productImg = shopProducts.getElementsByClassName("product-img")[0].src;
     addProductToCart(title, price, productImg);
     updateTotal();
+    cart.classList.add("active");
 }
 
 function addProductToCart(title, price, productImg){
@@ -261,11 +262,9 @@ function updateTotal(){
         var cartBox = cartBoxes[i];
         var priceElement = cartBox.getElementsByClassName("cart-price")[0];
         var quantityElement = cartBox.getElementsByClassName("unidades-selected")[0];
-        console.log(cartBox);
         var price = parseFloat(priceElement.innerText.replace("s/.",""));
         var quantity = quantityElement.value;
         total = total + (price * quantity);
-        console.log(total);
         //document.getElementsByClassName("total-price")[0].innerText = "s/." + total.toFixed(2);
     }
 
@@ -358,6 +357,7 @@ window.addEventListener("load", function() {
 //Add to cart from desc-product
 
 function addProduct(event){
+    cart.classList.add("active");
     var button = event.target;
     var shopProducts = button.parentElement.parentElement;
     var title = shopProducts.getElementsByClassName("product-title")[0].innerText;
@@ -396,7 +396,6 @@ function addProduct(event){
     `;
 
     cartShopBox.innerHTML = cartBoxContent;
-    console.log(cartBoxContent);
     cartItems.append(cartShopBox);
     cartShopBox.getElementsByClassName("remove-cart")[0].addEventListener("click", removeCartItem);
     cartShopBox.getElementsByClassName("plus")[0].addEventListener("click", addUnitProduct);
