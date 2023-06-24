@@ -48,7 +48,28 @@
                 <button type="submit">Buscar</button>
             </div>
             <div class="icons d-flex justify-content-around">
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <!--Cart icon-->
+                <i id="cart-icon" class="fas fa-shopping-cart" style="cursor: pointer;"></i>
+                <!--Cart section-->
+                <section class="cart">
+                    <h3>Tu carrito</h3>
+                    <div class="empty-cart">
+                        <p>El carrito está vacío.</p>
+                        <i class="fa-regular fa-face-sad-cry"></i>
+                    </div>
+                    <div class="cart-content">
+                        
+                    </div>
+                    <!--Total-->
+                    <div class="cart-total">
+                        <h4>Total</h4>
+                        <div class="total-price">s/.0.00</div>
+                    </div>
+                    <!--Buy Button-->
+                    <button type="button" class="btn-buy-cart" onclick = "window.location.href = './pago.html';">Comprar ahora</button>
+                    <!--Close cart-->
+                    <button id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+                </section>
                 <a href="./login.html"><i class="fas fa-user"></i></a>
             </div>
         </nav>
@@ -222,6 +243,7 @@
     <script src="./assests/scripts/active-state.js"></script>
     <script src="./assests/scripts/chatbot.js"></script>
     <script src="./assests/scripts/contacto.js"></script>
+    <script src="./assests/scripts/shopping-cart.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
