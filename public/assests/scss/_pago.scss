@@ -1,27 +1,99 @@
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 25px;
     min-height: 100vh;
-    background: linear-gradient(90deg, #2ecc71 50%, #27ae60 50.1%);
 }
 
 .cart-products{
-    width: 55%;
+    width: 40%;
+    align-self: start;
+    margin: 3rem;
+    .cart-items{
+        width: 85%;
+        max-height: 70vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        .cart-item{
+            display: grid;
+            grid-template-columns: 30% 70%;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            figure{
+                border-radius: 0.5rem;
+                img{
+                    width: 100%;
+                    border-radius: 0.5rem;
+                }
+            }
+            .detail-box{
+                line-height: 1.5;
+            }
+        }
+        &::-webkit-scrollbar{
+            width: 0.7rem;
+            background: #CFC9C9;
+            border-radius: 0.5rem;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: #ACDE7B;
+            border-radius: 0.5rem;
+        }
+        &::-moz-scrollbar{
+            width: 0.7rem;
+            background: #CFC9C9;
+            border-radius: 0.5rem;
+        }
+        &::-moz-scrollbar-thumb{
+            background-color: #ACDE7B;
+            border-radius: 0.5rem;
+        }
+    }
+    .cart-total{
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: solid black 1px;
+        .monto-total{
+            margin-right: 1rem;
+        }
+    }
 }
 
 .pago-info{
-    width: 45%;
+    width: 60%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .background-image{
+        background-image: url("../images/img-pago/fondo-pago.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.7;
+        .blur{
+            backdrop-filter: blur(5px);
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 
 .pago-info form {
+    width: 60%;
     border-radius: 0.5rem 0.5rem 0 0;
     padding: 20px;
     background: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.122);
 }
 
 .pago-info form .row {
@@ -35,10 +107,7 @@
 }
 
 .container form .row .col-form .title {
-    font-size: 20px;
-    color: #333;
     padding-bottom: 5px;
-    text-transform: uppercase;
 }
 
 .container form .row .col-form .inputBox {
@@ -86,18 +155,36 @@
     filter: drop-shadow(0 0 1px #000);
 }
 
-.container .submit-btn {
-    width: 100%;
-    padding: 12px;
-    font-size: 17px;
-    background: #27ae60;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-}
-
-.container .submit-btn:hover {
-    background: #2ecc71;
+.container{
+    .submit-btn{
+        width: 60%;
+        padding: 12px;
+        font-size: 17px;
+        background: $background-color_13;
+        color: #fff;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.267);
+        &:hover{
+            background: $background-color_14;
+        }
+    }
+    .cancel-btn{
+        width: 60%;
+        padding: 12px;
+        font-size: 17px;
+        background: #E2E4E4;
+        color: #737373;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        border-radius: 0 0 0.5rem 0.5rem;
+        &:hover{
+            background: #c8c8c8;
+            color:#515151;
+        }
+    }
 }
 
 /**/
@@ -108,7 +195,7 @@
     border-radius: 6px;
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 10%;
     transform: translate(-50%,-50%) scale(0.1);
     text-align: center;
     padding: 0 30px 30px;
@@ -116,6 +203,7 @@
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
     z-index: 1;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.122);
 }
 
 .open-popup{  

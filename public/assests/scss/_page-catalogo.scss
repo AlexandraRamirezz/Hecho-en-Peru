@@ -8,9 +8,10 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 25%;
+    width: 27%;
     min-height: 100vh;
     padding: 1.5rem;
+    padding-right: 1rem;
     background-color: #FFFFFF;
     box-shadow: -0.2rem 0 0.25rem rgba(40, 37, 37, 0.221);
     transition: 0.5s;
@@ -19,9 +20,31 @@
         margin-bottom: 1.5rem;
     }
     .cart-content{
+        max-height: 70vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: relative;
+        &::-webkit-scrollbar{
+            width: 0.7rem;
+            background: #CFC9C9;
+            border-radius: 0.5rem;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: #929292;
+            border-radius: 0.5rem;
+        }
+        &::-moz-scrollbar{
+            width: 0.7rem;
+            background: #CFC9C9;
+            border-radius: 0.5rem;
+        }
+        &::-moz-scrollbar-thumb{
+            background-color: #929292;
+            border-radius: 0.5rem;
+        }
         .cart-box{
             display: grid;
-            grid-template-columns: 32% 50% 18%;
+            grid-template-columns: 32% 45% 15%;
             align-items: center;
             gap: 1rem;
             margin-top: 1rem;
@@ -377,6 +400,15 @@
                     background-color: #ACDE7B;
                     border-radius: 0.5rem;
                 }
+                &::-moz-scrollbar{
+                    width: 0.5rem;
+                    background: #CFC9C9;
+                    border-radius: 0.5rem;
+                }
+                &::-moz-scrollbar-thumb{
+                    background-color: #ACDE7B;
+                    border-radius: 0.5rem;
+                }
                 .option{
                     display: flex;
                     margin-bottom: 0.5rem;
@@ -469,6 +501,15 @@
                     border-radius: 0.5rem;
                 }
                 &::-webkit-scrollbar-thumb{
+                    background-color: #ACDE7B;
+                    border-radius: 0.5rem;
+                }
+                &::-moz-scrollbar{
+                    width: 0.5rem;
+                    background: #CFC9C9;
+                    border-radius: 0.5rem;
+                }
+                &::-moz-scrollbar-thumb{
                     background-color: #ACDE7B;
                     border-radius: 0.5rem;
                 }

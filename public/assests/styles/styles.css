@@ -635,9 +635,10 @@ nav .icons i:hover {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 25%;
+  width: 27%;
   min-height: 100vh;
   padding: 1.5rem;
+  padding-right: 1rem;
   background-color: #FFFFFF;
   box-shadow: -0.2rem 0 0.25rem rgba(40, 37, 37, 0.221);
   transition: 0.5s;
@@ -646,9 +647,33 @@ nav .icons i:hover {
   text-align: start;
   margin-bottom: 1.5rem;
 }
+.cart .cart-content {
+  max-height: 70vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+.cart .cart-content::-webkit-scrollbar {
+  width: 0.7rem;
+  background: #CFC9C9;
+  border-radius: 0.5rem;
+}
+.cart .cart-content::-webkit-scrollbar-thumb {
+  background-color: #929292;
+  border-radius: 0.5rem;
+}
+.cart .cart-content::-moz-scrollbar {
+  width: 0.7rem;
+  background: #CFC9C9;
+  border-radius: 0.5rem;
+}
+.cart .cart-content::-moz-scrollbar-thumb {
+  background-color: #929292;
+  border-radius: 0.5rem;
+}
 .cart .cart-content .cart-box {
   display: grid;
-  grid-template-columns: 32% 50% 18%;
+  grid-template-columns: 32% 45% 15%;
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
@@ -990,6 +1015,15 @@ nav .icons i:hover {
   background-color: #ACDE7B;
   border-radius: 0.5rem;
 }
+.container-catalogo .filtro .f-categorias .options-container::-moz-scrollbar {
+  width: 0.5rem;
+  background: #CFC9C9;
+  border-radius: 0.5rem;
+}
+.container-catalogo .filtro .f-categorias .options-container::-moz-scrollbar-thumb {
+  background-color: #ACDE7B;
+  border-radius: 0.5rem;
+}
 .container-catalogo .filtro .f-categorias .options-container .option {
   display: flex;
   margin-bottom: 0.5rem;
@@ -1077,6 +1111,15 @@ nav .icons i:hover {
   border-radius: 0.5rem;
 }
 .container-catalogo .filtro .f-regiones .options-container::-webkit-scrollbar-thumb {
+  background-color: #ACDE7B;
+  border-radius: 0.5rem;
+}
+.container-catalogo .filtro .f-regiones .options-container::-moz-scrollbar {
+  width: 0.5rem;
+  background: #CFC9C9;
+  border-radius: 0.5rem;
+}
+.container-catalogo .filtro .f-regiones .options-container::-moz-scrollbar-thumb {
   background-color: #ACDE7B;
   border-radius: 0.5rem;
 }
@@ -2647,28 +2690,100 @@ nav .icons i:hover {
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 25px;
   min-height: 100vh;
-  background: linear-gradient(90deg, #2ecc71 50%, #27ae60 50.1%);
 }
 
 .cart-products {
-  width: 55%;
+  width: 40%;
+  align-self: start;
+  margin: 3rem;
+}
+.cart-products .cart-items {
+  width: 85%;
+  max-height: 70vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.cart-products .cart-items .cart-item {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.cart-products .cart-items .cart-item figure {
+  border-radius: 0.5rem;
+}
+.cart-products .cart-items .cart-item figure img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.cart-products .cart-items .cart-item .detail-box {
+  line-height: 1.5;
+}
+.cart-products .cart-items::-webkit-scrollbar {
+  width: 0.7rem;
+  background: #CFC9C9;
+  border-radius: 0.5rem;
+}
+.cart-products .cart-items::-webkit-scrollbar-thumb {
+  background-color: #ACDE7B;
+  border-radius: 0.5rem;
+}
+.cart-products .cart-items::-moz-scrollbar {
+  width: 0.7rem;
+  background: #CFC9C9;
+  border-radius: 0.5rem;
+}
+.cart-products .cart-items::-moz-scrollbar-thumb {
+  background-color: #ACDE7B;
+  border-radius: 0.5rem;
+}
+.cart-products .cart-total {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: solid black 1px;
+}
+.cart-products .cart-total .monto-total {
+  margin-right: 1rem;
 }
 
 .pago-info {
-  width: 45%;
+  width: 60%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.pago-info .background-image {
+  background-image: url("../images/img-pago/fondo-pago.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.7;
+}
+.pago-info .background-image .blur {
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100%;
 }
 
 .pago-info form {
+  width: 60%;
   border-radius: 0.5rem 0.5rem 0 0;
   padding: 20px;
   background: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.122);
 }
 
 .pago-info form .row {
@@ -2682,10 +2797,7 @@ nav .icons i:hover {
 }
 
 .container form .row .col-form .title {
-  font-size: 20px;
-  color: #333;
   padding-bottom: 5px;
-  text-transform: uppercase;
 }
 
 .container form .row .col-form .inputBox {
@@ -2734,17 +2846,33 @@ nav .icons i:hover {
 }
 
 .container .submit-btn {
-  width: 100%;
+  width: 60%;
   padding: 12px;
   font-size: 17px;
-  background: #27ae60;
+  background: #242423;
   color: #fff;
+  font-weight: 500;
   cursor: pointer;
   border: none;
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.267);
 }
-
 .container .submit-btn:hover {
-  background: #2ecc71;
+  background: #0E0E0E;
+}
+.container .cancel-btn {
+  width: 60%;
+  padding: 12px;
+  font-size: 17px;
+  background: #E2E4E4;
+  color: #737373;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.container .cancel-btn:hover {
+  background: #c8c8c8;
+  color: #515151;
 }
 
 /**/
@@ -2754,7 +2882,7 @@ nav .icons i:hover {
   border-radius: 6px;
   position: absolute;
   top: 40%;
-  left: 50%;
+  left: 10%;
   transform: translate(-50%, -50%) scale(0.1);
   text-align: center;
   padding: 0 30px 30px;
@@ -2762,6 +2890,7 @@ nav .icons i:hover {
   visibility: hidden;
   transition: transform 0.4s, top 0.4s;
   z-index: 1;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.122);
 }
 
 .open-popup {

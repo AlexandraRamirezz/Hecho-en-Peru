@@ -46,24 +46,7 @@ function ready()
         var button = addCart[i];
         button.addEventListener("click", addCartClicked);
     }
-
-    //Buy Button
-    document.getElementsByClassName("btn-buy-cart")[0].addEventListener("click", buyButtonClicked);
 }
-
-//Buy Button
-function buyButtonClicked(){
-    alert("Su compra ha sido procesada.");
-}
-
-//Remove item
-
-/*function removeCartItem(event){
-    var buttonClicked = event.target;
-    buttonClicked.parentElement.remove();
-    updateTotal();
-}*/
-
 
 function removeCartItem(event) {
     var buttonClicked = event.target;

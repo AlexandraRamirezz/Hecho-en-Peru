@@ -13,19 +13,30 @@
 
     <div class="container">
         <div class="cart-products">
-            <figure><img src="./assests/images/catalogo/aretes-hilo.jpg" class="product-img" alt="poncho"></figure>
-            <div class="detail-box">
-                <h4 class="cart-product-title">Aretes Hilo</h4>
-                <p class="cart-price">s/.150.00</p>
+            <h2>Mis productos</h2>
+            <div class="cart-items">
+                <div class="cart-item">
+                    <figure><img src="./assests/images/catalogo/aretes-hilo.jpg" class="product-img" alt="poncho"></figure>
+                    <div class="detail-box">
+                        <h4 class="cart-product-title">Aretes Hilo</h4>
+                        <p class="cart-units">Unidades: 2</p>
+                        <p class="cart-price">Total: s/.150.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-total">
+                <h4>Total a pagar:</h4>
+                <p class="monto-total">s/.10000.00</p>
             </div>
         </div>
         <div class="pago-info">
+            <div class="background-image"><div class="blur"></div></div>
             <form id="paymentForm" onsubmit="handleFormAndPopup(event)">
     
                 <div class="row">
                     <div class="col-form">
     
-                        <h3 class="title">Datos de la tarjeta</h3>
+                        <h2 class="title">Datos de la tarjeta</h2>
     
                         <div class="inputBox">
                             <span>Tarjetas aceptadas :</span>
@@ -61,12 +72,14 @@
     
             </form>
     
-            <input type="submit" value="Realizar el pago" class="submit-btn" onclick="validateForm(event)">
+            <input type="submit" value="Realizar pago" class="submit-btn" onclick="validateForm(event)">
+            <input type="submit" value="Cancelar" class="cancel-btn" onclick="window.location.href = '../index.html'";>
                 
             <div class="popup" id="popup">
                 <img src="./assests/images/img-pago/tick.png" alt="">
                 <h2>Gracias</h2>
                 <p>Tu pago fue procesado correctamente</p>
+                <p>Gracias por tu compra</p>
                 <button type="button" onclick="handleFormAndClosePopup(event)">OK</button>
             </div>
         </div>
