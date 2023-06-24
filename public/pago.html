@@ -19,7 +19,7 @@
                         <p class="cart-price">${item.price}</p>
                     </div>
         </div>
-        <form id="paymentForm" onsubmit="return validarFormulario()">
+        <form id="paymentForm" onsubmit="handleFormAndPopup(event)">
 
             <div class="row">
                 <div class="col-form">
@@ -58,10 +58,16 @@
 
             </div>
 
-
-            <input type="submit" value="Realizar el pago" class="submit-btn" onclick="validateForm(event)">
-
         </form>
+
+        <input type="submit" value="Realizar el pago" class="submit-btn" onclick="validateForm(event)">
+            
+        <div class="popup" id="popup">
+            <img src="./assests/images/img-pago/tick.png" alt="">
+            <h2>Gracias</h2>
+            <p>Tu pago fue procesado correctamente</p>
+            <button type="button" onclick="handleFormAndClosePopup(event)">OK</button>
+        </div>
 
     </div>
 

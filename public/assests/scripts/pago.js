@@ -167,27 +167,42 @@ function validateExpirationDate() {
 }
 
 
-
-
-
-
-
 function validateForm(event) {
     // Evita que el formulario se envíe automáticamente
     event.preventDefault();
 
-// Realiza la validación de cada campo del formulario
+    // Realiza la validación de cada campo del formulario
     var isNameValid = validateName();
     var isCardNumberValid = validateCardNumber();
     var isExpirationDateValid = validateExpirationDate();
-    var isValidateValid =validateCVV();
+    var isValidateValid = validateCVV();
 
     // Si todos los campos son válidos, se puede enviar el formulario
     if (isNameValid && isCardNumberValid && isValidateValid && isExpirationDateValid) {
-        alert('¡Formulario válido! Puedes enviarlo.');
-        // Aquí puedes enviar el formulario o realizar otras acciones
+        openPopup();
     } else {
         alert('Por favor, revisa los campos del formulario.');
         // Aquí puedes mostrar un mensaje de error o realizar otras acciones
+    }
 }
+
+function openPopup() {
+    var popup = document.getElementById("popup");
+    popup.classList.add("open-popup");
+}
+
+function closePopup() {
+    var popup = document.getElementById("popup");
+    popup.classList.remove("open-popup");
+}
+
+function handleFormAndPopup(event) {
+    validateForm(event);
+    openPopup();
+}
+
+function handleFormAndClosePopup(event) {
+    validateForm(event);
+    closePopup();
+    window.location.href = "paginaaredireccionar.html"
 }
