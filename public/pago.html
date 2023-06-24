@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./assests/styles/styles.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <form id="paymentForm" onsubmit="return validarFormulario()">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h3 class="title">Datos de la tarjeta</h3>
+
+                    <div class="inputBox">
+                        <span>Tarjetas aceptadas :</span>
+                        <img src="./assests/images/img-pago/card-img-2.png" alt="">
+                    </div>
+                    <div class="inputBox">
+                        <span>Nombre del propietario :</span>
+                        <input type="text" placeholder="Gonzalo Pingo" id="registro-name" onkeyup="validateName()">
+                        <p id="name-error" class="error-message"></p>
+                    </div>
+                    <div class="inputBox">
+                        <span>Numero de tarjeta :</span>
+                        <input type="text" placeholder="1111-2222-3333-4444" maxlength="19" id="cardNumber" onkeyup="validateCardNumber()" oninput="formatCardNumber(this)">
+                        <p id="cardNumber-error" class="error-message"></p>
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Fecha :</span>
+                            <input type="text" placeholder="MM/AA" maxlength="5" id="expirationDate" >
+                            <p id="expirationDateError" class="error-message"></p>
+                        </div>
+                        <div class="inputBox">
+                            <span>CVV :</span>
+                            <input type="text" placeholder="123" maxlength="3" id="cvv">
+                            <p id="cvv-error" class="error-message"></p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <input type="submit" value="Realizar el pago" class="submit-btn" onclick="validateForm(event)">
+
+        </form>
+
+    </div>
+
+    <script src="./assests/scripts/pago.js"></script>
+
+</body>
+</html>
