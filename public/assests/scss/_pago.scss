@@ -1,21 +1,30 @@
-
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 25px;
     min-height: 100vh;
-    background: linear-gradient(90deg, #2ecc71 60%, #27ae60 40.1%);
+    background: linear-gradient(90deg, #2ecc71 50%, #27ae60 50.1%);
 }
 
-.container form {
+.cart-products{
+    width: 55%;
+}
+
+.pago-info{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pago-info form {
+    border-radius: 0.5rem 0.5rem 0 0;
     padding: 20px;
-    width: 40%;
     background: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
 }
 
-.container form .row {
+.pago-info form .row {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -77,17 +86,17 @@
     filter: drop-shadow(0 0 1px #000);
 }
 
-.container form .submit-btn {
+.container .submit-btn {
     width: 100%;
     padding: 12px;
     font-size: 17px;
     background: #27ae60;
     color: #fff;
-    margin-top: 5px;
     cursor: pointer;
+    border: none;
 }
 
-.container form .submit-btn:hover {
+.container .submit-btn:hover {
     background: #2ecc71;
 }
 
