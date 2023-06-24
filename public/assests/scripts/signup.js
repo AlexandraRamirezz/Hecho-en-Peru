@@ -142,9 +142,6 @@ function validateForm(event) {
       return false;
     }
 
-    submitError.style.display = 'block';
-    submitError.innerHTML = 'Registro correcto';
-    submitError.style.color = 'green';
     setTimeout(function() {
       submitError.style.display = 'none';
     }, 10000);
@@ -160,24 +157,17 @@ function validateForm(event) {
     saveUserToDatabase(user);
 
     openPopup();
-    submitError.style.display = 'block';
-    submitError.innerHTML = 'Registro correcto';
-    submitError.style.color = 'green';
-    setTimeout(function () {
-        submitError.style.display = 'none';
-    }, 10000);
 
     return true;
-    
 }
 
 function openPopup() {
-  var popup = document.getElementById("popup");
+  var popup = document.getElementById("popup-registro");
   popup.classList.add("open-popup");
 }
 
 function closePopup() {
-  var popup = document.getElementById("popup");
+  var popup = document.getElementById("popup-registro");
   popup.classList.remove("open-popup");
 }
 
@@ -187,7 +177,6 @@ function handleFormAndPopup(event) {
 }
 
 function handleFormAndClosePopup(event) {
-  validateForm(event);
   closePopup();
   window.location.href = "../index.html"
 }

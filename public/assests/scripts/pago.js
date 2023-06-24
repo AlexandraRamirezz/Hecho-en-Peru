@@ -179,21 +179,51 @@ function validateForm(event) {
 
     // Si todos los campos son válidos, se puede enviar el formulario
     if (isNameValid && isCardNumberValid && isValidateValid && isExpirationDateValid) {
+        var popup = document.getElementById("popup-pago");
+        var popupImg = popup.querySelector("img");
+        var popupMainText = popup.querySelector("h2");
+        var popupSecondaryText = popup.querySelector("p");
+        var popupButton = popup.querySelector("button");
+
+        popupButton.classList.add("success");
+        popupButton.classList.remove("error");
+        
+        popupImg.src = "./assests/images/img-pago/popup-success.png"
+        popupMainText.innerText = "Gracias";
+        popupSecondaryText.innerHTML = 'Tu pago fue procesado correctamente<br>Gracias por tu compra.';
+        popupButton.innerText = "OK";
+        popupButton.style.backgroundColor = "#6fd649";
+        popupButton.style.color = "white";
+
         localStorage.removeItem("cart");
         openPopup();
     } else {
-        alert('Por favor, completa los campos del formulario.');
-        // Aquí puedes mostrar un mensaje de error o realizar otras acciones
+        var popup = document.getElementById("popup-pago");
+        var popupImg = popup.querySelector("img");
+        var popupMainText = popup.querySelector("h2");
+        var popupSecondaryText = popup.querySelector("p");
+        var popupButton = popup.querySelector("button");
+
+        popupImg.src = "./assests/images/img-pago/popup-error.png"
+        popupImg.style.width = "100px";
+        popupMainText.innerText = "Ocurrió un error";
+        popupSecondaryText.innerText = "Por favor, completa todos los campos correctamente y vuelve a intentarlo."
+        popupButton.innerText = "Cerrar";
+        popupButton.style.backgroundColor = "red";
+        popupButton.style.color = "white";
+        popupButton.classList.remove("success");
+        popupButton.classList.add("error");
+        openPopup();
     }
 }
 
 function openPopup() {
-    var popup = document.getElementById("popup");
+    var popup = document.getElementById("popup-pago");
     popup.classList.add("open-popup");
 }
 
 function closePopup() {
-    var popup = document.getElementById("popup");
+    var popup = document.getElementById("popup-pago");
     popup.classList.remove("open-popup");
 }
 
@@ -203,9 +233,15 @@ function handleFormAndPopup(event) {
 }
 
 function handleFormAndClosePopup(event) {
-    validateForm(event);
-    closePopup();
-    window.location.href = "../index.html";
+    var popup = document.getElementById("popup-pago");
+    var popupButton = popup.querySelector("button");
+    if (popupButton.classList.contains("success")){
+        closePopup();
+        window.location.href = "../index.html";
+    }else{
+        closePopup();
+    }
+    
 }
 
 function getCartItemsFromLocalStorage() {

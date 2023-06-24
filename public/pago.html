@@ -15,18 +15,11 @@
         <div class="cart-products">
             <h2>Mis productos</h2>
             <div class="cart-items">
-                <div class="cart-item">
-                    <figure><img src="./assests/images/catalogo/aretes-hilo.jpg" class="product-img" alt="poncho"></figure>
-                    <div class="detail-box">
-                        <h4 class="cart-product-title">Aretes Hilo</h4>
-                        <p class="cart-units">Unidades: 2</p>
-                        <p class="cart-price">Total: s/.150.00</p>
-                    </div>
-                </div>
+                
             </div>
             <div class="cart-total">
                 <h4>Total a pagar</h4>
-                <p class="monto-total">s/.10000.00</p>
+                <p class="monto-total">s/.0.00</p>
             </div>
         </div>
         <div class="pago-info">
@@ -75,11 +68,10 @@
             <input type="submit" value="Realizar pago" class="submit-btn" onclick="validateForm(event)">
             <input type="submit" value="Cancelar" class="cancel-btn" onclick="window.location.href = '../index.html'";>
                 
-            <div class="popup" id="popup">
-                <img src="./assests/images/img-pago/tick.png" alt="">
+            <div class="popup-pago" id="popup-pago">
+                <img src="./assests/images/img-pago/popup-success.png" alt="">
                 <h2>Gracias</h2>
-                <p>Tu pago fue procesado correctamente</p>
-                <p>Gracias por tu compra</p>
+                <p>Tu pago fue procesado correctamente<br>Gracias por tu compra.</p>
                 <button type="button" onclick="handleFormAndClosePopup(event)">OK</button>
             </div>
         </div>

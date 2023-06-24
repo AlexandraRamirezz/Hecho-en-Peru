@@ -248,7 +248,6 @@ function updateTotal(){
         var price = parseFloat(priceElement.innerText.replace("s/.",""));
         var quantity = quantityElement.value;
         total = total + (price * quantity);
-        //document.getElementsByClassName("total-price")[0].innerText = "s/." + total.toFixed(2);
     }
 
     if (total == 0)
