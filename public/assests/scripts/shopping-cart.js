@@ -278,6 +278,7 @@ function updateTotal(){
     }
 
     document.getElementsByClassName("total-price")[0].innerText = "s/." + total.toFixed(2);
+    localStorage.setItem('totalValue', total.toFixed(2));
 }
 
 

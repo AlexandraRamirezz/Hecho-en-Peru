@@ -12,12 +12,17 @@
 <body>
 
     <div class="container">
-
+        <div class="cart-products">
+            <figure><img src="${item.productImg}" class="product-img" alt="poncho"></figure>
+                    <div class="detail-box">
+                        <h4 class="cart-product-title">${item.title}</h4>
+                        <p class="cart-price">${item.price}</p>
+                    </div>
+        </div>
         <form id="paymentForm" onsubmit="return validarFormulario()">
 
             <div class="row">
-
-                <div class="col">
+                <div class="col-form">
 
                     <h3 class="title">Datos de la tarjeta</h3>
 
