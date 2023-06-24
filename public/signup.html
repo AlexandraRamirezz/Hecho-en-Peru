@@ -59,7 +59,7 @@
             <section id="login-form" class="col-6 form-inicio_sesion">
                 <div class="formulario">
                     <h1 class="form-h1-espacio">Registrarse</h1>
-                    <form class="form-info" id="registration-form">
+                    <form class="form-info" id="registration-form" onsubmit="handleFormAndPopup(event)">
                         <div class="names_form">
                             <div class="espacio registro-group">
                                 <h3 class="text-start">Nombre</h3>
@@ -87,7 +87,13 @@
                         </div>
 
                         <div>
-                            <button onclick="return validateForm()" id="btn-crear-cuenta" type="submit">Crear cuenta</button>
+                            <input onclick="validateForm(event)" id="btn-crear-cuenta" type="submit">
+                            <div class="popup" id="popup">
+                                <img src="./assests/images/img-pago/tick.png" alt="">
+                                <h2>Gracias</h2>
+                                <p>Tu cuenta ha sido creada correctamente</p>
+                                <button type="button" onclick="handleFormAndClosePopup(event)">OK</button>
+                            </div>
                         </div>
 
                         <div class="span-btn">

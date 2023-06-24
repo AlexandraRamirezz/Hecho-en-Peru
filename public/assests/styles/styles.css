@@ -2751,6 +2751,7 @@ nav .icons i:hover {
   color: #333;
   visibility: hidden;
   transition: transform 0.4s, top 0.4s;
+  z-index: 1;
 }
 
 .open-popup {

@@ -128,7 +128,9 @@ function validateEmail() {
     return true;
 }
 
-function validateForm() {
+function validateForm(event) {
+     // Evita que el formulario se envíe automáticamente
+      event.preventDefault();
     var submitError = document.getElementById('subit-error');
     if (!validateName() || !validateEmail() || !validatePassword() || !validateLastName()) {
       submitError.style.display = 'block';
@@ -157,6 +159,7 @@ function validateForm() {
     // Guardar el usuario en la base de datos local
     saveUserToDatabase(user);
 
+    openPopup();
     submitError.style.display = 'block';
     submitError.innerHTML = 'Registro correcto';
     submitError.style.color = 'green';
@@ -164,12 +167,31 @@ function validateForm() {
         submitError.style.display = 'none';
     }, 10000);
 
-    // Redirigir al usuario a la página de inicio de sesión
-    window.location.href = '../pages/login.html';
-
     return true;
     
 }
+
+function openPopup() {
+  var popup = document.getElementById("popup");
+  popup.classList.add("open-popup");
+}
+
+function closePopup() {
+  var popup = document.getElementById("popup");
+  popup.classList.remove("open-popup");
+}
+
+function handleFormAndPopup(event) {
+  validateForm(event);
+  openPopup();
+}
+
+function handleFormAndClosePopup(event) {
+  validateForm(event);
+  closePopup();
+  window.location.href = "../index.html"
+}
+
   
 // Función para guardar el usuario en la base de datos local
 function saveUserToDatabase(user) {
