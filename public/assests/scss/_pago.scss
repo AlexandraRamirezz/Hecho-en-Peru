@@ -28,7 +28,7 @@
                 }
             }
             .detail-box{
-                line-height: 1.5;
+                line-height: 2;
             }
         }
         &::-webkit-scrollbar{
@@ -53,12 +53,13 @@
     .cart-total{
         width: 85%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         margin-top: 2rem;
         padding-top: 1rem;
-        border-top: solid black 1px;
+        border-top: solid #4F4F4F 1px;
         .monto-total{
             margin-right: 1rem;
+            margin-left: 1rem;
         }
     }
 }
