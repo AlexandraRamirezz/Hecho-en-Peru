@@ -226,6 +226,7 @@
                         display: grid;
                         place-content: center;
                         margin-inline: 0.5rem;
+                        -moz-appearance: textfield;
                         &[type="radio"]{
                             -webkit-appearance: none;
                             &::before{

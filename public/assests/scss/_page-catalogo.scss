@@ -82,6 +82,7 @@
                         padding: 0.2rem;
                         text-align: center;
                         width: 35%;
+                        -moz-appearance: textfield;
                         &[type="number"]::-webkit-inner-spin-button {
                             -webkit-appearance: none;
                         }

@@ -714,6 +714,7 @@ nav .icons i:hover {
   padding: 0.2rem;
   text-align: center;
   width: 35%;
+  -moz-appearance: textfield;
 }
 .cart .cart-content .cart-box .detail-box .cart-quantity .unidades-selected[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -1895,6 +1896,7 @@ nav .icons i:hover {
   display: grid;
   place-content: center;
   margin-inline: 0.5rem;
+  -moz-appearance: textfield;
 }
 .product-container .general-info .f-talla .options-container .option input[type=radio] {
   -webkit-appearance: none;
