@@ -56,14 +56,14 @@ function filtrarProductos() {
     if (ordenSeleccionado != null) {
         if (ordenSeleccionado.value === "precio-mayor-menor") {
             productosFiltrados.sort(function(a, b) {
-                var precioA = parseFloat(a.querySelector('.precio_product').textContent.replace('s/.', ''));
-                var precioB = parseFloat(b.querySelector('.precio_product').textContent.replace('s/.', ''));
+                var precioA = parseFloat(a.querySelector('.precio-product').textContent.replace('s/.', ''));
+                var precioB = parseFloat(b.querySelector('.precio-product').textContent.replace('s/.', ''));
                 return precioB - precioA;
             });
         } else if (ordenSeleccionado.value === "precio-menor-mayor") {
             productosFiltrados.sort(function(a, b) {
-                var precioA = parseFloat(a.querySelector('.precio_product').textContent.replace('s/.', ''));
-                var precioB = parseFloat(b.querySelector('.precio_product').textContent.replace('s/.', ''));
+                var precioA = parseFloat(a.querySelector('.precio-product').textContent.replace('s/.', ''));
+                var precioB = parseFloat(b.querySelector('.precio-product').textContent.replace('s/.', ''));
                 return precioA - precioB;
             });
         } else if (ordenSeleccionado.value === "mejor-calificados") {
@@ -151,7 +151,7 @@ function filtrarProductos() {
     var productosFiltrados = Array.from(productos).filter(function(producto) {
         var categoria = producto.getAttribute('data-category');
         var region = producto.getAttribute('data-region');
-        var precio = parseFloat(producto.querySelector('.precio_product').textContent.replace('s/.', ''));
+        var precio = parseFloat(producto.querySelector('.precio-product').textContent.replace('s/.', ''));
         
         var categoriaCumple = categoriasSeleccionadas.length === 0 || categoriasSeleccionadas.includes(categoria);
         var regionCumple = regionesSeleccionadas.length === 0 || regionesSeleccionadas.includes(region);
@@ -164,15 +164,15 @@ function filtrarProductos() {
         switch (ordenSeleccionado.value) {
             case 'precio-menor-mayor':
             productosFiltrados.sort(function(a, b) {
-                var precioA = parseFloat(a.querySelector('.precio_product').textContent.replace('s/.', ''));
-                var precioB = parseFloat(b.querySelector('.precio_product').textContent.replace('s/.', ''));
+                var precioA = parseFloat(a.querySelector('.precio-product').textContent.replace('s/.', ''));
+                var precioB = parseFloat(b.querySelector('.precio-product').textContent.replace('s/.', ''));
                 return precioA - precioB;
             });
             break;
             case 'precio-mayor-menor':
             productosFiltrados.sort(function(a, b) {
-                var precioA = parseFloat(a.querySelector('.precio_product').textContent.replace('s/.', ''));
-                var precioB = parseFloat(b.querySelector('.precio_product').textContent.replace('s/.', ''));
+                var precioA = parseFloat(a.querySelector('.precio-product').textContent.replace('s/.', ''));
+                var precioB = parseFloat(b.querySelector('.precio-product').textContent.replace('s/.', ''));
                 return precioB - precioA;
             });
             break;
