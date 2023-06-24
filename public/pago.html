@@ -13,60 +13,62 @@
 
     <div class="container">
         <div class="cart-products">
-            <figure><img src="${item.productImg}" class="product-img" alt="poncho"></figure>
-                    <div class="detail-box">
-                        <h4 class="cart-product-title">${item.title}</h4>
-                        <p class="cart-price">${item.price}</p>
-                    </div>
-        </div>
-        <form id="paymentForm" onsubmit="handleFormAndPopup(event)">
-
-            <div class="row">
-                <div class="col-form">
-
-                    <h3 class="title">Datos de la tarjeta</h3>
-
-                    <div class="inputBox">
-                        <span>Tarjetas aceptadas :</span>
-                        <img src="./assests/images/img-pago/card-img-2.png" alt="">
-                    </div>
-                    <div class="inputBox">
-                        <span>Nombre del propietario :</span>
-                        <input type="text" placeholder="Gonzalo Pingo" id="registro-name" onkeyup="validateName()">
-                        <p id="name-error" class="error-message"></p>
-                    </div>
-                    <div class="inputBox">
-                        <span>Numero de tarjeta :</span>
-                        <input type="text" placeholder="1111-2222-3333-4444" maxlength="19" id="cardNumber" onkeyup="validateCardNumber()" oninput="formatCardNumber(this)">
-                        <p id="cardNumber-error" class="error-message"></p>
-                    </div>
-
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>Fecha :</span>
-                            <input type="text" placeholder="MM/AA" maxlength="5" id="expirationDate" >
-                            <p id="expirationDateError" class="error-message"></p>
-                        </div>
-                        <div class="inputBox">
-                            <span>CVV :</span>
-                            <input type="text" placeholder="123" maxlength="3" id="cvv">
-                            <p id="cvv-error" class="error-message"></p>
-                        </div>
-                    </div>
-
-                </div>
-
+            <figure><img src="./assests/images/catalogo/aretes-hilo.jpg" class="product-img" alt="poncho"></figure>
+            <div class="detail-box">
+                <h4 class="cart-product-title">Aretes Hilo</h4>
+                <p class="cart-price">s/.150.00</p>
             </div>
-
-        </form>
-
-        <input type="submit" value="Realizar el pago" class="submit-btn" onclick="validateForm(event)">
-            
-        <div class="popup" id="popup">
-            <img src="./assests/images/img-pago/tick.png" alt="">
-            <h2>Gracias</h2>
-            <p>Tu pago fue procesado correctamente</p>
-            <button type="button" onclick="handleFormAndClosePopup(event)">OK</button>
+        </div>
+        <div class="pago-info">
+            <form id="paymentForm" onsubmit="handleFormAndPopup(event)">
+    
+                <div class="row">
+                    <div class="col-form">
+    
+                        <h3 class="title">Datos de la tarjeta</h3>
+    
+                        <div class="inputBox">
+                            <span>Tarjetas aceptadas :</span>
+                            <img src="./assests/images/img-pago/card-img-2.png" alt="">
+                        </div>
+                        <div class="inputBox">
+                            <span>Nombre del propietario :</span>
+                            <input type="text" placeholder="Gonzalo Pingo" id="registro-name" onkeyup="validateName()">
+                            <p id="name-error" class="error-message"></p>
+                        </div>
+                        <div class="inputBox">
+                            <span>Numero de tarjeta :</span>
+                            <input type="text" placeholder="1111-2222-3333-4444" maxlength="19" id="cardNumber" onkeyup="validateCardNumber()" oninput="formatCardNumber(this)">
+                            <p id="cardNumber-error" class="error-message"></p>
+                        </div>
+    
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>Fecha :</span>
+                                <input type="text" placeholder="MM/AA" maxlength="5" id="expirationDate" >
+                                <p id="expirationDateError" class="error-message"></p>
+                            </div>
+                            <div class="inputBox">
+                                <span>CVV :</span>
+                                <input type="text" placeholder="123" maxlength="3" id="cvv">
+                                <p id="cvv-error" class="error-message"></p>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+            </form>
+    
+            <input type="submit" value="Realizar el pago" class="submit-btn" onclick="validateForm(event)">
+                
+            <div class="popup" id="popup">
+                <img src="./assests/images/img-pago/tick.png" alt="">
+                <h2>Gracias</h2>
+                <p>Tu pago fue procesado correctamente</p>
+                <button type="button" onclick="handleFormAndClosePopup(event)">OK</button>
+            </div>
         </div>
 
     </div>
