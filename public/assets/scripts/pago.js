@@ -150,17 +150,31 @@ function validateExpirationDate() {
     // La fecha de vencimiento es válida
     hideError();
     return true;
+}
+
+// Función para formatear la fecha de vencimiento
+function formatExpirationDate() {
+    var value = expirationDateInput.value.replace(/\D/g, ''); // Elimina todos los caracteres no numéricos
+    if (value.length > 4) value = value.slice(0, 4); // Limita a 4 dígitos
+
+    // Inserta el '/' después de los primeros dos dígitos
+    var formattedValue = value;
+    if (value.length > 2) {
+        formattedValue = value.slice(0, 2) + '/' + value.slice(2);
     }
 
-    // Función para mostrar el mensaje de error
-    function showError() {
+    expirationDateInput.value = formattedValue;
+}
+
+// Función para mostrar el mensaje de error
+function showError() {
     expirationDateError.style.borderTop = 'red solid 3px';
     expirationDateInput.classList.remove('valid');
     expirationDateInput.classList.add('invalid');
-    }
+}
 
-    // Función para ocultar el mensaje de error
-    function hideError() {
+// Función para ocultar el mensaje de error
+function hideError() {
     expirationDateError.style.borderTop = 'green solid 3px';
     expirationDateInput.classList.remove('invalid');
     expirationDateInput.classList.add('valid');
@@ -267,11 +281,13 @@ function loadCartItems() {
             var cartShopBox = document.createElement("div");
             cartShopBox.classList.add("cart-item");
             var cartBoxContent = `
-                <figure><img src="${item.productImg}" class="product-img" alt="poncho"></figure>
+                <figure>
+                    <img src="${item.productImg}" class="product-img" alt="poncho">
+                </figure>
                 <div class="detail-box">
                     <h4 class="cart-product-title">${item.title}</h4>
                     <p class="cart-units">Unidades: ${item.quantity}</p>
-                    <p class="cart-price">Total: ${item.price}</p>
+                    <p class="cart-price">Precio unitario: ${item.price}</p>
                 </div>
             `;
             cartShopBox.innerHTML = cartBoxContent;
