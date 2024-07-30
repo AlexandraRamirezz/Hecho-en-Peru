@@ -2,7 +2,9 @@
 function updateBreadcrumb() {
     const productName = document.querySelector(".general-info h3").textContent;
     const breadcrumbLink = document.querySelector(".breadcrumbs-item:nth-child(3) .breadcrumbs-link");
-    breadcrumbLink.textContent = productName;
+    if (breadcrumbLink) {
+        breadcrumbLink.textContent = productName;
+    }
 }
 
 // Al cargar la página
@@ -13,62 +15,48 @@ window.addEventListener("DOMContentLoaded", function() {
 
 // ZOOM IMG
 
+// ZOOM IMG
+
 const imgContElm = document.querySelector(".main-images");
 const imgElm = document.querySelector(".main-images figure img");
 
-const zoom = 200;
+if (imgContElm && imgElm) {
+    const zoom = 200;
 
-//Evemt mouse enter
-imgContElm.addEventListener("mouseenter", function(){
-    imgElm.style.width = zoom + "%";
-});
+    // Event mouse enter
+    imgContElm.addEventListener("mouseenter", function() {
+        imgElm.style.transition = "transform 0.3s ease"; // Asegúrate de que haya una transición suave
+        imgElm.style.transform = `scale(${zoom / 100})`; // Escalar la imagen
+    });
 
-//Event mouse leave
-imgContElm.addEventListener("mouseleave", function(){
-    imgElm.style.width = "100%";
-    imgElm.style.left = "0";
-    imgElm.style.top = "0";
-});
+    // Event mouse leave
+    imgContElm.addEventListener("mouseleave", function() {
+        imgElm.style.transition = "transform 0.3s ease";
+        imgElm.style.transform = "scale(1)"; // Restaurar el tamaño original
+        imgElm.style.left = "0";
+        imgElm.style.top = "0";
+    });
 
-//Event mouse move
+    // Event mouse move
+    imgContElm.addEventListener("mousemove", function(event) {
+        const rect = imgContElm.getBoundingClientRect();
+        const offsetX = event.clientX - rect.left;
+        const offsetY = event.clientY - rect.top;
 
-imgContElm.addEventListener("mousemove", function(){
-    let obj = imgContElm;
-    let obj_left = 0;
-    let obj_top = 0;
-    let xpos;
-    let ypos;
+        const imgWidth = imgElm.clientWidth;
+        const imgHeight = imgElm.clientHeight;
 
-    while(obj.offsetParent)
-    {
-        obj_left += obj.offsetLeft;
-        obj_top += obj.offsetTop;
-        obj = obj.offsetParent;
+        imgElm.style.transformOrigin = `${(offsetX / imgContElm.clientWidth) * 100}% ${(offsetY / imgContElm.clientHeight) * 100}%`;
+    });
+
+    // Ajustar la altura del contenedor de la imagen
+    function changeHeight() {
+        imgContElm.style.height = `${imgContElm.clientWidth}px`;
     }
 
-    if (MouseEvent)
-    {
-        xpos = window.event.x + document.body.scrollLeft - 2;
-        ypos = window.event.y + document.body.scrollTop - 2;
-    }
-
-    xpos -= obj_left;
-    ypos -= obj_top;
-
-    if (ypos < 0) ypos = 0;
-
-    const imgWidth = imgElm.clientWidth;
-    const imgHeight = imgElm.clientHeight;
-
-    imgElm.style.top = -(((imgHeight - this.clientHeight)*ypos)/this.clientHeight) + "px";
-    imgElm.style.left = -(((imgWidth - this.clientWidth)*xpos)/this.clientWidth) + "px";
-});
-
-function changeHeight(){
-    imgContElm.style.height = imgContElm.clientWidth + "px";
+    window.addEventListener("resize", changeHeight);
+    changeHeight(); // Asegurarse de que se llame al cargar la página
 }
-
-window.addEventListener("resize", changeHeight);
 
 //SLICE IMG
 
@@ -99,36 +87,41 @@ minus.addEventListener("click", ()=>{
 
 const colorItems = document.querySelectorAll('.color-item');
 
-colorItems.forEach((item) => {
-    const button = item.querySelector('.option');
-    button.addEventListener('click', () => {
-    // Remover la clase 'selected' de todos los color-item
+if (colorItems) {
     colorItems.forEach((item) => {
-        item.classList.remove('selected');
+        const button = item.querySelector('.option');
+        if (button) {
+            button.addEventListener('click', () => {
+                // Remover la clase 'selected' de todos los color-item
+                colorItems.forEach((item) => {
+                    item.classList.remove('selected');
+                });
+
+                // Agregar la clase 'selected' al color-item padre del botón actual
+                item.classList.add('selected');
+            });
+        }
     });
-    
-    // Agregar la clase 'selected' al color-item padre del botón actual
-    item.classList.add('selected');
-    });
-});
+}
 
 //TALLA DROPDOWN
 
 const selectedTalla = document.querySelector(".f-talla .option-selected");
 const optionsContainerTalla = document.querySelector(".f-talla .options-container");
-
 const optionsListTalla = document.querySelectorAll(".f-talla .option");
 
-selectedTalla.addEventListener("click", () => {
-    optionsContainerTalla.classList.toggle("active");
-});
-
-optionsListTalla.forEach(o => {
-    o.addEventListener("click", () => {
-    selectedTalla.innerHTML = o.querySelector("label").innerHTML;
-    optionsContainerTalla.classList.remove("active");
+if (selectedTalla && optionsContainerTalla && optionsListTalla) {
+    selectedTalla.addEventListener("click", () => {
+        optionsContainerTalla.classList.toggle("active");
     });
-});
+
+    optionsListTalla.forEach(o => {
+        o.addEventListener("click", () => {
+            selectedTalla.innerHTML = o.querySelector("label").innerHTML;
+            optionsContainerTalla.classList.remove("active");
+        });
+    });
+}
 
 //CARRUSEL
 
@@ -177,18 +170,17 @@ function nComentario() {
 
     if (valorIngresado === '' || stars_point_user === 0) {
         //alert("Ingrese un comentario");
-        if (valorIngresado === '')
-        {
-        commentError.classList.add("active");
-        inputBox.classList.add("error");
-        }else{
-        commentError.classList.remove("active");
-        inputBox.classList.remove("error");
+        if (valorIngresado === '') {
+            commentError.classList.add("active");
+            inputBox.classList.add("error");
+        } else {
+            commentError.classList.remove("active");
+            inputBox.classList.remove("error");
         }
         if (stars_point_user === 0)
-        ratingError.classList.add("active");
+            ratingError.classList.add("active");
         else ratingError.classList.remove("active");
-    }else {
+    } else {
         li.className = "comment";
         li.innerHTML = `
         <div class="comment-user">
@@ -214,15 +206,17 @@ function nComentario() {
         `;
         let commentsList = document.getElementById("comments-list");
         let firstComment = commentsList.firstChild;
-        commentsList.insertBefore(li, firstComment);
+        if (commentsList) {
+            commentsList.insertBefore(li, firstComment);
+        }
 
         sumStars += stars_point_user;
 
         document.getElementById("newComment").value = "";
-        stars_new_comment.forEach((star) =>{
-        star.classList.remove("active");
+        stars_new_comment.forEach((star) => {
+            star.classList.remove("active");
         });
-        
+
         commentError.classList.remove("active");
         inputBox.classList.remove("error");
         ratingError.classList.remove("active");
@@ -233,6 +227,13 @@ function nComentario() {
         updateRatingCount();
     }
 }
+
+// Función para manejar el evento de presionar tecla Enter
+document.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        nComentario();
+    }
+});
 
 // Función para manejar el evento de presionar tecla en el campo de entrada
 function handleKeyPress(event) {
@@ -461,7 +462,6 @@ showComments();
 
 
 //STAR RATING COMENTARIO
-
 const stars_new_comment = document.querySelectorAll(".rating-input i");
 let stars_point_user = 0;
 

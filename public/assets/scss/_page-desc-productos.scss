@@ -17,7 +17,6 @@
                 color:#858585;
                 &:hover {
                     color: $color_3;
-                    border-bottom: 0.2rem solid #E09898;
                     padding-bottom: 0.2rem;
                 }
             }
@@ -60,7 +59,7 @@
                 }
                 &:hover {
                     box-shadow: inset 0 0.5rem 1rem #0000003b;
-                    img{
+                    img {
                         transform: scale(1.1, 1.1);
                     }
                 }
@@ -192,7 +191,7 @@
                 order: 0;
                 &::after {
                     content: "";
-                    background: url("../imgs/icons/angle-down.png");
+                    background: url("../images/icons/angle-down.png");
                     background-size: contain;
                     background-repeat: no-repeat;
                     position: absolute;
@@ -248,7 +247,7 @@
                         cursor: pointer;
                     }
                     &:hover {
-                        input{
+                        input {
                             border: #ACDE7B solid 2px;
                         }
                     }
@@ -289,10 +288,10 @@
                 padding: 0.2rem;
                 text-align: center;
                 width: 4rem;
-                &[type="number"]::-webkit-inner-spin-button {
+                &[type="number"]::-webkit-inner-spin-button  {
                     -webkit-appearance: none;
                 }
-                &[type="number"]::-webkit-outer-spin-button {
+                &[type="number"]::-webkit-outer-spin-button  {
                     -webkit-appearance: none;
                 }
             }
@@ -309,7 +308,7 @@
             display: flex;
             justify-content: flex-start;
             width: 100%;
-            span{
+            span {
                 margin-left: 0.5rem;
             }
         }
@@ -320,7 +319,7 @@
             border-radius: 0.8rem;
             background-color: #A9E5BB;
             font-weight: 600;
-            span{
+            span {
                 margin-right: 1rem;
             }
         }
@@ -355,7 +354,7 @@
                 opacity: 70%;
             }
         }
-        .history-product{
+        .history-product {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -407,7 +406,7 @@
         padding: 3rem 0 5rem 3.5rem;
         margin: auto;
         border-radius: 2rem;
-        h3{
+        h3 {
             margin-bottom: 1rem;
         }
         .new-comment-section {
@@ -420,7 +419,7 @@
             }
             .comment-column {
                 width: 100%;
-                h4{
+                h4 {
                     margin-left: 1rem;
                 }
                 .input-box {
@@ -457,7 +456,7 @@
                         color: #dc3545;
                         display: none;
                     }
-                    
+
                     .error-input.active {
                         display: block;
                         transition: all 0.5s ease;
@@ -502,7 +501,7 @@
                                 background-color: #242423;
                                 color: white;
                                 transition: all 0.3s ease;
-                                &:hover {
+                                &:hover  {
                                     background-color: $background-color_14;
                                     color: $color_5;
                                     box-shadow: 0px 3px 6px #0000001a;

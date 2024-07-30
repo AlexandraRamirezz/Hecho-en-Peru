@@ -1785,7 +1785,6 @@ nav .icons .hamburger {
 }
 .breadcrumbs ul .breadcrumbs-item .breadcrumbs-link:hover {
   color: #E46953;
-  border-bottom: 0.2rem solid #E09898;
   padding-bottom: 0.2rem;
 }
 .breadcrumbs ul .breadcrumbs-item .breadcrumbs-link.active {
@@ -1954,7 +1953,7 @@ nav .icons .hamburger {
 }
 .product-container .general-info .f-talla .option-selected::after {
   content: "";
-  background: url("../imgs/icons/angle-down.png");
+  background: url("../images/icons/angle-down.png");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
