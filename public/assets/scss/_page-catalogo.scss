@@ -1,5 +1,5 @@
 .fondo-catalogo-img {
-    background-image: url("../images/hero-section/catalogo-fondo.jpg");
+    background-image: url("../imgs/hero-section/catalogo-fondo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -282,14 +282,12 @@
                 position: relative;
                 margin-bottom: 1rem;
                 cursor: pointer;
-                
                 order: 0;
                 &::after{
                     content: "";
-                    background: url("../images/icons/angle-down.png");
+                    background: url("../imgs/icons/angle-down.png");
                     background-size: contain;
                     background-repeat: no-repeat;
-
                     position: absolute;
                     height: 100%;
                     width: 1rem;
@@ -371,7 +369,7 @@
                 order: 0;
                 &::after{
                     content: "";
-                    background: url("../images/icons/angle-down.png");
+                    background: url("../imgs/icons/angle-down.png");
                     background-size: contain;
                     background-repeat: no-repeat;
 
@@ -475,7 +473,7 @@
                 order: 0;
                 &::after{
                     content: "";
-                    background: url("../images/icons/angle-down.png");
+                    background: url("../imgs/icons/angle-down.png");
                     background-size: contain;
                     background-repeat: no-repeat;
 
@@ -803,7 +801,6 @@
                             border-radius: 10px;
                             cursor: pointer;
                             transition: all 0.3s ease;
-                    
                             &:hover {
                                 background-color: $background-color_14;
                                 color: $color_5;
@@ -816,5 +813,3 @@
         }
     }
 }
-
-

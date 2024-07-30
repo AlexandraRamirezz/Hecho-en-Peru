@@ -1,51 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hecho en Perú | Catálogo</title>
-
-    <link href="./assests/images/logo-navbar.png" rel="icon">
-
+    <link href="./assets/imgs/logo-navbar.png" rel="icon">
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <!-- ANIMATE -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-    <!-- ÍCONOS -->
+    <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
     <!-- CSS BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-    <!-- FUENTE: Montserrat -->
+    <!-- FONT: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./assests/styles/styles.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="../index.html"><img src="./assests/images/logo-navbar.png" alt="Logo de Hecho en Perú"></a>
+                <a href="../index.html"><img src="./assets/imgs/logo-navbar.png" alt="Logo de Hecho en Perú"></a>
             </div>
-            <div class="menu d-flex justify-content-around">
-                <a class="menu-item" href="../index.html">Inicio</a>
-                <a class="menu-item" href="catalogo.html">Catálogo</a>
-                <a class="menu-item" href="regiones.html">Regiones</a>
-                <a class="menu-item" href="quienes-somos.html">Quiénes somos</a>
-                <a class="menu-item" href="contacto.html">Contacto</a>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Ingresa tu categoría aquí">
-                <button type="submit">Buscar</button>
+            <div class="nav-responsive">
+                <div class="menu d-flex justify-content-around">
+                    <a class="menu-item" href="../index.html">Inicio</a>
+                    <a class="menu-item" href="catalogo.html">Catálogo</a>
+                    <a class="menu-item" href="regiones.html">Regiones</a>
+                    <a class="menu-item" href="quienes-somos.html">Quiénes somos</a>
+                    <a class="menu-item" href="contacto.html">Contacto</a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Ingresa tu categoría aquí">
+                    <button type="submit">Buscar</button>
+                </div>
             </div>
             <div class="icons d-flex justify-content-around">
                 <!--Cart icon-->
@@ -57,9 +51,7 @@
                         <p>El carrito está vacío.</p>
                         <i class="fa-regular fa-face-sad-cry"></i>
                     </div>
-                    <div class="cart-content">
-                        
-                    </div>
+                    <div class="cart-content"></div>
                     <!--Total-->
                     <div class="cart-total">
                         <h4>Total</h4>
@@ -71,12 +63,13 @@
                     <button id="close-cart"><i class="fa-solid fa-xmark"></i></button>
                 </section>
                 <a href="./login.html"><i class="fas fa-user"></i></a>
+                <i class="fa-solid fa-bars hamburger"></i>
             </div>
         </nav>
     </header>
-
     <main>
-        <section> <!--Hero Section--> 
+        <!-- hero section -->
+        <section>
             <div class="p-6 text-center fondo-catalogo-img">
                 <div class="inicio-fondo">
                     <div class="d-flex justify-content-center align-items-center">
@@ -93,45 +86,33 @@
                 </div>
             </div>
         </section>
-
         <!-- chatbot -->
         <section>
             <div class="borde-butom">
                 <li id="toggleButton"><i class="fa-solid fa-message fa-2x"></i></li>
-
                 <div id="chatbotContainer">
                     <div class="chatbox-wrapper">
                         <div id="chatbot-container">
                             <div id="chatbot-header">
-                                <img src="assests/images/chatbot.jpg" alt="Chatbot Image">
+                                <img src="../public/assets/imgs/chatbot.jpg" alt="Perfil de llama del chatbot">
                                 <div class="nombre_p">
                                     <h4>Pacha la llama</h4>
                                     <p>en línea</p>
                                 </div>
-
                                 <li id="clear-chat-button"><i class="fa-regular fa-trash-can"></i></li>
-
                             </div>
-
                             <div id="chatbot-body">
                                 <div id="chat-container">
                                     <div id="chat-log"></div>
                                 </div>
                             </div>
-
                             <div class="foo-chtbot">
                                 <div id="faq-buttons-container">
-                                    <button class="faq-button" data-question="¿Cuál es el horario de atención?">¿Cuál es
-                                        el
-                                        horario de atención?</button>
+                                    <button class="faq-button" data-question="¿Cuál es el horario de atención?">¿Cuál es el horario de atención?</button>
                                     <button class="faq-button"
-                                        data-question="¿Cuáles son los métodos de pago aceptados?">¿Cuáles son los
-                                        métodos de
-                                        pago aceptados?</button>
+                                        data-question="¿Cuáles son los métodos de pago aceptados?">¿Cuáles son los métodos de pago aceptados?</button>
                                     <button class="faq-button"
-                                        data-question="¿Cómo puedo contactar al servicio al cliente?">¿Cómo puedo
-                                        contactar al
-                                        servicio al cliente?</button>
+                                        data-question="¿Cómo puedo contactar al servicio al cliente?">¿Cómo puedo contactar al servicio al cliente?</button>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +120,6 @@
                 </div>
             </div>
         </section>
-        
         <section class="container-catalogo row">
             <div class="filtro col-3">
                 <h3>Filtrar por</h3>
@@ -149,10 +129,8 @@
                         <div class="progress"></div>
                     </div>
                     <div class="range-input">
-                        <input type="range" class="range-min" min="10" max="2000" value="10" step="10"
-                            style="cursor:pointer">
-                        <input type="range" class="range-max" min="10" max="2000" value="1500" step="10"
-                            style="cursor:pointer">
+                        <input type="range" class="range-min" min="10" max="2000" value="10" step="10" style="cursor:pointer">
+                        <input type="range" class="range-max" min="10" max="2000" value="1500" step="10" style="cursor:pointer">
                     </div>
                     <div class="price-input">
                         <div class="field">
@@ -165,7 +143,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="f-ordenar-por">
                     <div class="options-container active">
                         <div class="option">
@@ -188,7 +165,6 @@
                         <h4>Ordenar por</h4>
                     </div>
                 </div>
-
                 <div class="f-categorias">
                     <div class="options-container active">
                         <div class="option">
@@ -220,7 +196,6 @@
                         <h4>Categorías</h4>
                     </div>
                 </div>
-
                 <div class="f-regiones">
                     <div class="options-container active">
                         <div class="option">
@@ -325,16 +300,15 @@
                     </div>
                 </div>
             </div>
-
             <div class="container_productos col-md-9 col-sm-12 row">
                 <div data-region="cusco" data-category="ponchos" class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure onclick="window.location.href = './productos/poncho-lana.html';"><img src="assests/images/img-catalogo/poncho-lana-main.jpg" class="product-img" alt="poncho"></figure>
-
+                    <figure onclick="window.location.href = './productos/poncho-lana.html';">
+                        <img src="assets/imgs/img-catalogo/poncho-lana-main.jpg" class="product-img" alt="Poncho de lana">
+                    </figure>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
                         <span class="rating-value">4.5</span>
                     </div>
-
                     <div class="info-product" onclick="window.location.href = './productos/poncho-lana.html';">
                         <h4 class="product-title">Poncho de lana</h4>
                         <p class="precio-product">s/.150.00</p>
@@ -342,13 +316,13 @@
                     <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="puno" data-category="ponchos" class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/poncho-tejido-crochet-main.jpg" class="product-img" alt="poncho"></figure>
-
+                    <figure>
+                        <img src="assets/imgs/img-catalogo/poncho-tejido-crochet-main.jpg" class="product-img" alt="Poncho tejido crochet">
+                    </figure>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
                         <span class="rating-value">4.5</span>
                     </div>
-
                     <div class="info-product">
                         <h4 class="product-title">Poncho de lana tejido a crochet</h4>
                         <p class="precio-product">s/.170.00</p>
@@ -357,13 +331,13 @@
                 </div>
                 <div data-region="ayacucho" data-category="decoraciones"
                     class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/plato-urpi-main.jpg" class="product-img"alt="poncho"></figure>
-
+                    <figure>
+                        <img src="assets/imgs/img-catalogo/plato-urpi-main.jpg" class="product-img"alt="Plato urpi">
+                    </figure>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
                         <span class="rating-value">3.5</span>
                     </div>
-
                     <div class="info-product">
                         <h4 class="product-title">Plato Urpi</h4>
                         <p class="precio-product">s/.75.00</p>
@@ -372,13 +346,13 @@
                 </div>
                 <div data-region="amazonas" data-category="accesorios"
                     class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/aretes-hilo.jpg" class="product-img" alt="poncho"></figure>
-
+                    <figure>
+                        <img src="assets/imgs/img-catalogo/aretes-hilo.jpg" class="product-img" alt="Aretes de hilo">
+                    </figure>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
                         <span class="rating-value">4.5</span>
                     </div>
-
                     <div class="info-product">
                         <h4 class="product-title">Aretes de fibra de chambira</h4>
                         <p class="precio-product">s/.30.00</p>
@@ -387,13 +361,13 @@
                 </div>
                 <div data-region="amazonas" data-category="accesorios"
                     class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/collar-mostacilla.jpg" class="product-img" alt="poncho"></figure>
-
+                    <figure>
+                        <img src="assets/imgs/img-catalogo/collar-mostacilla.jpg" class="product-img" alt="Collar mostacilla">
+                    </figure>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
                         <span class="rating-value">3.7</span>
                     </div>
-
                     <div class="info-product">
                         <h4 class="product-title">Collar de mostacilla</h4>
                         <p class="precio-product">s/.172.50</p>
@@ -402,13 +376,13 @@
                 </div>
                 <div data-region="ayacucho" data-category="decoraciones"
                     class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/cojin-lana-main.jpg" class="product-img" alt="poncho"></figure>
-
+                    <figure>
+                        <img src="assets/imgs/img-catalogo/cojin-lana-main.jpg" class="product-img" alt="Cojin de lana">
+                    </figure>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
                         <span class="rating-value">4.0</span>
                     </div>
-
                     <div class="info-product">
                         <h4 class="product-title">Set de cojines de lana </h4>
                         <p class="precio-product">s/.120.00</p>
@@ -416,13 +390,13 @@
                     <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="apurimac" data-category="chalinas" class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/chalina-tejida-main.jpg" class="product-img" alt="poncho"></figure>
-
+                    <figure>
+                        <img src="assets/imgs/img-catalogo/chalina-tejida-main.jpg" class="product-img" alt="Chalina tejida">
+                    </figure>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
                         <span class="rating-value">4.5</span>
                     </div>
-
                     <div class="info-product">
                         <h4 class="product-title">Bufanda tejida</h4>
                         <p class="precio-product">s/.70.00</p>
@@ -430,13 +404,13 @@
                     <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="ayacucho" data-category="muebles" class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo//banco-tejido-main.jpg" class="product-img" alt="poncho"></figure>
-
+                    <figure>
+                        <img src="assets/imgs/img-catalogo/banco-tejido-main.jpg" class="product-img" alt="Banco tejido">
+                    </figure>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
                         <span class="rating-value">4.5</span>
                     </div>
-
                     <div class="info-product">
                         <h4 class="product-title">Banco tejido de lana</h4>
                         <p class="precio-product">s/.550.00</p>
@@ -445,13 +419,13 @@
                 </div>
                 <div data-region="ayacucho" data-category="ponchos"
                     class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/poncho-capucha-main.jpg" class="product-img" alt="poncho"></figure>
-
+                    <figure>
+                        <img src="assets/imgs/img-catalogo/poncho-capucha-main.jpg" class="product-img" alt="Poncho con capucha">
+                    </figure>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
                         <span class="rating-value">4.5</span>
                     </div>
-
                     <div class="info-product">
                         <h4 class="product-title">Poncho de lana con capucha</h4>
                         <p class="precio-product">s/.115.00</p>
@@ -459,13 +433,13 @@
                     <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="ayacucho" data-category="muebles" class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/baul-tejido-main.jpg" class="product-img" alt="poncho"></figure>
-
+                    <figure>
+                        <img src="assets/imgs/img-catalogo/baul-tejido-main.jpg" class="product-img" alt="Baul tejido">
+                    </figure>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
                         <span class="rating-value">4.5</span>
                     </div>
-
                     <div class="info-product">
                         <h4 class="product-title">Banco tejido de lana</h4>
                         <p class="precio-product">s/.100.00</p>
@@ -474,13 +448,13 @@
                 </div>
                 <div data-region="ayacucho" data-category="sombreros"
                     class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/chullo-blanco-main.jpeg" class="product-img" alt="poncho"></figure>
-
+                    <figure>
+                        <img src="assets/imgs/img-catalogo/chullo-blanco-main.jpeg" class="product-img" alt="Chullo blanco">
+                    </figure>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
                         <span class="rating-value">4.5</span>
                     </div>
-
                     <div class="info-product">
                         <h4 class="product-title">Chullo de lana con<br>orejeras</h4>
                         <p class="precio-product">s/.50.00</p>
@@ -489,20 +463,19 @@
                 </div>
                 <div data-region="apurimac" data-category="decoraciones"
                     class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/cuadro-tejido-main.jpg" class="product-img" alt="poncho"></figure>
-
+                    <figure>
+                        <img src="assets/imgs/img-catalogo/cuadro-tejido-main.jpg" class="product-img" alt="Cuadro tejido">
+                    </figure>
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
                         <span class="rating-value">4.5</span>
                     </div>
-
                     <div class="info-product">
                         <h4 class="product-title">Cuadro tejido de lana</h4>
                         <p class="precio-product">s/.150.00</p>
                     </div>
                     <button class="add-cart">Añadir al carrito</button>
                 </div>
-
                 <div class="pages col-12">
                     <button><i class="fa-solid fa-caret-left fa-2x"></i></button>
                     <input type="number" id="numero_pagina" value="1">
@@ -510,7 +483,6 @@
                 </div>
             </div>
         </section>
-
         <section class="interest-products">
             <h2>PRODUCTOS QUE PODRÍAN INTERESARTE</h2>
             <div class="container-slider">
@@ -518,13 +490,13 @@
                     <i id="left" class="caret fa-solid fa-angle-left fa-2x"></i>
                     <ul class="carousel">
                         <li class="carousel-product">
-                            <figure><img src="assests/images/img-catalogo/poncho-lana-main.jpg" alt="poncho"></figure>
-
+                            <figure>
+                                <img src="assets/imgs/img-catalogo/poncho-lana-main.jpg" alt="Poncho de lana">
+                            </figure>
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <span class="rating-value">4.5</span>
                             </div>
-
                             <div class="info-product">
                                 <h4>Poncho de lana</h4>
                                 <p class="precio-product">s/.150.00</p>
@@ -532,14 +504,13 @@
                             </div>
                         </li>
                         <li class="carousel-product">
-                            <figure><img src="assests/images/img-catalogo/gorro-crema-main.jpg" class="d-block w-100" alt="poncho">
+                            <figure>
+                                <img src="assets/imgs/img-catalogo/gorro-crema-main.jpg" class="d-block w-100" alt="Gorro crema">
                             </figure>
-
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <span class="rating-value">4.5</span>
                             </div>
-
                             <div class="info-product">
                                 <h4>Gorro de lana</h4>
                                 <p class="precio-product">s/.90.00</p>
@@ -547,13 +518,13 @@
                             </div>
                         </li>
                         <li class="carousel-product">
-                            <figure><img src="assests/images/img-catalogo/bufanda-gris-claro-main.jpg" class="d-block w-100" alt="poncho"></figure>
-
+                            <figure>
+                                <img src="assets/imgs/img-catalogo/bufanda-gris-claro-main.jpg" class="d-block w-100" alt="Bufanda gris claro">
+                            </figure>
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <span class="rating-value">4.5</span>
                             </div>
-
                             <div class="info-product">
                                 <h4>Bufanda bouclé</h4>
                                 <p class="precio-product">s/.110.00</p>
@@ -561,14 +532,13 @@
                             </div>
                         </li>
                         <li class="carousel-product">
-                            <figure><img src="assests/images/img-catalogo/vasija-cuzqueña.jpg" class="d-block w-100" alt="poncho">
+                            <figure>
+                                <img src="assets/imgs/img-catalogo/vasija-cuzqueña.jpg" class="d-block w-100" alt="Vasija cuzqueña">
                             </figure>
-
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <span class="rating-value">4.5</span>
                             </div>
-
                             <div class="info-product">
                                 <h4>Vasija cuzqueña</h4>
                                 <p class="precio-product">s/.540.00</p>
@@ -576,13 +546,13 @@
                             </div>
                         </li>
                         <li class="carousel-product">
-                            <figure><img src="assests/images/img-catalogo/pulsera-shipibo-main.jpg" class="d-block w-100" alt="poncho"></figure>
-
+                            <figure>
+                                <img src="assets/imgs/img-catalogo/pulsera-shipibo-main.jpg" class="d-block w-100" alt="Pulsera shipibo">
+                            </figure>
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
                                 <span class="rating-value">4.5</span>
                             </div>
-
                             <div class="info-product">
                                 <h4>Brazalete Shipibo</h4>
                                 <p class="precio-product">s/.40.00</p>
@@ -595,11 +565,11 @@
             </div>
         </section>
     </main>
-
     <footer>
         <div class="logo d-flex justify-content-center align-items-center">
-            <a class="text-decoration-none" href="../index.html"><img src="./assests/images/logo-footer.png"
-                    alt="Logo de Hecho en Perú"></a>
+            <a class="text-decoration-none" href="../index.html">
+                <img src="./assets/imgs/logo-footer.png" alt="Logo de Hecho en Perú">
+            </a>
         </div>
         <div class="footer-navigation">
             <h3>Navegación</h3>
@@ -640,22 +610,17 @@
             </ul>
         </div>
     </footer>
-
-    <script src="./assests/scripts/active-state.js"></script>
-    <script src="./assests/scripts/chatbot.js"></script>
-    <script src="./assests/scripts/catalogo.js"></script>
-    <script src="./assests/scripts/catalogo-filters.js"></script>
-    <script src="./assests/scripts/shopping-cart.js"></script>
-
+    <script src="./assets/scripts/active-state.js"></script>
+    <script src="./assets/scripts/chatbot.js"></script>
+    <script src="./assets/scripts/catalogo.js"></script>
+    <script src="./assets/scripts/catalogo-filters.js"></script>
+    <script src="./assets/scripts/shopping-cart.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-
 </body>
-
 </html>

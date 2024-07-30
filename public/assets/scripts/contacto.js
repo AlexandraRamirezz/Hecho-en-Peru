@@ -10,7 +10,7 @@ function validateName(){
     var inputElement = document.getElementById('contact-name');
 
     if(name.length == 0){
-        nameError.innerHTML= 'Name is required'
+        nameError.innerHTML= 'Ingrese sus nombres'
         inputElement.classList.remove('valid');
         inputElement.classList.add('invalid');
         return false;
@@ -35,10 +35,10 @@ function validateEmail() {
     var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   
     if (!emailPattern.test(email)) {
-      emailError.innerHTML = 'Invalid Email';
-      inputElement.classList.remove('valid');
-      inputElement.classList.add('invalid');
-      return false;
+        emailError.innerHTML = 'Ingrese un email válido';
+        inputElement.classList.remove('valid');
+        inputElement.classList.add('invalid');
+        return false;
     }
   
     emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
@@ -55,7 +55,7 @@ function validateAsunto() {
     var x = requerido - motivo.length;
 
     if(motivo.length == 0){
-        motivoError.innerHTML= 'Asunto is required'
+        motivoError.innerHTML= 'Escriba un asunto del mensaje'
         inputElement.classList.remove('valid');
         inputElement.classList.add('invalid');
         return false;
@@ -81,7 +81,7 @@ function validateMensaje() {
 
 
     if(message.length == 0){
-        mensajeError.innerHTML= 'Mensaje is required'
+        mensajeError.innerHTML= 'Escriba un mensaje'
         inputElement.classList.remove('valid');
         inputElement.classList.add('invalid');
         return false;

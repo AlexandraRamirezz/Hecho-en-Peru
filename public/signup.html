@@ -1,51 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hecho en Perú | Registro</title>
-
-    <link href="./assests/images/logo-navbar.png" rel="icon">
-
+    <link href="./assets/imgs/logo-navbar.png" rel="icon">
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <!-- ANIMATE -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-    <!-- ÍCONOS -->
+    <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
     <!-- CSS BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-    <!-- FUENTE: Montserrat -->
+    <!-- FONT: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./assests/styles/styles.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="../index.html"><img src="./assests/images/logo-navbar.png" alt="Logo de Hecho en Perú"></a>
+                <a href="../index.html"><img src="./assets/imgs/logo-navbar.png" alt="Logo de Hecho en Perú"></a>
             </div>
-            <div class="menu d-flex justify-content-around">
-                <a class="menu-item" href="../index.html">Inicio</a>
-                <a class="menu-item" href="catalogo.html">Catálogo</a>
-                <a class="menu-item" href="regiones.html">Regiones</a>
-                <a class="menu-item" href="quienes-somos.html">Quiénes somos</a>
-                <a class="menu-item" href="contacto.html">Contacto</a>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Ingresa tu categoría aquí">
-                <button type="submit">Buscar</button>
+            <div class="nav-responsive">
+                <div class="menu d-flex justify-content-around">
+                    <a class="menu-item" href="../index.html">Inicio</a>
+                    <a class="menu-item" href="catalogo.html">Catálogo</a>
+                    <a class="menu-item" href="regiones.html">Regiones</a>
+                    <a class="menu-item" href="quienes-somos.html">Quiénes somos</a>
+                    <a class="menu-item" href="contacto.html">Contacto</a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Ingresa tu categoría aquí">
+                    <button type="submit">Buscar</button>
+                </div>
             </div>
             <div class="icons d-flex justify-content-around">
                 <!--Cart icon-->
@@ -57,9 +51,7 @@
                         <p>El carrito está vacío.</p>
                         <i class="fa-regular fa-face-sad-cry"></i>
                     </div>
-                    <div class="cart-content">
-                        
-                    </div>
+                    <div class="cart-content"></div>
                     <!--Total-->
                     <div class="cart-total">
                         <h4>Total</h4>
@@ -71,11 +63,11 @@
                     <button id="close-cart"><i class="fa-solid fa-xmark"></i></button>
                 </section>
                 <a href="./login.html"><i class="fas fa-user"></i></a>
+                <i class="fa-solid fa-bars hamburger"></i>
             </div>
         </nav>
     </header>
-
-<main>
+    <main>
         <section class="row box_inicio_sesion">
             <section id="login-form" class="col-6 form-inicio_sesion">
                 <div class="formulario">
@@ -87,68 +79,57 @@
                                 <input type="text" placeholder="Ingresa tus nombres" id="registro-name" onkeyup="validateName()">
                             <p id="name-error" class="error-message"></p>
                             </div>
-
                             <div class="espacio registro-group">
                                 <h3 class="text-start">Apellido</h3>
                                 <input type="text" placeholder="Ingresa tus apellidos" id="registro-LastName" onkeyup="validateLastName()">
                             <p id="LastName-error" class="error-message"></p>
                             </div>
                         </div>
-
                         <div class="espacio registro-group">
                             <h3 class="text-start">Correo electrónico</h3>
                             <input type="email" placeholder="Ingresa tu correo electrónico" name="email" id="registro-email" onkeyup="validateEmail()">
                             <p id="email-error" class="error-message"></p>
                         </div>
-
                         <div class="espacio registro-group">
                             <h3 class="text-start">Contraseña</h3>
                             <input type="password" placeholder="Ingresa tu contraseña" id="registro-password" onkeyup="validatePassword()">
                             <p id="password-error" class="error-message"></p>
                         </div>
-
                         <div>
                             <input onclick="validateForm(event)" id="btn-crear-cuenta" type="submit">
                             <div class="popup-registro" id="popup-registro">
-                                <img src="./assests/images/popup-party.png" alt="">
+                                <img src="./assets/imgs/popup-party.png" alt="Emoji de festejar en circulo">
                                 <h2>¡Felicidades!</h2>
                                 <p>Tu cuenta ha sido creada exitosamente<br><br>Has ganado s/.20 de descuento para usar en tu primera compra.</p>
                                 <button type="button" onclick="handleFormAndClosePopup(event)">OK</button>
                             </div>
                         </div>
-
                         <div class="span-btn">
                             <p id="subit-error"></p>
                         </div>
-
                         <div class="Other_sesion row">
                             <div class="col-md-6"> 
-                                <button> <li><img src="./assests/images/google.png" alt="Logo de Google"></li> Crear cuenta con Google</button>
+                                <button> <li><img src="./assets/imgs/google.png" alt="Logo de Google"></li> Crear cuenta con Google</button>
                             </div>
-    
                             <div class="col-md-6"> 
-                                <button> <li><img src="./assests/images/microsoft.png" alt="Logo de Microsoft"></li> Crear cuenta con Microsoft</button>
+                                <button> <li><img src="./assets/imgs/microsoft.png" alt="Logo de Microsoft"></li> Crear cuenta con Microsoft</button>
                             </div>
                         </div>
                     </form>
-
                     <div class="box-contorno">
                         <h6>¿Ya tienes una cuenta?</h6>
                         <a href="./login.html">Inicia sesión</a>
                     </div>
                 </div>
             </section>
-
             <figure class="col-6 image_llama">
-                <img src="./assests/images/2-llamitas.jpg" alt="llamita">
+                <img src="./assets/imgs/2-llamitas.jpg" alt="Dos llamas">
             </figure>
         </section>
     </main>
-
     <footer>
         <div class="logo d-flex justify-content-center align-items-center">
-            <a class="text-decoration-none" href="../index.html"><img src="./assests/images/logo-footer.png"
-                    alt="Logo de Hecho en Perú"></a>
+            <a class="text-decoration-none" href="../index.html"><img src="./assets/imgs/logo-footer.png" alt="Logo de Hecho en Perú"></a>
         </div>
         <div class="footer-navigation">
             <h3>Navegación</h3>
@@ -189,20 +170,15 @@
             </ul>
         </div>
     </footer>
-    
-    <script src="./assests/scripts/active-state.js"></script>
-    <script src="./assests/scripts/signup.js"></script>
-    <script src="./assests/scripts/shopping-cart.js"></script>
-    
+    <script src="./assets/scripts/active-state.js"></script>
+    <script src="./assets/scripts/signup.js"></script>
+    <script src="./assets/scripts/shopping-cart.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-
 </body>
-
 </html>

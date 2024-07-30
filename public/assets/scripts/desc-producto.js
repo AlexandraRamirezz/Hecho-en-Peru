@@ -1,5 +1,4 @@
 //BREADCRUMB
-
 function updateBreadcrumb() {
     const productName = document.querySelector(".general-info h3").textContent;
     const breadcrumbLink = document.querySelector(".breadcrumbs-item:nth-child(3) .breadcrumbs-link");

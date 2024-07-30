@@ -1,15 +1,14 @@
 .fondo-quienes-somos-img {
-    background-image: url("../images/hero-section/quienes-somos-fondo.png");
+    background-image: url("../imgs/hero-section/quienes-somos-fondo.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .container-descripcion {
     width: 90%;
-
     margin: auto;
     margin-top: 3rem;
-
+    
     .bg-color {
         background-color: $background-color_20;
         padding: 1.2rem;
@@ -19,26 +18,25 @@
 
 .container-m-v {
     width: 92%;
-
     margin: auto;
     margin-top: 3rem;
-
+    
     .bg-color {
         background-color: $background-color_20;
         padding: 1.2rem;
         text-align: justify;
     }
-
+    
     .row {
         margin-bottom: 6rem;
         margin: auto;
-
+        
         .m-v {
             margin-top: 1rem;
-
+            
             .img-m-v {
                 margin: 0;
-
+                
                 img {
                     border-radius: 0.5rem;
                     margin-top: 2.2rem;
@@ -54,7 +52,7 @@
 
 .container-equipo-de-trabajo {
     margin: 6rem 0;
-
+    
     .equipo-de-trabajo {
         background-color: $background-color_11;
         padding: 3rem 10%;
@@ -64,31 +62,30 @@
         text-align: center;
         flex-direction: column;
         margin: auto;
-
+        
         .row {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-
+            
             .card-equipo {
                 padding: 1.3rem;
                 margin: 1rem;
                 background-color: $background-color_1;
                 height: 93%;
-                
                 box-shadow: 0rem 0.2rem 0.3rem #0000001a;
-
+                
                 .per-img {
                     border-radius: 50%;
                     width: 15rem;
                     height: 15rem;
                     object-fit: cover;
                 }
-
+                
                 p {
                     margin-top: 1.2rem;
                 }
-
+                
                 .p-personal {
                     text-align: center;
                     padding: 0rem 0.4rem;

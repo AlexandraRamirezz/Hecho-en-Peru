@@ -1,51 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hecho en Perú | Quiénes somos</title>
-
-    <link href="./assests/images/logo-navbar.png" rel="icon">
-
+    <link href="./assets/imgs/logo-navbar.png" rel="icon">
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <!-- ANIMATE -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-    <!-- ÍCONOS -->
+    <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
     <!-- CSS BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-    <!-- FUENTE: Montserrat -->
+    <!-- FONT: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./assests/styles/styles.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="../index.html"><img src="./assests/images/logo-navbar.png" alt="Logo de Hecho en Perú"></a>
+                <a href="../index.html"><img src="./assets/imgs/logo-navbar.png" alt="Logo de Hecho en Perú"></a>
             </div>
-            <div class="menu d-flex justify-content-around">
-                <a class="menu-item" href="../index.html">Inicio</a>
-                <a class="menu-item" href="catalogo.html">Catálogo</a>
-                <a class="menu-item" href="regiones.html">Regiones</a>
-                <a class="menu-item" href="quienes-somos.html">Quiénes somos</a>
-                <a class="menu-item" href="contacto.html">Contacto</a>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Ingresa tu categoría aquí">
-                <button type="submit">Buscar</button>
+            <div class="nav-responsive">
+                <div class="menu d-flex justify-content-around">
+                    <a class="menu-item" href="../index.html">Inicio</a>
+                    <a class="menu-item" href="catalogo.html">Catálogo</a>
+                    <a class="menu-item" href="regiones.html">Regiones</a>
+                    <a class="menu-item" href="quienes-somos.html">Quiénes somos</a>
+                    <a class="menu-item" href="contacto.html">Contacto</a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Ingresa tu categoría aquí">
+                    <button type="submit">Buscar</button>
+                </div>
             </div>
             <div class="icons d-flex justify-content-around">
                 <!--Cart icon-->
@@ -57,9 +51,7 @@
                         <p>El carrito está vacío.</p>
                         <i class="fa-regular fa-face-sad-cry"></i>
                     </div>
-                    <div class="cart-content">
-                        
-                    </div>
+                    <div class="cart-content"></div>
                     <!--Total-->
                     <div class="cart-total">
                         <h4>Total</h4>
@@ -71,12 +63,13 @@
                     <button id="close-cart"><i class="fa-solid fa-xmark"></i></button>
                 </section>
                 <a href="./login.html"><i class="fas fa-user"></i></a>
+                <i class="fa-solid fa-bars hamburger"></i>
             </div>
         </nav>
     </header>
-
     <main>
-        <section><!--Hero Section-->
+        <!-- hero section -->
+        <section>
             <div class="p-6 text-center fondo-quienes-somos-img">
                 <div class="inicio-fondo">
                     <div class="d-flex justify-content-center align-items-center">
@@ -93,45 +86,33 @@
                 </div>
             </div>
         </section>
-
         <!-- chatbot -->
         <section>
             <div class="borde-butom">
                 <li id="toggleButton"><i class="fa-solid fa-message fa-2x"></i></li>
-
                 <div id="chatbotContainer">
                     <div class="chatbox-wrapper">
                         <div id="chatbot-container">
                             <div id="chatbot-header">
-                                <img src="assests/images/chatbot.jpg" alt="Chatbot Image">
+                                <img src="../public/assets/imgs/chatbot.jpg" alt="Perfil de llama del chatbot">
                                 <div class="nombre_p">
                                     <h4>Pacha la llama</h4>
                                     <p>en línea</p>
                                 </div>
-
                                 <li id="clear-chat-button"><i class="fa-regular fa-trash-can"></i></li>
-
                             </div>
-
                             <div id="chatbot-body">
                                 <div id="chat-container">
                                     <div id="chat-log"></div>
                                 </div>
                             </div>
-
                             <div class="foo-chtbot">
                                 <div id="faq-buttons-container">
-                                    <button class="faq-button" data-question="¿Cuál es el horario de atención?">¿Cuál es
-                                        el
-                                        horario de atención?</button>
+                                    <button class="faq-button" data-question="¿Cuál es el horario de atención?">¿Cuál es el horario de atención?</button>
                                     <button class="faq-button"
-                                        data-question="¿Cuáles son los métodos de pago aceptados?">¿Cuáles son los
-                                        métodos de
-                                        pago aceptados?</button>
+                                        data-question="¿Cuáles son los métodos de pago aceptados?">¿Cuáles son los métodos de pago aceptados?</button>
                                     <button class="faq-button"
-                                        data-question="¿Cómo puedo contactar al servicio al cliente?">¿Cómo puedo
-                                        contactar al
-                                        servicio al cliente?</button>
+                                        data-question="¿Cómo puedo contactar al servicio al cliente?">¿Cómo puedo contactar al servicio al cliente?</button>
                                 </div>
                             </div>
                         </div>
@@ -139,129 +120,90 @@
                 </div>
             </div>
         </section>
-        
         <section class="container-descripcion">
             <div>
                 <h2>DESCRIPCIÓN</h2>
                 <div class="bg-color">
-                    <p>En nuestra empresa, nos dedicamos a ofrecer soluciones innovadoras en el campo de la tecnología y
-                        la información. A través de nuestra experiencia en Ingeniería de Sistemas de Información, nos
-                        esforzamos por brindar servicios de calidad que ayuden a nuestros clientes a optimizar sus
-                        procesos, tomar decisiones informadas y alcanzar sus objetivos empresariales. Nuestro enfoque se
-                        basa en la integración de tecnologías de vanguardia y el desarrollo de sistemas eficientes y
-                        seguros.
+                    <p>En nuestra empresa, nos dedicamos a ofrecer soluciones innovadoras en el campo de la tecnología y la información. A través de nuestra experiencia en Ingeniería de Sistemas de Información, nos esforzamos por brindar servicios de calidad que ayuden a nuestros clientes a optimizar sus procesos, tomar decisiones informadas y alcanzar sus objetivos empresariales. Nuestro enfoque se basa en la integración de tecnologías de vanguardia y el desarrollo de sistemas eficientes y seguros.
                     </p>
                 </div>
             </div>
         </section>
-
         <section class="container-m-v">
             <div>
                 <div class="row">
                     <div class="m-v col-lg-6 col-md-6 col-sm-12 col-12">
                         <h2>MISIÓN</h2>
                         <div class="bg-color">
-                            <p>Nuestra misión es promover la cultura peruana y el turismo al interior del país, mediante
-                                la venta de productos artesanales en la página web. Además, el usuario podrá acceder a
-                                la descripción de los materiales usados para cada producto, la historia del artesano y
-                                el significado de cada diseño. De este modo, se podrá conocer el esfuerzo y la
-                                dedicación que emplean en fabricar cada producto regional.
+                            <p>Nuestra misión es promover la cultura peruana y el turismo al interior del país, mediante la venta de productos artesanales en la página web. Además, el usuario podrá acceder a la descripción de los materiales usados para cada producto, la historia del artesano y el significado de cada diseño. De este modo, se podrá conocer el esfuerzo y la dedicación que emplean en fabricar cada producto regional.
                             </p>
                         </div>
                         <div class="img-m-v">
-                            <img class="img-fluid" src="assests/images/img-quienes-somos/mision.jpg" alt="Fotografía de la región Amazonas">
+                            <img class="img-fluid" src="assets/imgs/img-quienes-somos/mision.jpg" alt="Fotografía de un grupo de empresarios conversando en una mesa">
                         </div>
                     </div>
                     <div class="m-v col-lg-6 col-md-6 col-sm-12 col-12">
                         <h2>VISIÓN</h2>
                         <div class="bg-color">
-                            <p>Nuestra visión es convertirnos en líderes reconocidos en el ámbito de la tecnología y la
-                                información, proporcionando soluciones de vanguardia que impulsen el crecimiento y la
-                                transformación digital de nuestros clientes. Buscamos ser referentes en la
-                                implementación de sistemas inteligentes, el análisis de datos y la gestión de
-                                información, ofreciendo servicios confiables y de alto valor agregado.
+                            <p>Nuestra visión es convertirnos en líderes reconocidos en el ámbito de la tecnología y la información, proporcionando soluciones de vanguardia que impulsen el crecimiento y la transformación digital de nuestros clientes. Buscamos ser referentes en la implementación de sistemas inteligentes, el análisis de datos y la gestión de información, ofreciendo servicios confiables y de alto valor agregado.
                             </p>
                         </div>
                         <div class="img-m-v">
-                            <img class="img-fluid" src="assests/images/img-quienes-somos/vision.jpg" alt="Fotografía de la región Amazonas">
+                            <img class="img-fluid" src="assets/imgs/img-quienes-somos/vision.jpg" alt="Fotografía de un grupo de empresarios haciendo un rompecabezas">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <section class="container-equipo-de-trabajo">
             <div class="equipo-de-trabajo">
                 <h2 class="text-center">NUESTRO EQUIPO DE TRABAJO</h2>
                 <div class="row my-0">
                     <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                         <div class="card-equipo">
-                            <img class="img-fluid per-img" src="assests/images/img-quienes-somos/personal/g.jpg" alt="Producto 2">
+                            <img class="img-fluid per-img" src="assets/imgs/img-quienes-somos/personal/g.jpg" alt="Fotografía de Gwyneth Segura">
                             <p class="fw-bold">Gwyneth Lyu Gisele Segura Silva</p>
-                            <p class="p-personal">Estudiante proactiva de Ingeniería de Sistemas de Información con habilidades sólidas en
-                                el desarrollo web y gestión de proyectos. Orientado a resultados, busca aplicar sus
-                                conocimientos en el diseño y desarrollo de aplicaciones web innovadoras que impulsen el
-                                crecimiento empresarial.
+                            <p class="p-personal">Estudiante proactiva de Ingeniería de Sistemas de Información con habilidades sólidas en el desarrollo web y gestión de proyectos. Orientado a resultados, busca aplicar sus conocimientos en el diseño y desarrollo de aplicaciones web innovadoras que impulsen el crecimiento empresarial.
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                         <div class="card-equipo">
-                            <img class="img-fluid per-img" src="assests/images/img-quienes-somos/personal/j.jpg"
-                                alt="Fotografía de la región Amazonas">
+                            <img class="img-fluid per-img" src="assets/imgs/img-quienes-somos/personal/j.jpg" alt="Fotografía de Jean Carlos Achamizo">
                             <p class="fw-bold">Jean Carlos Achamizo Huamani</p>
-                            <p class="p-personal">Estudiante apasionado de la carrera de Ingeniería de Software con habilidades
-                                destacadas en el análisis de datos, programación y desarrollo de software. Comprometido
-                                con la
-                                innovación tecnológica y la mejora de procesos empresariales a través de soluciones
-                                informáticas eficientes.
+                            <p class="p-personal">Estudiante apasionado de la carrera de Ingeniería de Software con habilidades destacadas en el análisis de datos, programación y desarrollo de software. Comprometido con la innovación tecnológica y la mejora de procesos empresariales a través de soluciones informáticas eficientes.
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                         <div class="card-equipo">
-                            <img class="img-fluid per-img" src="assests/images/img-quienes-somos/personal/d.jpg"
-                                alt="Fotografía de la región Amazonas">
+                            <img class="img-fluid per-img" src="assets/imgs/img-quienes-somos/personal/d.jpg" alt="Fotografía de Deyvid Guevara">
                             <p class="fw-bold">Deyvid Joseph Guevara Cueva</p>
-                            <p class="p-personal">Estudiante de Ingeniería de Sistemas de Información con enfoque en la
-                                seguridad. Apasionado por la protección de datos y la prevención de
-                                ciberataques, busca aplicar sus conocimientos en el diseño de sistemas seguros y la
-                                seguridad robustas.
+                            <p class="p-personal">Estudiante de Ingeniería de Sistemas de Información con enfoque en la seguridad. Apasionado por la protección de datos y la prevención de ciberataques, busca aplicar sus conocimientos en el diseño de sistemas seguros y la seguridad robustas.
                             </p>
                         </div>
                     </div>
-
                     <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                         <div class="card-equipo">
-                            <img class="img-fluid per-img" src="assests/images/img-quienes-somos/personal/r.jpg" alt="Producto 2">
+                            <img class="img-fluid per-img" src="assets/imgs/img-quienes-somos/personal/r.jpg" alt="Fotografía de Raul Pingo">
                             <p class="fw-bold">Raul Gonzalo Pingo Amaya</p>
-                            <p class="p-personal">Estudiante entusiasta de Ingeniería de Sistemas de Información con experiencia en el
-                                análisis de datos. Apasionado por convertir grandes
-                                volúmenes de información en conocimientos accionables, busca desarrollar soluciones de
-                                análisis y visualización que impulsen la toma de decisiones informada.
+                            <p class="p-personal">Estudiante entusiasta de Ingeniería de Sistemas de Información con experiencia en el análisis de datos. Apasionado por convertir grandes volúmenes de información en conocimientos accionables, busca desarrollar soluciones de análisis y visualización que impulsen la toma de decisiones informada.
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                         <div class="card-equipo">
-                            <img class="img-fluid per-img" src="assests/images/img-quienes-somos/personal/a.jpg"
-                                alt="Fotografía de la región Amazonas">
+                            <img class="img-fluid per-img" src="assets/imgs/img-quienes-somos/personal/a.jpg" alt="Fotografía de Alexandra Ramirez">
                             <p class="fw-bold">Alexandra Dayanna Ramirez Diaz</p>
-                            <p class="p-personal">Estudiante creativa de Ingeniería de Sistemas de Información con amplios conocimientos en
-                                diseño de interfaces y experiencia de usuario. Apasionado por la usabilidad y la
-                                interacción humano-computadora, busca desarrollar soluciones intuitivas y atractivas.
+                            <p class="p-personal">Estudiante creativa de Ingeniería de Sistemas de Información con amplios conocimientos en diseño de interfaces y experiencia de usuario. Apasionado por la usabilidad y la interacción humano-computadora, busca desarrollar soluciones intuitivas y atractivas.
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                         <div class="card-equipo">
-                            <img class="img-fluid per-img" src="assests/images/img-quienes-somos/personal/f.jpg"
-                                alt="Fotografía de la región Amazonas">
+                            <img class="img-fluid per-img" src="assets/imgs/img-quienes-somos/personal/f.jpg" alt="Fotografía de Fiorella Burga">
                             <p class="fw-bold">Fiorella Francesca Burga Bernal</p>
-                            <p class="p-personal">Estudiante de Ingeniería de Sistemas de Información con habilidades destacadas
-                                en la administración de bases de datos y el diseño de sistemas de información.
-                                Comprometida con la optimización de la gestión de datos empresariales, busca desarrollar
-                                soluciones eficaces.
+                            <p class="p-personal">Estudiante de Ingeniería de Sistemas de Información con habilidades destacadas en la administración de bases de datos y el diseño de sistemas de información. Comprometida con la optimización de la gestión de datos empresariales, busca desarrollar soluciones eficaces.
                             </p>
                         </div>
                     </div>
@@ -269,11 +211,11 @@
             </div>
         </section>
     </main>
-
     <footer>
         <div class="logo d-flex justify-content-center align-items-center">
-            <a class="text-decoration-none" href="../index.html"><img src="./assests/images/logo-footer.png"
-                    alt="Logo de Hecho en Perú"></a>
+            <a class="text-decoration-none" href="../index.html">
+                <img src="./assets/imgs/logo-footer.png" alt="Logo de Hecho en Perú">
+            </a>
         </div>
         <div class="footer-navigation">
             <h3>Navegación</h3>
@@ -314,20 +256,15 @@
             </ul>
         </div>
     </footer>
-    
-    <script src="./assests/scripts/active-state.js"></script>
-    <script src="./assests/scripts/chatbot.js"></script>
-    <script src="./assests/scripts/shopping-cart.js"></script>
-    
+    <script src="./assets/scripts/active-state.js"></script>
+    <script src="./assets/scripts/chatbot.js"></script>
+    <script src="./assets/scripts/shopping-cart.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-
 </body>
-
 </html>

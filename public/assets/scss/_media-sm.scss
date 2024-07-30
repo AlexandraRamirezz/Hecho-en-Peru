@@ -1,0 +1,52 @@
+@media screen and (max-width: 576px) {
+    .container-productos-vendidos {
+        .container-slider {
+            .container-carousel {
+                .carousel {
+                    grid-auto-columns: 100%;
+                }
+            }
+        }
+    }
+    
+    .our-team {
+        .row {
+            .personal {
+                width: 48%;
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    .container-servicios {
+        .container-slider {
+            .container-carousel {
+                .carousel {
+                    grid-auto-columns: 100%;
+                }
+            }
+        }
+    }
+    
+    .container-testimonios {
+        .container-slider {
+            .container-carousel {
+                .carousel {
+                    grid-auto-columns: 100%;
+                }
+            }
+        }
+    }
+    
+    .interest-products {
+        .container-slider {
+            .container-carousel {
+                .carousel {
+                    grid-auto-columns: 100%;
+                }
+            }
+        }
+    }
+}

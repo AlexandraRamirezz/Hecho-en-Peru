@@ -1,3 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -5,66 +13,73 @@
     min-height: 100vh;
 }
 
-.cart-products{
+.cart-products {
     width: 40%;
     align-self: start;
     margin: 3rem;
-    .cart-items{
+    
+    .cart-items {
         width: 85%;
         max-height: 70vh;
         overflow-y: scroll;
         overflow-x: hidden;
-        .cart-item{
+        
+        .cart-item {
             display: grid;
             grid-template-columns: 30% 70%;
             align-items: center;
             gap: 1rem;
             margin-top: 1rem;
-            figure{
+            
+            figure {
                 border-radius: 0.5rem;
-                img{
+                
+                img {
                     width: 100%;
                     border-radius: 0.5rem;
                 }
             }
-            .detail-box{
+            
+            .detail-box {
                 line-height: 2;
             }
         }
-        &::-webkit-scrollbar{
+        &::-webkit-scrollbar {
             width: 0.7rem;
             background: #CFC9C9;
             border-radius: 0.5rem;
         }
-        &::-webkit-scrollbar-thumb{
+        &::-webkit-scrollbar-thumb {
             background-color: #ACDE7B;
             border-radius: 0.5rem;
         }
-        &::-moz-scrollbar{
+        &::-moz-scrollbar {
             width: 0.7rem;
             background: #CFC9C9;
             border-radius: 0.5rem;
         }
-        &::-moz-scrollbar-thumb{
+        &::-moz-scrollbar-thumb {
             background-color: #ACDE7B;
             border-radius: 0.5rem;
         }
     }
-    .cart-total{
+    
+    .cart-total {
         width: 85%;
         display: flex;
         justify-content: flex-end;
         margin-top: 2rem;
         padding-top: 1rem;
         border-top: solid #4F4F4F 1px;
-        .monto-total{
+        
+        .monto-total {
             margin-right: 1rem;
             margin-left: 1rem;
         }
     }
 }
 
-.pago-info{
+.pago-info {
     width: 60%;
     height: 100vh;
     display: flex;
@@ -72,8 +87,9 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    .background-image{
-        background-image: url("../images/img-pago/fondo-pago.jpg");
+    
+    .background-image {
+        background-image: url("../imgs/img-pago/fondo-pago.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
@@ -81,7 +97,8 @@
         position: absolute;
         z-index: -1;
         opacity: 0.7;
-        .blur{
+        
+        .blur {
             backdrop-filter: blur(5px);
             width: 100%;
             height: 100%;
@@ -156,8 +173,8 @@
     filter: drop-shadow(0 0 1px #000);
 }
 
-.container{
-    .submit-btn{
+.container {
+    .submit-btn {
         width: 60%;
         padding: 12px;
         font-size: 17px;
@@ -167,11 +184,12 @@
         cursor: pointer;
         border: none;
         box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.267);
-        &:hover{
+        &:hover {
             background: $background-color_14;
         }
     }
-    .cancel-btn{
+    
+    .cancel-btn {
         width: 60%;
         padding: 12px;
         font-size: 17px;
@@ -181,16 +199,14 @@
         cursor: pointer;
         border: none;
         border-radius: 0 0 0.5rem 0.5rem;
-        &:hover{
+        &:hover {
             background: #c8c8c8;
             color:#515151;
         }
     }
 }
 
-/**/
-
-.popup-pago{
+.popup-pago {
     width:  25rem;
     background: white;
     border-radius: 6px;
@@ -207,25 +223,26 @@
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.122);
 }
 
-.popup-pago.open-popup{  
+.popup-pago.open-popup {  
     visibility: visible;
     top: 50%;
     transform: translate(-50%,-50%) scale(1);
 }
 
-.popup-pago img{
+.popup-pago img {
     width: 100px;
     margin-top: -50px;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.popup-pago h2{
+.popup-pago h2 {
     font-size: 2.5rem;
     font-weight: 500;
     margin: 30px 0 10px;
 }
-.popup-pago button{
+
+.popup-pago button {
     width: 6.3rem;
     margin-top: 50px;
     padding: 10px 0;

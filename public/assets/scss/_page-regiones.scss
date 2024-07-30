@@ -1,5 +1,5 @@
 .fondo-regiones-img {
-    background-image: url("../images/hero-section/regiones-fondo.jpg");
+    background-image: url("../imgs/hero-section/regiones-fondo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -9,14 +9,14 @@
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 6rem;
-
+    
     .row {
         .reg {
             position: relative;
             display: inline-block;
             margin-top: 1.5rem;
             height: 15rem;
-
+            
             img {
                 border-radius: 0.5rem;
                 display: block;
@@ -24,16 +24,14 @@
                 height: 100%;
                 object-fit: cover;
             }
-
+            
             .div-btn {
                 width: 94%;
-
                 position: absolute;
                 bottom: 0.5rem;
-
                 display: flex;
                 justify-content: center;
-
+                
                 button {
                     padding: 0.5rem 0;
                     width: 12rem;
@@ -42,7 +40,6 @@
                     border: none;
                     border-radius: 1.25rem;
                     font-size: 1rem;
-
                     &:hover {
                         background-color: $background-color_21;
                         box-shadow: 0px 3px 6px #0000001a;

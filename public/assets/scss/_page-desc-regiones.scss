@@ -1,5 +1,5 @@
 .fondo-inicio-reg-img {
-    background-image: url("../images/regiones/Cusco.jpg");
+    background-image: url("../imgs/regiones/Cusco.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -8,7 +8,7 @@
     background-color: $background-color_5;
     padding: 10rem 18rem;
     width: 100%;
-
+    
     .h1-desc-reg {
         font-size: 5rem;
         font-family: $font-family_3;
@@ -18,10 +18,9 @@
 
 .container-historia {
     width: 90%;
-
     margin: auto;
     margin-top: 3rem;
-
+    
     .bg-color {
         background-color: $background-color_20;
         padding: 1.2rem;
@@ -31,16 +30,15 @@
 
 .container-lugares {
     width: 90%;
-
     margin: auto;
     margin-top: 3rem;
-
+    
     .bg-color {
         background-color: $background-color_20;
         padding: 1.2rem;
         text-align: justify;
     }
-
+    
     .row {
         margin-bottom: 6rem;
         margin: auto;
@@ -48,10 +46,10 @@
         .lug {
             margin-top: 1rem;
             padding: 1.2rem;
-
+            
             .img-lug {
                 margin: 0;
-
+                
                 img {
                     border-radius: 0.5rem;
                     display: block;
@@ -60,13 +58,14 @@
                     object-fit: cover;
                 }
             }
-
+            
             .info-lug {
                 h3 {
                     margin-top: 1rem;
                     padding-bottom: 0.5rem;
                     border-bottom: 1px black solid;
                 }
+                
                 p {
                     margin-top: 1.2rem;
                     text-align: justify;
@@ -78,17 +77,16 @@
 
 .container-artesanos {
     width: 90%;
-
     margin: auto;
     margin-top: 3rem;
     margin-bottom: 4rem;
-
+    
     .bg-color {
         background-color: $background-color_20;
         padding: 1.2rem;
         text-align: justify;
     }
-
+    
     .row {
         margin-bottom: 6rem;
         margin: auto;
@@ -96,10 +94,10 @@
         .art {
             margin-top: 1rem;
             padding: 1.2rem;
-
+            
             .img-art {
                 margin: 0;
-
+                
                 img {
                     border-radius: 0.5rem;
                     display: block;
@@ -109,13 +107,14 @@
                     object-position: top;
                 }
             }
-
+            
             .info-art {
                 h3 {
                     margin-top: 1rem;
                     padding-bottom: 0.5rem;
                     border-bottom: 1px black solid;
                 }
+                
                 p {
                     margin-top: 1.2rem;
                     text-align: justify;
@@ -125,35 +124,41 @@
     }
 }
 
-.comments-section-region{
-    .comments-presentation{
+.comments-section-region {
+    .comments-presentation {
         background-color: #F2F2F2;
         width: 90%;
         height: 18rem;
-        padding: 1.5rem;
+        padding: 2.5rem 1rem 0 3rem;
         margin: auto;
         border-radius: 2rem;
-        h3{
+        
+        h3 {
             margin-bottom: 1rem;
         }
-        .new-comment-section{
+        
+        .new-comment-section {
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
-            .user-icon{
+            
+            .user-icon {
                 margin-right: 1rem;
                 margin-top: 0.5rem;
             }
-            .input-box{
+            
+            .input-box {
                 width: 95%;
                 margin-bottom: 1.5rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: baseline;
-                h4{
+                
+                h4 {
                     margin-left: 1rem;
                 }
-                .input-comment{
+                
+                .input-comment {
                     width: 100%;
                     height: 3rem;
                     outline: none;
@@ -164,34 +169,39 @@
                     border-bottom: 2px solid rgba(255, 255, 255, 0);
                     transition: all 0.3s ease;
                     align-self: flex-start;
-                    &::placeholder{
+                    &::placeholder {
                         color:black;
                         text-align: start;
                     }
-                    &:focus{
+                    &:focus {
                         border-bottom: 2px solid #000000;
                     }
                 }
-                .input-comment.error{
+                
+                .input-comment.error {
                     transition: all 0.5s ease;
                     border-bottom: 2px solid #dc3545;
                 }
-                .error-input{
+                
+                .error-input {
                     margin-left: 1rem;
                     color: #dc3545;
                     display: none;
                 }
-                .error-input.active{
+                
+                .error-input.active {
                     display: block;
                     transition: all 0.5s ease;
                 }
-                .btn-comment{
+                
+                .btn-comment {
                     height: 3.5rem;
                     display: flex;
                     justify-content: flex-end;
                     align-items: center;
                     padding: 1rem;
-                    button{
+                    
+                    button {
                         height: 2.4rem;
                         width: 8rem;
                         font-size: 1rem;
@@ -213,7 +223,8 @@
             
         }
     }
-    .comments-container{
+    
+    .comments-container {
         width: 90%;
         background-color: white;
         height: auto;
@@ -224,10 +235,10 @@
         margin: auto;
         margin-top: 1.5rem;
         padding: 1.5rem;
-        .comment{
+        
+        .comment {
             width: 100%;
-            margin-bottom: 1.5rem;
-            //border: solid black 1px;
+            margin-bottom: 2.8rem;
             display: grid; 
             grid-template-columns: 0.5fr 25fr 3fr;
             grid-template-rows: auto;
@@ -235,59 +246,69 @@
             gap: 0 1.5rem;
             grid-template-areas: 
                 "user-icon comment-text icons"; 
-            .comment-user{
+            
+            .comment-user {
                 align-self: center;
                 justify-self: flex-start;
                 grid-area: "user-icon";
             }
-            .comment-text{
+            
+            .comment-text {
                 text-align: justify;
                 grid-area: "comment-text";
                 justify-self: flex-start;
-                .rating-comment-box{
+                
+                .rating-comment-box {
                     color: #bfbfbf;
                     font-size: 1.2rem;
                     margin-bottom: 1rem;
-                    i.active{
+                    i.active {
                         color: #F9C846;
                     }
                 }
             }
-            .comment-votes{
+            
+            .comment-votes {
                 display: flex;
                 justify-self: center;
                 align-self: center;
                 align-items: center ;
                 gap: 1rem;
                 grid-area: "icons";
-                .liked-comment{
-                    .count{
+                
+                .liked-comment {
+                    .count {
                         margin: 0;
                     }
                 }
-                .dislike-comment{
-                    .count{
+                
+                .dislike-comment {
+                    .count {
                         margin: 0;
                     }
                 }
             }
         }
     }
-    .pagination-buttons{
+    
+    .pagination-buttons {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 1rem;
         margin-bottom: 3rem;
-        button{
+        
+        button {
             background-color: white;
             border: 0;
             padding-inline: 0.7rem;
-            i{
+            
+            i {
                 opacity: 50%;
             }
         }
-        #currentPageIndicator{
+        
+        #currentPageIndicator {
             background-color: #F2F2F2;
             border: none;
             border-radius: 0.8rem;

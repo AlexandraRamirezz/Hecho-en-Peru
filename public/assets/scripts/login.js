@@ -41,7 +41,7 @@ document.getElementById('login-email').addEventListener('blur', function() {
         emailInput.classList.remove('invalid');
         emailInput.classList.add('valid');
     } else {
-        emailError.innerHTML = 'Invalid Email';
+        emailError.innerHTML = 'Email inválido';
         emailError.style.color = 'red';
         emailInput.classList.remove('valid');
         emailInput.classList.add('invalid');
@@ -61,7 +61,7 @@ document.getElementById('login-password').addEventListener('blur', function() {
         passwordInput.classList.remove('invalid');
         passwordInput.classList.add('valid');
     } else {
-        passwordError.innerHTML = 'Invalid Password';
+        passwordError.innerHTML = 'Contraseña inválida';
         passwordError.style.color = 'red';
         passwordInput.classList.remove('valid');
         passwordInput.classList.add('invalid');

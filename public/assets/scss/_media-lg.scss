@@ -1,0 +1,101 @@
+@media screen and (max-width: 992px) {
+    nav {
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 5rem 6fr;
+        grid-template-areas: 
+        "logo iconos"
+        "responsive responsive";
+        padding: 0;
+        box-shadow:none;
+        width: 100%;
+        position: relative;
+        
+        a {
+            text-decoration: none;
+            color: $color_2;
+        }
+        
+        .logo {
+            grid-area: logo;
+            justify-self: flex-start;
+            margin-left: 2rem;
+        }
+        
+        .nav-responsive {
+            display: none;
+            grid-area: responsive;
+            align-self: normal;
+            justify-self: normal;
+            width: 100%;
+            background-color: $background-color_1;
+            box-shadow: inset 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
+
+            .menu {
+                margin-top: 1rem;
+                grid-area: none;
+                line-height: 2.5;
+                flex-direction: column;
+                height: fit-content;
+            }
+            
+            .search-bar {
+                grid-area: none;
+                margin-top: 1rem;
+                padding-bottom: 2rem;
+                input[type=text]{
+                    width: 70%;
+                }
+            }
+        }
+        
+        .nav-responsive.active {
+            display: block;
+        }
+        
+        .icons {
+            justify-self: flex-end;
+            margin-right: 2rem;
+            
+            .hamburger {
+                display: block;
+            }
+        }
+    }
+    
+    .regiones {
+        .regiones-fondo {
+            width: 50%;
+        }
+    }
+    
+    .our-team {
+        .row {
+            .personal {
+                width: 23%;
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    .container-servicios {
+        .container-slider {
+            .container-carousel {
+                .carousel {
+                    grid-auto-columns: calc(((100%)/3) - 12px);
+                }
+            }
+        }
+    }
+    
+    .interest-products {
+        .container-slider {
+            .container-carousel {
+                .carousel {
+                    grid-auto-columns: calc(((100%)/3) - 12px);
+                }
+            }
+        }
+    }    
+}

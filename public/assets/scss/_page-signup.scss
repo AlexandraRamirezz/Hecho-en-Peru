@@ -6,7 +6,6 @@
     background-color: $background-color_6;
     margin-top: 2rem;
     color: white;
-
     &:hover {
         background-color: $background-color_7;
         box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
@@ -17,7 +16,7 @@
     margin-top: 3rem;
     display: flex;
     justify-content: space-between;
-
+    
     button {
         display: flex;
         padding: 0.75rem;
@@ -25,12 +24,12 @@
         box-shadow: #000000;
         border-radius: 0.5rem;
     }
-
+    
     img {
         width: 1.5rem;
         margin-right: 0.6rem;
     }
-
+    
     .col-md-6 {
         display: flex;
         justify-content: center;
@@ -40,25 +39,25 @@
 .registro-group {
     position: relative;
     margin-bottom: 2rem;
-
+    
     &:placeholder-shown {
         font-size: 1rem;
     }
-
+    
     p {
         text-align: start;
         font-size: 16px;
         color: red;
     }
-
+    
     input.invalid {
         border: 2px solid red;
     }
-
+    
     input.valid {
         border: 2px solid green;
     }
-
+    
     input {
         font-size: 1rem;
     }
@@ -78,26 +77,26 @@
     justify-content: center;
     padding-top: 3rem;
     margin: auto;
-
+    
     h6 {
         font-weight: 400;
         margin-bottom: 0;
     }
-
+    
     a {
         padding-left: 1.4rem;
         color: #7b7b7b;
     }
 }
 
-.popup-registro{
-    width:  25rem;
+.popup-registro {
+    width: 25rem;
     background: white;
     border-radius: 6px;
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%,-50%) scale(0.1);
+    transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
     padding: 0 30px 30px;
     color: #333;
@@ -107,29 +106,30 @@
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.122);
 }
 
-.popup-registro.open-popup{  
+.popup-registro.open-popup {
     visibility: visible;
     top: 50%;
-    transform: translate(-50%,-50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
 }
 
-.popup-registro img{
+.popup-registro img {
     width: 100px;
     margin-top: -50px;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.popup-registro h2{
+.popup-registro h2 {
     font-size: 2.5rem;
     font-weight: 500;
     margin: 30px 0 10px;
 }
-.popup-registro button{
+
+.popup-registro button {
     width: 6.3rem;
     margin-top: 50px;
     padding: 10px 0;
-    background: #F9C846;
+    background: #f9c846;
     color: #000000;
     font-weight: 600;
     border: 0;

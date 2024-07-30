@@ -24,7 +24,7 @@
     margin-top: 2rem;
     width: 90%;
     margin: auto;
-
+    
     input {
         margin: auto;
         width: 100%;
@@ -35,13 +35,13 @@
         background-color: #F2F2F2;
         color: black;
     }
-
+    
     h4 {
         font-size: 0.75rem;
         text-align: end;
         margin-top: 0.5rem;
     }
-
+    
     h6 {
         text-align: left;
         width: auto;
@@ -65,7 +65,7 @@
 }
 
 .iniciar-sesion-group {
-    .text-end{
+    .text-end {
         color: #7b7b7b;
         font-size: 1rem;
     }
@@ -76,15 +76,16 @@
 		border: 2px solid green;
 	}
 	position: relative;
-    
 	&:placeholder-shown {
 		font-size: 1rem;
 	}
+    
 	p {
 		text-align: start;
 		font-size: 16px;
 		color: red;
 	}
+    
 	input {
 		font-size: 1rem;
 	}

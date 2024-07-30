@@ -1,0 +1,107 @@
+header {
+    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 0.3fr 2fr 0.3fr;
+    grid-template-areas: "logo responsive iconos";
+    align-items: center;
+    text-align: center;
+    background-color: $background-color_1;
+    color: $color_2;
+    height: 5rem;
+    padding: 0 3rem;
+    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
+    
+    a {
+        text-decoration: none;
+        color: $color_2;
+    }
+    
+    .logo {
+        grid-area: logo;
+    }
+    
+    .nav-responsive{
+        display: grid;
+        grid-template-columns: 4fr 4fr;
+        grid-template-areas: "secciones buscador";
+        align-items: center;
+        grid-area: responsive;
+        .menu {
+            grid-area: secciones;
+            height: 3.1rem;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            
+            .menu-item {
+                font-size: 1rem;
+                &:hover {
+                    color: $color_3;
+                    border-bottom: 0.2rem solid #E09898;
+                    padding-bottom: 0.2rem;
+                }
+            }
+        
+            .menu-item.active {
+                color: $color_3;
+                border-bottom: 0.2rem solid #E09898;
+                padding-bottom: 0.2rem;
+            }
+        }
+        .search-bar {
+            grid-area: buscador;
+            
+            input[type=text] {
+                height: 2rem;
+                width: 40%;
+                border: none;
+                background-color: $background-color_2;
+                margin-right: 0.3rem;
+                font-size: 1rem;
+                padding: 0 0.6rem;
+                border-radius: 0.3rem;
+            }
+            
+            button {
+                background-color: $background-color_3;
+                border: none;
+                width: 5.6rem;
+                color: $color_2;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                height: 2rem;
+                margin-right: 0.3rem;
+                font-size: 1rem;
+                font-weight: 600;
+                padding: 0 0.6rem;
+                border-radius: 0.3rem;
+                &:hover {
+                    background-color: $background-color_4;
+                    color: $color_2;
+                    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
+                }
+            }
+        }
+    }
+    
+    .icons {
+        grid-area: iconos;
+        
+        i {
+            font-size: 1.5rem;
+            padding-inline: 1rem;
+            &:hover {
+                color: $color_4;
+            }
+        }
+        .hamburger{
+            display: none;
+        }
+    }
+}

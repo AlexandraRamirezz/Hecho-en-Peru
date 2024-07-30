@@ -1,0 +1,67 @@
+@media screen and (max-width: 768px) {
+    .inicio-fondo {
+        padding: 6rem 4rem;
+    }
+    
+    .regiones {
+        .regiones-fondo {
+            width: 70%;
+        }
+    }
+    
+    .our-team {
+        .row {
+            .personal {
+                width: 31%;
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    .container-productos-vendidos {
+        .container-slider {
+            .container-carousel {
+                .carousel {
+                    grid-auto-columns: calc(((100%)/2) - 12px);
+                }
+            }
+        }
+    }
+    
+    .container-servicios {
+        .container-slider {
+            .container-carousel {
+                .carousel {
+                    grid-auto-columns: calc(((100%)/2) - 12px);
+                }
+            }
+        }
+    }
+    
+    .container-testimonios {
+        .container-slider {
+            .container-carousel {
+                .carousel {
+                    grid-auto-columns: calc(((100%)/2) - 12px);
+                }
+            }
+        }
+    }
+    
+    .interest-products {
+        .container-slider {
+            .container-carousel {
+                .carousel {
+                    grid-auto-columns: calc(((100%)/2) - 12px);
+                }
+            }
+        }
+    }   
+    
+    footer {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+}

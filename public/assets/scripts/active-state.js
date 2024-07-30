@@ -9,6 +9,18 @@ navLinksElements.forEach(e => {
     }
 });
 
+const btnHamburguer = document.querySelector('.hamburger');
+const navResponsive = document.querySelector('.nav-responsive');
+
+btnHamburguer.addEventListener('click', function() {
+    if (!navResponsive.classList.contains("active")){
+        navResponsive.classList.add("active");
+    }else{
+        navResponsive.classList.remove("active");
+    }
+    
+});
+
 
 //BREADCRUMBS
 const breadCrumbLinksElements = document.querySelectorAll('.breadcrumbs-link');
