@@ -202,7 +202,7 @@ function validateForm(event) {
         popupButton.classList.add("success");
         popupButton.classList.remove("error");
         
-        popupImg.src = "./assests/images/img-pago/popup-success.png"
+        popupImg.src = "./assets/imgs/img-pago/popup-success.png"
         popupMainText.innerText = "Gracias";
         popupSecondaryText.innerHTML = 'Tu pago fue procesado correctamente<br>Gracias por tu compra.';
         popupButton.innerText = "OK";
@@ -218,7 +218,7 @@ function validateForm(event) {
         var popupSecondaryText = popup.querySelector("p");
         var popupButton = popup.querySelector("button");
 
-        popupImg.src = "./assests/images/img-pago/popup-error.png"
+        popupImg.src = "./assets/imgs/img-pago/popup-error.png"
         popupImg.style.width = "100px";
         popupMainText.innerText = "Ocurrió un error";
         popupSecondaryText.innerText = "Por favor, completa todos los campos correctamente y vuelve a intentarlo."
