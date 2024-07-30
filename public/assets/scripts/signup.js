@@ -13,13 +13,14 @@ function validateName() {
     return false;
   }
 
-  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+  if (!name.match(/^[A-Za-z]+(?:\s[A-Za-z]+)*$/)) {
     nameError.style.color = "red";
     nameError.innerHTML = "Nombre invalido";
     inputElement.classList.remove("valid");
     inputElement.classList.add("invalid");
     return false;
   }
+
   nameError.style.color = "green";
   nameError.style.position = "absolute";
   nameError.style.top = "53%";
